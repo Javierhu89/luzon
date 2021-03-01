@@ -26,7 +26,8 @@ class SnakeGame extends React.Component {
       directionChanged: false,
       isGameOver: false,
       snakeColor: this.props.snakeColor || this.getRandomColor(),
-      appleColor: this.props.appleColor || this.getRandomColor(),
+      appleColor: this.props.appleColor  || this.getRandomColor()
+      ,
       score: 0,
       highScore: Number(localStorage.getItem('snakeHighScore')) || 0,
       newHighScore: false,
@@ -312,13 +313,15 @@ class SnakeGame extends React.Component {
 
   handleKeyDown(event) {
     // if spacebar is pressed to run a new game
+    //TO-DO: score > X 
     if (this.state.isGameOver && event.keyCode === 32) {
       this.resetGame()
       return
     }
 
     if (this.state.directionChanged) return
-
+    //crear teclado con las 4 flechas
+//teclas - números, asignar clicks a diferentes teclas
     switch (event.keyCode) {
       case 37:
       case 65:
