@@ -10,7 +10,7 @@ import Game from './components/Game/Game';
 import Game1 from './components/Game1/Game1';
 import Donar from './components/Donar/Donar'
 
- function App() {
+ function App () {
 
 return(
   <>

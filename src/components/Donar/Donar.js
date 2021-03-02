@@ -12,11 +12,15 @@ function Donar () {
           {
             description: "Cool looking table",
             amout: {
+              currency_code: "CAD", // Lo añades también en la parte de index.html
               value:650.00
             }
           }
         ]
       })
+    },
+    onApprove: async (data, actions) =>{
+      const order = await (actions.order.capture())
     }
   }).render(paypal.current)
   }, [])
