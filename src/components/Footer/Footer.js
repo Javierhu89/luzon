@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-
+import './Footer.scss';
 class Footer extends Component {
   render() {
-    return <div>Footer</div>;
+    return <div><p>Grupo1</p></div>;
   }
 }
 

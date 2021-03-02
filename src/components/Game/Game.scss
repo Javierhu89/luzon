@@ -1,0 +1,29 @@
+img.iconos{
+    width: 12%;
+    height: auto;
+    margin: 10px;
+    border: solid 2px black;
+    border-radius: 15px;
+}
+div.conjuntoiconos{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+button{
+    text-align: center;
+}
+div.botones{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+button.home, button.phase1{
+    margin-top: 40px;
+}
+.bordes{
+    background-color: red;
+}

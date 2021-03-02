@@ -1,5 +1,5 @@
 import React from 'react'
-import './SnakeGame.css'
+import './SnakeGame.scss'
 import GameOver from './GameOver.js'
 
 // color serpiente y color manzana
