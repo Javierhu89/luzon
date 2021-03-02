@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import logo from './logo.svg';
 import './App.scss';
 import Header from './components/Header/Header';
@@ -11,7 +11,7 @@ import Game1 from './components/Game1/Game1';
 import Donar from './components/Donar/Donar'
 
  function App () {
-
+  const [checkout, setCheckOut] = useState (false)
 return(
   <>
   <BrowserRouter>
@@ -22,7 +22,7 @@ return(
         <Route exact path='/phase1' component={Game1}/>
         <Route exact path='/donar' component={Donar}/>
       </Switch>
-      </BrowserRouter>
+  </BrowserRouter>
   <Footer />
   </>
 )

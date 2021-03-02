@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from "react";
 
 function Donar () {
-  const paypal = useRef
+  const paypal = useRef ()
 
   useEffect(() => {
   window.paypal.Buttons ({
@@ -11,22 +11,26 @@ function Donar () {
         purchase_units: [
           {
             description: "Cool looking table",
-            amout: {
-              currency_code: "CAD", // Lo añades también en la parte de index.html
-              value:650.00
+            amount: {
+              currency_code: "EUR", // Lo añades también en la parte de index.html
+              value: 1
             }
           }
         ]
       })
     },
     onApprove: async (data, actions) =>{
-      const order = await (actions.order.capture())
+      const order = await actions.order.capture()
+      console.log(order)
+    },
+    onError: (err) => {
+      console.log(err)
     }
   }).render(paypal.current)
   }, [])
-    return <div>
-        <div ref={paypal}></div>
-      </div>;
+    return  <div ref={paypal}>
+    </div>
+
   }
 
 export default Donar;
