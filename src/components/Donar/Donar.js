@@ -1,36 +1,27 @@
-import React, {useRef, useEffect} from "react";
+import React, { Component } from "react";
+import './Donar.scss';
+import { Link } from 'react-router-dom';
 
-function Donar () {
-  const paypal = useRef ()
+class Donar extends Component {
 
-  useEffect(() => {
-  window.paypal.Buttons ({
-    createOrder: (data, actions, err) => {
-      return actions.order.create({
-        intent: "CAPTURE",
-        purchase_units: [
-          {
-            description: "Cool looking table",
-            amount: {
-              currency_code: "EUR", // Lo añades también en la parte de index.html
-              value: 1
-            }
-          }
-        ]
-      })
-    },
-    onApprove: async (data, actions) =>{
-      const order = await actions.order.capture()
-      console.log(order)
-    },
-    onError: (err) => {
-      console.log(err)
-    }
-  }).render(paypal.current)
-  }, [])
-    return  <div ref={paypal}>
-    </div>
-
+  render() {
+    return <div>
+      <br/>
+    <form className="PayPal" action="https://www.paypal.com/donate" method="post" target="_top">
+      <input type="hidden" name="hosted_button_id" value="9GQMEW4MYPY8Y" />
+      <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <img alt="botón" border="0" src="https://www.paypal.com/es_ES/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+    <br/>
+    <h4 className="PayPal">Si lo prefieres puedes escanear este código QR desde tu aplicación de PayPal:</h4> <br/>
+    <img className="PayPal" src={process.env.PUBLIC_URL + '/assets/img/Código-QR.png'} alt="QR PayPal"/>
+    <Link to={'/'}>
+        <button className="home">
+          Home
+        </button>
+      </Link>
+    </div>;
   }
+}
 
 export default Donar;

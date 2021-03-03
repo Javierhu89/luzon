@@ -378,7 +378,9 @@ class SnakeGame extends React.Component {
       )
     }
 
-    return (
+    return ( <div>
+
+    
       <div
         id='GameBoard'
         style={{
@@ -415,6 +417,14 @@ class SnakeGame extends React.Component {
           HIGH-SCORE: {this.state.highScore}&ensp;&ensp;&ensp;&ensp;SCORE:{' '}
           {this.state.score}
         </div>
+
+      </div><br/><br/><br/>
+        <div className="botones">
+          <button onClick={()=>this.goUp()}>↑</button>
+          <button onClick={()=>this.goRight()}>→</button>
+          <button onClick={()=>this.goLeft()}>←</button>
+          <button onClick={()=>this.goDown()}>↓</button>
+      </div>
       </div>
     )
   }
