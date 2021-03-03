@@ -7,7 +7,7 @@ class Game extends Component {
     super(props)
   
     this.state = {
-       
+       icono: ""
     }
   }
   
@@ -18,7 +18,7 @@ class Game extends Component {
     let icono4=document.getElementById("icono4");
     let icono5=document.getElementById("icono5");
     icono1.addEventListener('click', () => {
-      console.log("click")
+      this.setState({'icono': '/assets/img/chico.png' })
       icono1.classList.add('bordes')
       icono2.classList.remove('bordes')
       icono3.classList.remove('bordes')
@@ -26,7 +26,7 @@ class Game extends Component {
       icono5.classList.remove('bordes')
     });
     icono2.addEventListener('click', () => {
-      console.log("click")
+      this.setState({'icono': '/assets/img/hombre-de-negocios.png' })
       icono2.classList.add('bordes')
       icono1.classList.remove('bordes')
       icono3.classList.remove('bordes')
@@ -34,7 +34,7 @@ class Game extends Component {
       icono5.classList.remove('bordes')
     });
     icono3.addEventListener('click', () => {
-      console.log("click")
+      this.setState({'icono': '/assets/img/jefe.png' })
       icono3.classList.add('bordes')
       icono2.classList.remove('bordes')
       icono1.classList.remove('bordes')
@@ -42,7 +42,7 @@ class Game extends Component {
       icono5.classList.remove('bordes')
     });
     icono4.addEventListener('click', () => {
-      console.log("click")
+      this.setState({'icono': '/assets/img/mujer.png' })
       icono4.classList.add('bordes')
       icono2.classList.remove('bordes')
       icono3.classList.remove('bordes')
@@ -50,7 +50,7 @@ class Game extends Component {
       icono5.classList.remove('bordes')
     });
     icono5.addEventListener('click', () => {
-      console.log("click")
+      this.setState({'icono': '/assets/img/nina.png' })
       icono5.classList.add('bordes')
       icono2.classList.remove('bordes')
       icono3.classList.remove('bordes')
@@ -72,7 +72,7 @@ class Game extends Component {
           Home
         </button>
       </Link>
-      <Link to={'/phase1'}>
+      <Link to={{ pathname:'/phase1', state: {iconos:this.state.icono}}}>
         <button className="phase1">
           Jugar Phase1
         </button>

@@ -11,8 +11,8 @@ class Game1 extends Component {
           Home
         </button>
       </Link>
+      <img className="iconos" alt="icono5" id="icono5" src={process.env.PUBLIC_URL + this.props.location.state.iconos} />
     </div>;
   }
 }
-
 export default Game1;

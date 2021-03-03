@@ -43,7 +43,7 @@ class SnakeGame extends React.Component {
 
   initGame() {
     // Game size initialization
-    let percentageWidth = this.props.percentageWidth || 40
+    let percentageWidth = this.props.percentageWidth || 100 // Con el segundo valor tocas el tamaño de la pantalla
     let width =
       document.getElementById('GameBoard').parentElement.offsetWidth *
       (percentageWidth / 100)
@@ -315,12 +315,11 @@ class SnakeGame extends React.Component {
     // if spacebar is pressed to run a new game
     //TO-DO: score > X 
     if (this.state.isGameOver && event.keyCode === 32) {
-      this.resetGame()
+      this.resetGame() // Tocar aquí si queremos redireccionar
       return
     }
 
     if (this.state.directionChanged) return
-    //crear teclado con las 4 flechas
 //teclas - números, asignar clicks a diferentes teclas
     switch (event.keyCode) {
       case 37:
