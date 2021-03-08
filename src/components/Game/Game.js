@@ -7,7 +7,7 @@ class Game extends Component {
     super(props)
   
     this.state = {
-       icono: ""
+       icono: null
     }
   }
   
@@ -66,16 +66,14 @@ class Game extends Component {
       <img className="iconos" alt="icono4" id="icono4" src={process.env.PUBLIC_URL + '/assets/img/mujer.png'} />
       <img className="iconos" alt="icono5" id="icono5" src={process.env.PUBLIC_URL + '/assets/img/nina.png'} />
       </div>
-      <div className="botones">
+      <div className="seleccion">
       <Link to={'/'}>
         <button className="home">
           Home
         </button>
       </Link>
       <Link to={{ pathname:'/phase1', state: {iconos:this.state.icono}}}>
-        <button className="phase1">
-          Jugar Phase1
-        </button>
+        {this.state.icono?<button className="phase1">Jugar Phase1</button>:<></>}
       </Link>
     </div>
     </>

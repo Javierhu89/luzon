@@ -15,14 +15,14 @@ div.conjuntoiconos{
 button{
     text-align: center;
 }
-div.botones{
+div.seleccion{
     display: flex;
     text-align: center;
     flex-direction: row;
     justify-content: space-around;
 }
 button.home, button.phase1{
-    margin-top: 40px;
+    margin-top: 10px;
 }
 .bordes{
     background-color: red;

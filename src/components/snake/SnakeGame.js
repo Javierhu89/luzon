@@ -43,7 +43,7 @@ class SnakeGame extends React.Component {
 
   initGame() {
     // Game size initialization
-    let percentageWidth = this.props.percentageWidth || 100 // Con el segundo valor tocas el tamaño de la pantalla
+    let percentageWidth = this.props.percentageWidth || 95 // Con el segundo valor tocas el tamaño de la pantalla
     let width =
       document.getElementById('GameBoard').parentElement.offsetWidth *
       (percentageWidth / 100)
@@ -418,11 +418,11 @@ class SnakeGame extends React.Component {
         </div>
 
       </div><br/><br/><br/>
-        <div className="botones">
-          <button onClick={()=>this.goUp()}>↑</button>
-          <button onClick={()=>this.goRight()}>→</button>
-          <button onClick={()=>this.goLeft()}>←</button>
-          <button onClick={()=>this.goDown()}>↓</button>
+      <div className="botones">
+          <button className="flecha1" onClick={()=>this.goUp()}>↑</button> <br></br>
+          <button className="flecha2" onClick={()=>this.goLeft()}>←</button>
+          <button className="flecha3" onClick={()=>this.goRight()}>→</button>
+          <button className="flecha4" onClick={()=>this.goDown()}>↓</button>
       </div>
       </div>
     )
