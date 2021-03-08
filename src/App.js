@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.scss';
-import Header from './components/Header/Header';
+
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
@@ -11,9 +11,11 @@ import Donar from './components/Donar/Donar'
 
  function App () {
 return(
-  <>
+  <div style={{ 
+    backgroundImage: `url(${process.env.PUBLIC_URL + 'assets/img/Fondojuego.svg'})`,
+    backgroundRepeat: 'no-repeat'
+  }}>
   <BrowserRouter>
-      <Header />
       <Switch>
         <Route path='/game' component={Game}/>
         <Route exact path='/' component={Main}/>
@@ -21,8 +23,7 @@ return(
         <Route exact path='/donar' component={Donar}/>
       </Switch>
   </BrowserRouter>
-  <Footer />
-  </>
+  </ div>
 )
  }
 export default App;

@@ -1,71 +1,61 @@
 import React, { Component } from "react";
 import Game1 from "../Game1/Game1";
+import Header2 from '../Header2/Header2';
 import './Game.scss';
 import { Link } from 'react-router-dom';
+import IconButton from '@material-ui/core/IconButton';
+import ArrowLeftwardIcon from '@material-ui/icons/ArrowLeft';
+import ArrowRightwardIcon from '@material-ui/icons/ArrowRight';
 class Game extends Component {
   constructor(props) {
     super(props)
   
     this.state = {
-       icono: null
+       valueicono: '/assets/img/chico.png',
+       valuenombre: 'Javier',
+       valueedad: 31,
+       icono: ['/assets/img/chico.png', '/assets/img/hombre-de-negocios.png', '/assets/img/jefe.png','/assets/img/mujer.png', '/assets/img/nina.png'],
+       nombres: ['Javier','Laura','Sofia','Pedro','Julia'],
+       edades: [31,36,26,25,45],
+       llave: 0
     }
   }
-  
-  componentDidMount() {
-    let icono1=document.getElementById("icono1");
-    let icono2=document.getElementById("icono2");
-    let icono3=document.getElementById("icono3");
-    let icono4=document.getElementById("icono4");
-    let icono5=document.getElementById("icono5");
-    icono1.addEventListener('click', () => {
-      this.setState({'icono': '/assets/img/chico.png' })
-      icono1.classList.add('bordes')
-      icono2.classList.remove('bordes')
-      icono3.classList.remove('bordes')
-      icono4.classList.remove('bordes')
-      icono5.classList.remove('bordes')
-    });
-    icono2.addEventListener('click', () => {
-      this.setState({'icono': '/assets/img/hombre-de-negocios.png' })
-      icono2.classList.add('bordes')
-      icono1.classList.remove('bordes')
-      icono3.classList.remove('bordes')
-      icono4.classList.remove('bordes')
-      icono5.classList.remove('bordes')
-    });
-    icono3.addEventListener('click', () => {
-      this.setState({'icono': '/assets/img/jefe.png' })
-      icono3.classList.add('bordes')
-      icono2.classList.remove('bordes')
-      icono1.classList.remove('bordes')
-      icono4.classList.remove('bordes')
-      icono5.classList.remove('bordes')
-    });
-    icono4.addEventListener('click', () => {
-      this.setState({'icono': '/assets/img/mujer.png' })
-      icono4.classList.add('bordes')
-      icono2.classList.remove('bordes')
-      icono3.classList.remove('bordes')
-      icono1.classList.remove('bordes')
-      icono5.classList.remove('bordes')
-    });
-    icono5.addEventListener('click', () => {
-      this.setState({'icono': '/assets/img/nina.png' })
-      icono5.classList.add('bordes')
-      icono2.classList.remove('bordes')
-      icono3.classList.remove('bordes')
-      icono4.classList.remove('bordes')
-      icono1.classList.remove('bordes')
-    });
-  }
+  cambiarPersonajeIzq = () => {
+    if(this.state.llave===4){
+      this.state.llave=0
+    } else {
+      this.state.llave += 1;
+    }
+    this.setState({valueicono: this.state.icono[this.state.llave]})
+    this.setState({valuenombre: this.state.nombres[this.state.llave]})
+    this.setState({valueedad: this.state.edades[this.state.llave]})
+    }
+    cambiarPersonajeDer = () => {
+      if(this.state.llave===0){
+        this.state.llave=4
+      } else {
+        this.state.llave -= 1;
+      }
+    this.setState({valueicono: this.state.icono[this.state.llave]})
+    this.setState({valuenombre: this.state.nombres[this.state.llave]})
+    this.setState({valueedad: this.state.edades[this.state.llave]})
+      }
+
   render() {
-    return <><div className="conjuntoiconos">
-      <img className="iconos" alt="icono1" id="icono1" src={process.env.PUBLIC_URL + '/assets/img/chico.png'} />
-      <img className="iconos" alt="icono2" id="icono2" src={process.env.PUBLIC_URL + '/assets/img/hombre-de-negocios.png'} /> 
-      <img className="iconos" alt="icono3" id="icono3" src={process.env.PUBLIC_URL + '/assets/img/jefe.png'} />
-      <img className="iconos" alt="icono4" id="icono4" src={process.env.PUBLIC_URL + '/assets/img/mujer.png'} />
-      <img className="iconos" alt="icono5" id="icono5" src={process.env.PUBLIC_URL + '/assets/img/nina.png'} />
+    return <>
+    <Header2 />
+    <p className="combatir"><b>El juego que se creó para combatir la ELA</b></p>
+    <p className="difcolor">Para empezar elige un jugador y nivel</p>
+    <div className="conjuntoiconos">
+      <div className="seleccion">
+      <IconButton aria-label="delete" size="medium" onClick={() => {this.cambiarPersonajeIzq()}}><ArrowLeftwardIcon fontSize="large" /></IconButton>
+      <img className="iconos" alt="icono1" id="icono1" src={process.env.PUBLIC_URL + this.state.valueicono} /> 
+      <IconButton aria-label="delete" size="medium" onClick={() => {this.cambiarPersonajeDer()}}><ArrowRightwardIcon fontSize="large" /></IconButton>
       </div>
+      <div className="nomico">
+      <p>Nombre: {this.state.valuenombre}</p> <p>Edad: {this.state.valueedad}</p>
+      </div>
+    </div>
       <div className="seleccion">
       <Link to={'/'}>
         <button className="home">
