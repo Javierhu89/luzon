@@ -10,13 +10,13 @@ function GameOver(props) {
         borderWidth: props.width / 50,
       }}>
       <div id='GameOver' style={{ fontSize: props.width / 15 }}>
-        <div id='GameOverText'>GAME OVER</div>
-        <div>Your score: {props.score}</div>
+        <div id='GameOverText'><b>GAME OVER</b></div>
+        <div><b>Your score: {props.score}</b></div>
         <div>
-          {props.newHighScore ? 'New local ' : 'Local '}high score:{' '}
-          {props.highScore}
+          {props.newHighScore ? <b>'New local '</b> :<b> 'Local '</b>}<b>high score:{' '}
+          {props.highScore} </b>
         </div>
-        <div id='PressSpaceText'>Press Space to restart</div>
+        <div id='PressSpaceText'><b>Press Space to restart</b></div>
       </div>
     </div>
   )

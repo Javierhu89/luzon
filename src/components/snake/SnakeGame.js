@@ -30,7 +30,7 @@ class SnakeGame extends React.Component {
       ,
       score: 0,
       highScore: Number(localStorage.getItem('snakeHighScore')) || 0,
-      newHighScore: false,
+      newHighScore: false
     }
   }
 
@@ -40,7 +40,7 @@ class SnakeGame extends React.Component {
     window.addEventListener('keydown', this.handleKeyDown)
     this.gameLoop()
   }
-
+  
   initGame() {
     // Game size initialization
     let percentageWidth = this.props.percentageWidth || 95 // Con el segundo valor tocas el tamaño de la pantalla
@@ -49,8 +49,8 @@ class SnakeGame extends React.Component {
       (percentageWidth / 100)
     width -= width % 30
     if (width < 30) width = 30
-    let height = (width / 3) * 2
-    let blockWidth = width / 30
+    let height = (width / 2) * 2
+    let blockWidth = width / 20
     let blockHeight = height / 20
 
     // snake initialization
@@ -152,7 +152,7 @@ class SnakeGame extends React.Component {
       direction: 'right',
       directionChanged: false,
       isGameOver: false,
-      gameLoopTimeout: 50,
+      gameLoopTimeout: 100, // Cambia la velocidad al morir? Modificar?
       snakeColor: this.getRandomColor(),
       appleColor: this.getRandomColor(),
       score: 0,
@@ -240,7 +240,9 @@ class SnakeGame extends React.Component {
       })
     }
   }
-
+  cambiarRestart = () => {
+    this.resetGame()
+  }
   tryToEatSnake() {
     let snake = this.state.snake
 
@@ -366,7 +368,7 @@ class SnakeGame extends React.Component {
   render() {
     // Game over
     if (this.state.isGameOver) {
-      return (
+      return ( <div>
         <GameOver
           width={this.state.width}
           height={this.state.height}
@@ -374,6 +376,8 @@ class SnakeGame extends React.Component {
           newHighScore={this.state.newHighScore}
           score={this.state.score}
         />
+        <button className="restart" onClick={this.cambiarRestart}>Restart!</button>
+        </div>
       )
     }
 

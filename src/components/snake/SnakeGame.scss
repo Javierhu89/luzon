@@ -42,26 +42,41 @@
   background: #BAC3D7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  width: 342px;
-  height: 255px;
+  width: 273.6px;
+  height: 204px;
   margin-top:-15px;
   margin-left:auto;
   margin-right: auto;
 }
 .flecha1, .flecha2, .flecha3, .flecha4{
-  width: 62px;
-  height: 62px;
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
 }
 .flecha1{
-  margin-top: 12px;
-  margin-left: 40.93%;
+  margin-top: 10px;
+  margin-left: 111.8px;
 }
 .flecha2{
-  margin-top: 24.5px;
+  margin-top: 10px;
   margin-left: 20px;
-  margin-right: 52.04%;
+  margin-right: 126.5px;
 }
 .flecha4{
-  margin-top:24.5px;
-  margin-left: 40.93%;
+  margin-top:10px;
+  margin-left: 111.8px;
+}
+
+button.restart{
+
+    background: #a2e58d;
+    border-radius: 10px;
+    border: 0px;
+    width: 148px;
+    height: 46px;
+    font-weight: bold;
+    align-items: center;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
 }
