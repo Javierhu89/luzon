@@ -423,10 +423,10 @@ class SnakeGame extends React.Component {
 
       </div><br/><br/><br/>
       <div className="botones">
-          <button className="flecha1" onClick={()=>this.goUp()}>↑</button> <br></br>
-          <button className="flecha2" onClick={()=>this.goLeft()}>←</button>
-          <button className="flecha3" onClick={()=>this.goRight()}>→</button>
-          <button className="flecha4" onClick={()=>this.goDown()}>↓</button>
+          <img onClick={()=>this.goUp()} className="flecha1" alt="flechaArr" id="flechaarr" src={process.env.PUBLIC_URL + '/assets/img/FlechaArr.png'} />
+          <img onClick={()=>this.goLeft()} className="flecha2" alt="flechaizq" id="flechaizq" src={process.env.PUBLIC_URL + '/assets/img/FlechaIzq.png'} />
+          <img onClick={()=>this.goRight()} className="flecha3" alt="flechader" id="flechader" src={process.env.PUBLIC_URL + '/assets/img/FlechaDer.png'} />
+          <img onClick={()=>this.goDown()} className="flecha4" alt="flechaAbaj" id="flechaabaj" src={process.env.PUBLIC_URL + '/assets/img/FlechaAbaj.png'} />
       </div>
       </div>
     )
