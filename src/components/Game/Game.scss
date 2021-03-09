@@ -30,6 +30,12 @@ div.seleccion{
 }
 button.home, button.phase1{
     margin-top: 10px;
+    background: #FFB6AE;
+    border-radius: 10px;
+    border: 0px;
+    width: 148px;
+    height: 46px;
+    font-weight: bold;
 }
 .bordes{
     background-color: red;
@@ -69,4 +75,13 @@ p.estado {
     line-height: 16px;
     text-align: center;
     color: #000000;
+}
+select#level{
+    width: 90%;
+    margin-top: 19px;
+    margin-left: 5%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 10px;
 }

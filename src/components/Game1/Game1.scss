@@ -1,4 +1,10 @@
-img.iconos{
-    display:block;
-    margin-right:auto;
+img.icono{
+    width: 100px;
+}
+.snakegamebotons{
+    margin-top:15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

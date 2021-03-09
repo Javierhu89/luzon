@@ -6,13 +6,15 @@ class Game1 extends Component {
   render() {
     return <div>
       <SnakeGame />
+      <div className="snakegamebotons">
       <Link to={'/'}>
         <button className="home">
           Home
         </button>
       </Link>
-      <img className="iconos" alt="icono5" id="icono5" src={process.env.PUBLIC_URL + this.props.location.state.iconos} />
-    </div>;
+      <img className="icono" alt="icono" id="icono" src={process.env.PUBLIC_URL + this.props.location.state.icono} />
+    </div>
+    </div>
   }
 }
 export default Game1;

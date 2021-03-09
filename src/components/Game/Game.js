@@ -17,8 +17,16 @@ class Game extends Component {
        icono: ['/assets/img/chico.png', '/assets/img/hombre-de-negocios.png', '/assets/img/jefe.png','/assets/img/mujer.png', '/assets/img/nina.png'],
        nombres: ['Javier','Pedro','Juán','Ana','Julia'],
        edades: [31,36,26,25,45],
-       llave: 0
+       llave: 0, 
+       level: 1
     }
+  }
+
+  cambiarLevel = () => {
+    let valor = document.getElementById('level');
+    let eleccion = valor.selectedIndex + 1;
+    this.setState({level:eleccion})
+    
   }
   cambiarPersonajeIzq = () => {
     if(this.state.llave===4){
@@ -56,14 +64,22 @@ class Game extends Component {
       <p className="estado"><b>Nombre: {this.state.valuenombre}</b></p> <p className="estado"><b>Edad: {this.state.valueedad}</b></p>
       </div>
     </div>
+      <select name="selectorLevel" id="level" onChange={this.cambiarLevel}>
+          <option key="1" value='1'>Level 1</option>
+          <option key="2" value='2'>Level 2</option>
+          <option key="3" value='3'>Level 3</option>
+          <option key="4" value='4'>Level 4</option>
+          <option key="5" value='5'>Level 5</option>
+          <option key="6" value='6'>Level 6</option>
+      </select>
       <div className="seleccion">
       <Link to={'/'}>
         <button className="home">
           Home
         </button>
       </Link>
-      <Link to={{ pathname:'/phase1', state: {iconos:this.state.icono}}}>
-        {this.state.icono?<button className="phase1">Jugar Phase1</button>:<></>}
+      <Link to={{ pathname:`/phase${this.state.level}` , state: {icono:this.state.valueicono}}}>
+        {this.state.icono?<button className="phase1">¡Jugar!</button>:<></>}
       </Link>
     </div>
     </>
