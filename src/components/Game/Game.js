@@ -15,7 +15,7 @@ class Game extends Component {
        valuenombre: 'Javier',
        valueedad: 31,
        icono: ['/assets/img/chico.png', '/assets/img/hombre-de-negocios.png', '/assets/img/jefe.png','/assets/img/mujer.png', '/assets/img/nina.png'],
-       nombres: ['Javier','Laura','Sofia','Pedro','Julia'],
+       nombres: ['Javier','Pedro','Juán','Ana','Julia'],
        edades: [31,36,26,25,45],
        llave: 0
     }
@@ -53,7 +53,7 @@ class Game extends Component {
       <IconButton aria-label="delete" size="medium" onClick={() => {this.cambiarPersonajeDer()}}><ArrowRightwardIcon fontSize="large" /></IconButton>
       </div>
       <div className="nomico">
-      <p>Nombre: {this.state.valuenombre}</p> <p>Edad: {this.state.valueedad}</p>
+      <p className="estado"><b>Nombre: {this.state.valuenombre}</b></p> <p className="estado"><b>Edad: {this.state.valueedad}</b></p>
       </div>
     </div>
       <div className="seleccion">
