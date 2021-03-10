@@ -10,7 +10,7 @@ const [value, setValue] = useState(null);
 
 const useStyles = makeStyles({
   root: {
-    width: '375px',
+    width: '100%',
     color: 'black',
   borderTop: '2px solid black'},
   root1:{
