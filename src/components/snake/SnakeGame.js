@@ -1,6 +1,7 @@
 import React from 'react'
 import './SnakeGame.scss'
 import GameOver from './GameOver.js'
+import Nav from '../Nav/Nav'
 
 // color serpiente y color manzana
 // snakeColor: this.getRandomColor(),
@@ -377,6 +378,7 @@ class SnakeGame extends React.Component {
           score={this.state.score}
         />
         <button className="restart" onClick={this.cambiarRestart}>Restart!</button>
+        <Nav />
         </div>
       )
     }
@@ -428,6 +430,7 @@ class SnakeGame extends React.Component {
           <img onClick={()=>this.goRight()} className="flecha3" alt="flechader" id="flechader" src={process.env.PUBLIC_URL + '/assets/img/FlechaDer.png'} />
           <img onClick={()=>this.goDown()} className="flecha4" alt="flechaAbaj" id="flechaabaj" src={process.env.PUBLIC_URL + '/assets/img/FlechaAbaj.png'} />
       </div>
+      <Nav />
       </div>
     )
   }

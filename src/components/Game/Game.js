@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowLeftwardIcon from '@material-ui/icons/ArrowLeft';
 import ArrowRightwardIcon from '@material-ui/icons/ArrowRight';
+import Nav from "../Nav/Nav";
 class Game extends Component {
   constructor(props) {
     super(props)
@@ -73,14 +74,15 @@ class Game extends Component {
           <option key="6" value='6'>Level 6</option>
       </select>
       <div className="seleccion">
-      <Link to={'/'}>
+      <Nav />
+      {/* <Link to={'/'}>
         <button className="home">
           Home
-        </button>
-      </Link>
+        </button> 
+  </Link> */}
       <Link to={{ pathname:`/phase${this.state.level}` , state: {icono:this.state.valueicono}}}>
         {this.state.icono?<button className="phase1">¡Jugar!</button>:<></>}
-      </Link>
+      </Link> 
     </div>
     </>
   }

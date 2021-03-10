@@ -7,12 +7,12 @@ class Game1 extends Component {
     return <div>
       <SnakeGame />
       <div className="snakegamebotons">
-      <Link to={'/'}>
+      {/* <Link to={'/'}>
         <button className="home">
           Home
         </button>
       </Link>
-      <img className="icono" alt="icono" id="icono" src={process.env.PUBLIC_URL + this.props.location.state.icono} />
+      <img className="icono" alt="icono" id="icono" src={process.env.PUBLIC_URL + this.props.location.state.icono} /> */}
     </div>
     </div>
   }

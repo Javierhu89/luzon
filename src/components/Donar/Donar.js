@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './Donar.scss';
 import { Link } from 'react-router-dom';
+import Nav from "../Nav/Nav";
 
 class Donar extends Component {
 
@@ -15,11 +16,7 @@ class Donar extends Component {
     <br/>
     <h4 className="PayPal">Si lo prefieres puedes escanear este código QR desde tu aplicación de PayPal:</h4> <br/>
     <img className="PayPal" src={process.env.PUBLIC_URL + '/assets/img/Código-QR.png'} alt="QR PayPal"/>
-    <Link to={'/'}>
-        <button className="home">
-          Home
-        </button>
-      </Link>
+      <Nav />
     </div>;
   }
 }
