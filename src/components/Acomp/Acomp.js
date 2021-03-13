@@ -23,6 +23,7 @@ class Acomp extends Component {
       <p className="elige">Elige tu acompañante a lo largo de este viaje. Te acompañará por la diferentes fases de la ELA y te ayudará a descubir cómo es un día a día con la enfermedad.</p>
     </div>
       <button className="omitir" onClick={() => this.pasarPagina('/game')}>Omitir</button>
+      <img className="bolas1" alt="orden de paginación" src={process.env.PUBLIC_URL + '/assets/img/Bolas1.png'} />
       {this.state.pagina?(<Redirect to={{ pathname: this.state.pagina }}/>):<></> }
     </>
   }

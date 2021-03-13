@@ -27,8 +27,7 @@ class SnakeGame extends React.Component {
       directionChanged: false,
       isGameOver: false,
       snakeColor: this.props.snakeColor || this.getRandomColor(),
-      appleColor: this.props.appleColor  || this.getRandomColor()
-      ,
+      appleColor: this.props.appleColor  || this.getRandomColor(),
       score: 0,
       highScore: Number(localStorage.getItem('snakeHighScore')) || 0,
       newHighScore: false
@@ -394,7 +393,8 @@ class SnakeGame extends React.Component {
           borderWidth: this.state.width / 50,
         }}>
         {this.state.snake.map((snakePart, index) => {
-          return (
+          if(index!=0){
+            return (
             <div
               key={index}
               className='Block'
@@ -406,18 +406,31 @@ class SnakeGame extends React.Component {
                 background: this.state.snakeColor,
               }}
             />
-          )
+            )}else {
+              return (
+                
+                <img
+                  key={index}
+                  className='Block'
+                  style={{
+                    width: this.state.blockWidth,
+                    height: this.state.blockHeight,
+                    left: snakePart.Xpos,
+                    top: snakePart.Ypos,
+                    // background: this.state.snakeColor,
+                  }} src={process.env.PUBLIC_URL + '/assets/img/jefe.png'}
+                />
+              )
+            }
         })}
-        <div
-          className='Block'
+        <img className='Block'
           style={{
             width: this.state.blockWidth,
             height: this.state.blockHeight,
             left: this.state.apple.Xpos,
             top: this.state.apple.Ypos,
             background: this.state.appleColor,
-          }}
-        />
+          }} src={process.env.PUBLIC_URL + '/assets/img/chico.png'} />
         <div id='Score' style={{ fontSize: this.state.width / 20 }}>
           HIGH-SCORE: {this.state.highScore}&ensp;&ensp;&ensp;&ensp;SCORE:{' '}
           {this.state.score}
