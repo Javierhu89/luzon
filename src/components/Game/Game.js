@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Game1 from "../Game1/Game1";
-import Header2 from '../Header2/Header2';
+import Header from '../Header/Header';
 import './Game.scss';
 import { Link } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
@@ -52,7 +52,7 @@ class Game extends Component {
 
   render() {
     return <>
-    <Header2 />
+    <Header />
     <p className="combatir"><b>El juego que se creó para combatir la ELA</b></p>
     <p className="difcolor">Para empezar elige un jugador y nivel</p>
     <div className="conjuntoiconos">
