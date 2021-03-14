@@ -1,9 +1,9 @@
 img.saludar{
     display: block;
     margin: 10px auto;
-    padding-top: 40px;
+    padding-top: 35px;
     margin-bottom: 20px;
-    height: 39vh;
+    height: 37vh;
 }
 h2.acompanante{
     font-family: Roboto;
@@ -26,19 +26,20 @@ p.elige{
     color: #666666;
     margin-left: 60px;
     margin-right: 60px;
-    height: 14vh;
+    height: 21vh;
 }
 button.omitir{
     outline: none;
     display: block;
     margin: 10px auto;
-    height: 18vh;
     left: 41.15%;
     text-decoration: none;
     border: 0;
     background-color: white;
     text-decoration: underline;
-    
+}
+div.divOmitir{
+    height: 13vh;
 }
 img.bolas{
     display: block;
@@ -48,7 +49,7 @@ div.board{
     height: 100vh;
 }
 div.sigue{
-    height: 17vh;
+    height: 13vh;
     padding-top:1vh;
     margin: 10px auto;
 }
@@ -56,10 +57,11 @@ button#seguimos{
     background: #A2E58D;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    width: 148px;
+    width: 120px;
     border: 0px solid;
-    height: 46px;
+    height: 36px;
     font-weight: bold;
     display: block;
     margin: 10px auto;
+    text-decoration:none;
 }

@@ -14,18 +14,23 @@ class Acomp extends Component {
       bolas: ['/assets/img/Bolas1.png', '/assets/img/Bolas2.png','/assets/img/Bolas3.png', '/assets/img/Bolas4.png' ],
       alts: ['Mujer Saludando', 'Hombre sentado en sofá', 'Dos personas colaborando', 'Mujer Saludando' ],
       pagina:0,
-      omitir: null
+      omitir: null,
+      home : null
     }
   }
   
-
+  next = () => {
+    this.setState({'home': true});
+  }
   pasarPagina = () => {
-    let sumar = this.state.pagina + 1;
-    console.log(sumar)
-    this.setState({'pagina': sumar})
+    if (this.state.pagina===3){
+      
+    } else {
+      let sumar = this.state.pagina + 1;
+      this.setState({'pagina': sumar})
+    }
   }
   omitirOnboarding = () => {
-    console.log("hhhhh")
     this.setState({'omitir': true});
   }
   
@@ -35,14 +40,15 @@ class Acomp extends Component {
       <h2 className="acompanante">{this.state.h2[this.state.pagina]}</h2>
       <p className="elige">{this.state.p[this.state.pagina]}</p>
     
-      {this.state.pagina===3?<Link to={'/home'}>
+      {this.state.pagina===3?
         <div className="sigue">
-        <button id="seguimos">
-          Siguiente
+        <button id="seguimos" onClick={this.next}>
+          SIGUIENTE
         </button>
         </div>
-      </Link>:<button className="omitir" onClick={this.omitirOnboarding}>Omitir</button>}
+      :<div className="divOmitir"><button className="omitir" onClick={this.omitirOnboarding}>Omitir</button></div>}
       {this.state.omitir?(<Redirect to={{ pathname: '/game' }}/>):<></> }
+      {this.state.home?(<Redirect to={{ pathname: '/home' }}/>):<></> }
       <img className="bolas" alt="orden de paginación" src={process.env.PUBLIC_URL + this.state.bolas[this.state.pagina] } />
   </div>)
 }}

@@ -1,12 +1,12 @@
-button#siguiente{
+button.siguiente{
     background: #A2E58D;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    width: 148px;
+    width: 120px;
     border: 0px solid;
-    height: 46px;
+    height: 36px;
     font-weight: bold;
-    margin-top:45.5px;
+    margin-top:58.5px;
 }
 div.introduccion{
     margin-top:0px;
@@ -42,5 +42,4 @@ div.donjug{
     display:flex;
     justify-content: space-around;
     margin-top:-20px;
-    padding-bottom: 25.7px;
 }
