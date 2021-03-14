@@ -1,18 +1,20 @@
 img.saludar{
     display: block;
     margin: 10px auto;
-    margin-top: 25px;
+    padding-top: 40px;
     margin-bottom: 20px;
-    width: 310px;
+    height: 39vh;
 }
 h2.acompanante{
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 28px;
     color: #A2E58D;
     text-align: center;
+    margin: auto;
+    height: 5vh;
 }
 p.elige{
     font-family: Roboto;
@@ -22,15 +24,42 @@ p.elige{
     line-height: 16px;
     text-align: center;
     color: #666666;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 60px;
+    margin-right: 60px;
+    height: 14vh;
 }
 button.omitir{
     outline: none;
     display: block;
     margin: 10px auto;
+    height: 18vh;
+    left: 41.15%;
     text-decoration: none;
     border: 0;
     background-color: white;
     text-decoration: underline;
+    
+}
+img.bolas{
+    display: block;
+    margin: 10px auto;
+}
+div.board{
+    height: 100vh;
+}
+div.sigue{
+    height: 17vh;
+    padding-top:1vh;
+    margin: 10px auto;
+}
+button#seguimos{
+    background: #A2E58D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 148px;
+    border: 0px solid;
+    height: 46px;
+    font-weight: bold;
+    display: block;
+    margin: 10px auto;
 }

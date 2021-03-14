@@ -17,7 +17,7 @@ class Intro extends Component {
   render() {
     return <div style={{ 
       backgroundImage: `url(${process.env.PUBLIC_URL + 'assets/img/IntroBack.png'})`,
-      backgroundRepeat: 'no-repeat', BackgroundSize: 'cover', position:'absolute',top:0, width:'100%'
+      backgroundRepeat: 'no-repeat', BackgroundSize: 'cover', position:'absolute',top:0, width:'100%', height: '100vh'
     }} onClick={this.pasarIntro}>
       <img className="intro" src={process.env.PUBLIC_URL + '/assets/img/Intro.png'}></img>
       {this.state.pagina?(<Redirect to={{ pathname: '/luzon' }}/>):<></> }

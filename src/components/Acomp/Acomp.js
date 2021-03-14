@@ -30,19 +30,21 @@ class Acomp extends Component {
   }
   
   render() {
-      return <><div onClick={this.pasarPagina}> 
+      return (<div className="board" onClick={this.pasarPagina}> 
       <img className="saludar" alt={this.state.alts[this.state.pagina]} src={process.env.PUBLIC_URL + this.state.imagen[this.state.pagina]} />
       <h2 className="acompanante">{this.state.h2[this.state.pagina]}</h2>
       <p className="elige">{this.state.p[this.state.pagina]}</p>
-    </div>
+    
       {this.state.pagina===3?<Link to={'/home'}>
-        <button id="siguiente">
+        <div className="sigue">
+        <button id="seguimos">
           Siguiente
         </button>
+        </div>
       </Link>:<button className="omitir" onClick={this.omitirOnboarding}>Omitir</button>}
       {this.state.omitir?(<Redirect to={{ pathname: '/game' }}/>):<></> }
       <img className="bolas" alt="orden de paginación" src={process.env.PUBLIC_URL + this.state.bolas[this.state.pagina] } />
-  </>
+  </div>)
 }}
 
 export default Acomp;
