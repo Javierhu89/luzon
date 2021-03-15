@@ -30,7 +30,7 @@ class Maria extends Component {
       backgroundColor: '#BAC3D7'
     }}>
       <audio className="audio-element">
-          <source src={process.env.PUBLIC_URL + 'assets/music/My Little Friend - Canto (Drumagick Remix)_50k.mp3'}></source>
+          <source src={process.env.PUBLIC_URL + 'assets/music/Fase_1.mp3'}></source>
       </audio>
       <div className="superior">
       <img alt="Foto de María" className="iconomaria" src={process.env.PUBLIC_URL + '/assets/img/maria.png'}/>
@@ -53,7 +53,7 @@ class Maria extends Component {
         backgroundColor: '#BAC3D7'
       }}>
       <audio className="audio-element">
-      <source src={process.env.PUBLIC_URL + 'assets/music/gameboy.mp3'}></source>
+      <source src={process.env.PUBLIC_URL + 'assets/music/Fase_2.mp3'}></source>
       </audio>
       <div className="superior">
       <img alt="Foto de María" className="iconomaria" src={process.env.PUBLIC_URL + '/assets/img/maria.png'}/>
@@ -71,7 +71,7 @@ class Maria extends Component {
         backgroundColor: '#BAC3D7'
       }}>
       <audio className="audio-element">
-      <source src={process.env.PUBLIC_URL + 'assets/music/My Little Friend - Canto (Drumagick Remix)_50k.mp3'}></source>
+      <source src={process.env.PUBLIC_URL + 'assets/music/Fase_3.mp3'}></source>
       </audio>
       <div className="superior">
       <img alt="Foto de María" className="iconomaria" src={process.env.PUBLIC_URL + '/assets/img/maria.png'}/>
@@ -88,7 +88,7 @@ class Maria extends Component {
       backgroundColor: '#BAC3D7'
     }}>
     <audio className="audio-element">
-    <source src={process.env.PUBLIC_URL + 'assets/music/gameboy.mp3'}></source>
+    <source src={process.env.PUBLIC_URL + 'assets/music/Fase_4.mp3'}></source>
     </audio>
     <div className="superior">
     <img alt="Foto de María" className="iconomaria" src={process.env.PUBLIC_URL + '/assets/img/maria.png'}/>

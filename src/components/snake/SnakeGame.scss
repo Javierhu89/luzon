@@ -3,10 +3,10 @@
   margin: auto;
   border-style: solid;
   /* color de fondo */
-  // background-color: black;
-  background-image: url("map.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-color: white;
+  //background-image: url("map.jpg");
+  //background-size: 100% 100%;
+  //background-repeat: no-repeat;
 }
 
 #GameBoard .Block {
@@ -67,19 +67,9 @@
   margin-left: 111.8px;
 }
 
-button.restart{
-
-    background: #a2e58d;
-    border-radius: 10px;
-    border: 0px;
-    width: 148px;
-    height: 46px;
-    font-weight: bold;
-    align-items: center;
-    margin: 0 auto;
-    display: block;
-    margin-top: 10px;
-}
 .ocultos{
   visibility: hidden;
+}
+h3.acumulados{
+  margin-top:0px;
 }

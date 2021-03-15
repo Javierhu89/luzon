@@ -2,6 +2,7 @@ import React from 'react'
 import './SnakeGame.scss'
 import GameOver from './GameOver.js'
 import Nav from '../Nav/Nav'
+import { Redirect } from "react-router-dom";
 // color serpiente y color manzana
 // snakeColor: this.getRandomColor(),
 // appleColor: this.getRandomColor(),
@@ -10,7 +11,7 @@ class SnakeGame extends React.Component {
     super(props)
 
     this.handleKeyDown = this.handleKeyDown.bind(this)
-
+    localStorage.setItem('Puntos Acumulados', 0)
     this.state = {
       width: 0,
       height: 0,
@@ -28,9 +29,8 @@ class SnakeGame extends React.Component {
       isGameOver: false,
       snakeColor: this.props.snakeColor || this.getRandomColor(),
       appleColor: this.props.appleColor  || this.getRandomColor(),
-      score: 0,
-      highScore: Number(localStorage.getItem('snakeHighScore')) || 0,
-      newHighScore: false
+      Score: 0,
+      numInfo:0
     }
   }
   componentDidMount() {
@@ -99,9 +99,6 @@ class SnakeGame extends React.Component {
         blockHeight
     }
     
-
-
-
     this.setState({
       width,
       height,
@@ -118,7 +115,6 @@ class SnakeGame extends React.Component {
     let timeoutId = setTimeout(() => {
       if (!this.state.isGameOver) {
         this.moveSnake()
-        this.tryToEatSnake()
         this.tryToEatApple()
         this.tryToEatRock()
         this.setState({ directionChanged: false })
@@ -134,92 +130,6 @@ class SnakeGame extends React.Component {
     clearTimeout(this.state.timeoutId)
     window.removeEventListener('keydown', this.handleKeyDown)
   }
-
-  resetGame() {
-    let width = this.state.width
-    let height = this.state.height
-    let blockWidth = this.state.blockWidth
-    let blockHeight = this.state.blockHeight
-    let apple = this.state.apple
-    let rock = this.state.rock
-
-    // snake reset
-    let snake = []
-    let Xpos = width / 2
-    let Ypos = height / 2
-    let snakeHead = { Xpos: width / 2, Ypos: height / 2 }
-    snake.push(snakeHead)
-    for (let i = 1; i < this.state.startSnakeSize; i++) {
-      Xpos -= blockWidth
-      let snakePart = { Xpos: Xpos, Ypos: Ypos }
-      snake.push(snakePart)
-    }
-
-    // apple position reset
-    
-    rock =[{}]
-      let auxiliar = {Xpos:0, Ypos:0};
-      auxiliar.Xpos =
-        Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
-        blockWidth
-      auxiliar.Ypos =
-        Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
-        blockHeight
-      while (this.isRockOnSnake(auxiliar.Xpos, auxiliar.Ypos)) {
-        auxiliar.Xpos =
-          Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
-          blockWidth
-        auxiliar.Ypos =
-          Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
-          blockHeight
-      }
-      let auxiliar1 = {Xpos:0, Ypos:0};
-      auxiliar1.Xpos =
-        Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
-        blockWidth
-      auxiliar1.Ypos =
-        Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
-        blockHeight
-      while (this.isRockOnSnake(auxiliar1.Xpos, auxiliar1.Ypos)||auxiliar1.Xpos===auxiliar.Xpos||auxiliar1.Ypos===auxiliar.Ypos) {
-        auxiliar.Xpos =
-          Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
-          blockWidth
-        auxiliar.Ypos =
-          Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
-          blockHeight
-      }
-      rock[0]=auxiliar;
-      rock.push(auxiliar1);
-      apple.Xpos =
-      Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
-      blockWidth
-    apple.Ypos =
-      Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
-      blockHeight
-    while (this.isAppleOnSnake(apple.Xpos, apple.Ypos)) {
-      apple.Xpos =
-        Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
-        blockWidth
-      apple.Ypos =
-        Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
-        blockHeight
-    }
-
-    this.setState({
-      snake,
-      apple,
-      rock,
-      direction: 'right',
-      directionChanged: false,
-      isGameOver: false,
-      gameLoopTimeout: 100, // Cambia la velocidad al morir? Modificar?
-      snakeColor: this.getRandomColor(),
-      appleColor: this.getRandomColor(),
-      score: 0,
-      newHighScore: false,
-    })
-  }
-
   getRandomColor() {
     let hexa = '0123456789ABCDEF'
     let color = '#'
@@ -249,7 +159,6 @@ class SnakeGame extends React.Component {
     let rock = this.state.rock
     for(let i=0;i<rock.length;i++){
       if (snake[0].Xpos === rock[i].Xpos && snake[0].Ypos === rock[i].Ypos) {
-        console.log("roca")
       this.setState({ isGameOver: true })
     }
   }}
@@ -257,6 +166,7 @@ class SnakeGame extends React.Component {
     let snake = this.state.snake
     let apple = this.state.apple
     let rock = this.state.rock
+    let numInfo = this.state.numInfo
 
     // if the snake's head is on an apple
     if (snake[0].Xpos === apple.Xpos && snake[0].Ypos === apple.Ypos) {
@@ -265,9 +175,8 @@ class SnakeGame extends React.Component {
       let blockWidth = this.state.blockWidth
       let blockHeight = this.state.blockHeight
       let newTail = { Xpos: apple.Xpos, Ypos: apple.Ypos }
-      let highScore = this.state.highScore
-      let newHighScore = this.state.newHighScore
       let gameLoopTimeout = this.state.gameLoopTimeout
+      let Score = this.state.Score;
       // increase snake size
       snake.push(newTail)
 
@@ -307,12 +216,8 @@ class SnakeGame extends React.Component {
            
 
       // increment high score if needed
-      if (this.state.score === highScore) {
-        highScore++
-        localStorage.setItem('snakeHighScore', highScore)
-        newHighScore = true
-      }
-
+        Score++
+        localStorage.setItem('Puntos Acumulados', Score)
       // decrease the game loop timeout
       if (gameLoopTimeout > 25) gameLoopTimeout -= 0.5
 
@@ -320,25 +225,12 @@ class SnakeGame extends React.Component {
         snake,
         apple,
         rock,
-        score: this.state.score + 1,
-        highScore,
-        newHighScore,
+        Score,
         gameLoopTimeout,
+        numInfo: numInfo +1
       })
     }
   }
-  cambiarRestart = () => {
-    this.resetGame()
-  }
-  tryToEatSnake() {
-    let snake = this.state.snake
-
-    for (let i = 1; i < snake.length; i++) {
-      if (snake[0].Xpos === snake[i].Xpos && snake[0].Ypos === snake[i].Ypos)
-        this.setState({ isGameOver: true })
-    }
-  }
-
   isRockOnSnake(rockXpos, rockYpos) {
     let snake = this.state.snake
     for (let i = 0; i < snake.length; i++) {
@@ -418,10 +310,6 @@ class SnakeGame extends React.Component {
   handleKeyDown(event) {
     // if spacebar is pressed to run a new game
     //TO-DO: score > X 
-    if (this.state.isGameOver && event.keyCode === 32) {
-      this.resetGame() // Tocar aquí si queremos redireccionar
-      return
-    }
 
     if (this.state.directionChanged) return
 //teclas - números, asignar clicks a diferentes teclas
@@ -472,14 +360,11 @@ class SnakeGame extends React.Component {
     // Game over
     if (this.state.isGameOver) {
       return ( <div>
-        <GameOver
+        <GameOver key= '2'
           width={this.state.width}
           height={this.state.height}
-          highScore={this.state.highScore}
-          newHighScore={this.state.newHighScore}
-          score={this.state.score}
+          Score={this.state.Score}
         />
-        <button className="restart" onClick={this.cambiarRestart}>Restart!</button>
         </div>
       )
     }
@@ -493,22 +378,8 @@ class SnakeGame extends React.Component {
           borderWidth: this.state.width / 50,
         }}>
         {this.state.snake.map((snakePart, index) => {
-          if(index!==0){
-            return (
-            <div
-              key={index}
-              className='Block'
-              style={{
-                width: this.state.blockWidth,
-                height: this.state.blockHeight,
-                left: snakePart.Xpos,
-                top: snakePart.Ypos,
-                background: this.state.snakeColor,
-              }}
-            />
-            )}else {
+          if(index==0){
               return (
-                
                 <img alt='Personaje Corriendo'
                   key={index}
                   className='Block'
@@ -542,8 +413,7 @@ class SnakeGame extends React.Component {
             background: 'green',
           }} src={process.env.PUBLIC_URL + 'assets/img/ladrillo.png'} />)}): <></>}
         <div id='Score' style={{ fontSize: this.state.width / 20 }}>
-          HIGH-SCORE: {this.state.highScore}&ensp;&ensp;&ensp;&ensp;SCORE:{' '}
-          {this.state.score}
+          <h3 className='acumulados'>Puntos Acumulados: {this.state.Score} </h3>
         </div>
 
       </div><br/><br/><br/>
@@ -553,7 +423,8 @@ class SnakeGame extends React.Component {
           <img onClick={()=>this.goRight()} className="flecha3" alt="flechader" id="flechader" src={process.env.PUBLIC_URL + '/assets/img/FlechaDer.png'} />
           <img onClick={()=>this.goDown()} className="flecha4" alt="flechaAbaj" id="flechaabaj" src={process.env.PUBLIC_URL + '/assets/img/FlechaAbaj.png'} />
       </div>
-      <Nav />
+      <Nav key='1'/>
+      {this.state.numInfo===10?(<Redirect to={{ pathname: '/quiz' }}/>):<></> }
       </div>
     )
   }
