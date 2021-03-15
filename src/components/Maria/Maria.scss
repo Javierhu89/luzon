@@ -1,0 +1,53 @@
+img.iconomaria{
+    margin-top:40px;
+    border-radius: 10px;
+    width: 71px;
+    height: 66px;
+}
+div.superior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+p.perez{
+    margin-left:-30px;
+    margin-top:55px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+img.sonido{
+    margin-left:-10px;
+    margin-top:64px;
+    width: 25px;
+    height: 25px;
+}
+p.descrip{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFF9F9;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top:10px;
+    margin-bottom: 0;
+}
+img.momento{
+    display: block;
+    margin: auto;
+    width: 250px;
+    height: auto;
+    margin-top: 0px;
+}
+p.tiempo{
+    margin-bottom: 15px;
+}
+p.ayuda{
+    padding-bottom: 30px;
+}

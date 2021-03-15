@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Game1 from "./Game1";
+import Maria from "./Maria";
 
-describe("Game1", () => {
+describe("Maria", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<Game1 />);
+    const wrapper = shallow(<Maria />);
     expect(wrapper).toMatchSnapshot();
   });
 });
