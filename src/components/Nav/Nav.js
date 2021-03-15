@@ -37,7 +37,10 @@ const useStyles = makeStyles({
       }
   }
   return (
-    <div className="fijo">
+    <div className="fijo" style={{ 
+      backgroundImage: `url(${process.env.PUBLIC_URL + 'assets/img/barraNavegacion.png'})`,
+      backgroundRepeat: 'no-repeat', BackgroundSize: 'cover'
+    }}>
       
     <BottomNavigation
      showLabels

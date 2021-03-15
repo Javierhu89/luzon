@@ -23,7 +23,7 @@ class Main extends Component {
     }}>
       <Header />
       <div className="introduccion">
-      <p className="descripcion">La <span className="modificarcolor">Fundación Luzón</span> es una organización independiente, sin ánimo de lucro y dedicada por completo a la mejora de las condiciones con las que viven los pacientes con <span className="modificarcolor">ELA</span> y sus familiares.</p>
+      <p className="luzon">La <span className="modificarcolor">Fundación Luzón</span> es una organización independiente, sin ánimo de lucro y dedicada por completo a la mejora de las condiciones con las que viven los pacientes con <span className="modificarcolor">ELA</span> y sus familiares.</p>
       <a href="https://ffluzon.org/" className="externa" target="_blank">Visita nuestra página para saber más.</a>
       <p className="elalife"><span className="modificarcolor">#ELALIFE</span> se inspiró para apoyar la causa y concienciar sobre la enfermedad</p>
       <div className="donjug">

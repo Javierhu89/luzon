@@ -14,7 +14,7 @@ div.jugadores{
     margin-top:-20px;
     display: flex;
     flex-direction: row;
-    align-items: center
+    align-items: center;
 }
 p.edad{
     text-align: right;
@@ -36,14 +36,14 @@ div.recuadro{
     margin-top: 30px;
 }
 p.descripcion{
-    margin-top: 12%;
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 16px;
     color: #FFFFFF;
-    margin-right: 0px;
+    margin-right: 8%;
+    margin-left:8%;
 }
 img.foto{
     padding-top: 7%;
@@ -52,10 +52,24 @@ img.foto{
 span.negrita{
     font-weight: bold;
 }
+p.javiedad{
+    margin-top:-15px;
+}
+p.subtitulo{
+    margin-top: 12%;
+}
 img.javi {
     padding-top:0;
 }
-p.javiedad{
-    margin-top:-18px;
+img.david {
+    padding-top:0;
 }
-
+p.davidedad{
+    margin-top:-20.4px;
+}
+p.saraedad{
+    margin-right: 10.4%;
+}
+div.inferior{
+    margin-bottom: 68px;
+}
