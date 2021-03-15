@@ -1,0 +1,85 @@
+#GameBoard {
+    position: relative;
+    margin: auto;
+    border-style: solid;
+    /* color de fondo */
+    // background-color: black;
+    background-image: url("map.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  #GameBoard .Block {
+    position: absolute;
+  }
+  
+  #GameBoard #GameOver {
+    text-align: center;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #GameBoard #Score {
+    position: relative;
+    top: 105%;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  #GameBoard #GameOverText {
+    color: #ca0000;
+    font-weight: bold;
+    text-decoration-line: underline;
+  }
+  
+  #GameBoard #PressSpaceText {
+    color: #2e7ecb;
+    font-weight: bold;
+  }
+  .botones{
+    background: #BAC3D7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 273.6px;
+    height: 204px;
+    margin-top:-15px;
+    margin-left:auto;
+    margin-right: auto;
+  }
+  .flecha1, .flecha2, .flecha3, .flecha4{
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+  }
+  .flecha1{
+    margin-top: 10px;
+    margin-left: 111.8px;
+  }
+  .flecha2{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 126.5px;
+  }
+  .flecha4{
+    margin-top:10px;
+    margin-left: 111.8px;
+  }
+  
+  button.restart{
+  
+      background: #a2e58d;
+      border-radius: 10px;
+      border: 0px;
+      width: 148px;
+      height: 46px;
+      font-weight: bold;
+      align-items: center;
+      margin: 0 auto;
+      display: block;
+      margin-top: 10px;
+  }
+  .ocultos{
+    visibility: hidden;
+  }
