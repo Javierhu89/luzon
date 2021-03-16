@@ -3,6 +3,8 @@ import './SnakeGame.scss'
 import GameOver from './GameOver.js'
 import Nav from '../Nav/Nav'
 import { Redirect } from "react-router-dom";
+import { ThreeSixtyOutlined } from '@material-ui/icons';
+import Modal from '../Modal/Modal'
 // color serpiente y color manzana
 // snakeColor: this.getRandomColor(),
 // appleColor: this.getRandomColor(),
@@ -30,7 +32,9 @@ class SnakeGame extends React.Component {
       snakeColor: this.props.snakeColor || this.getRandomColor(),
       appleColor: this.props.appleColor  || this.getRandomColor(),
       Score: 0,
-      numInfo:0
+      numInfo:0, 
+      active: false,
+      quiz: false
     }
   }
   componentDidMount() {
@@ -160,6 +164,8 @@ class SnakeGame extends React.Component {
     for(let i=0;i<rock.length;i++){
       if (snake[0].Xpos === rock[i].Xpos && snake[0].Ypos === rock[i].Ypos) {
       this.setState({ isGameOver: true })
+      this.setState({'active': !this.state.active})
+
     }
   }}
   tryToEatApple() {
@@ -229,6 +235,10 @@ class SnakeGame extends React.Component {
         gameLoopTimeout,
         numInfo: numInfo +1
       })
+      if(this.state.numInfo===10){
+        this.setState({ isGameOver: true })
+        this.setState({'active': !this.state.active})
+      }
     }
   }
   isRockOnSnake(rockXpos, rockYpos) {
@@ -239,7 +249,6 @@ class SnakeGame extends React.Component {
     } // ojo con rockXpos === snake[i].Xpos && 
     return false
   }
-
   isAppleOnSnake(appleXpos, appleYpos) {
     let snake = this.state.snake
     let rock = this.state.rock
@@ -254,7 +263,6 @@ class SnakeGame extends React.Component {
     }          
     return false
   }
-
   moveHead() {
     switch (this.state.direction) {
       case 'left':
@@ -279,7 +287,6 @@ class SnakeGame extends React.Component {
       snake[0].Xpos <= 0 ? width - blockWidth : snake[0].Xpos - blockWidth
     this.setState({ snake })
   }
-
   moveHeadUp() {
     let height = this.state.height
     let blockHeight = this.state.blockHeight
@@ -353,18 +360,46 @@ class SnakeGame extends React.Component {
   goDown() {
     let newDirection = this.state.direction === 'up' ? 'up' : 'down'
     this.setState({ direction: newDirection })
+  } 
+  toggle = () => {
+    this.setState({'active': !this.state.active})
+    this.setState({'quiz': !this.state.quiz})
   }
-  
 
   render() {
+    const styleModal = {
+      position: "relative",
+      top: '25%'
+    }
     // Game over
-    if (this.state.isGameOver) {
+    if (this.state.isGameOver && this.state.numInfo ===10) {
       return ( <div>
         <GameOver key= '2'
           width={this.state.width}
           height={this.state.height}
           Score={this.state.Score}
         />
+        <Modal active={this.state.active} toggle={this.toggle}>
+        <p className='ops'>¡Felicidades! Has pasado el reto y has ganado 10 puntos.</p>
+        <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
+        </Modal>
+        {this.state.quiz?(<Redirect to={{ pathname: '/quiz', state: {fase: 1}}}/>):<></> }
+        </div>
+      )
+    } else if (this.state.isGameOver && this.state.numInfo <10){
+      return ( <div>
+        <GameOver key= '2'
+          width={this.state.width}
+          height={this.state.height}
+          Score={this.state.Score}
+        />
+        <Modal active={this.state.active} toggle={this.toggle}>
+        <p className='ops'>¡Oops!</p>
+        <p className='chocado'>Te has chocado contra la pared.</p>
+        <p>Has acumulado: {this.state.Score} puntos.</p>
+        <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
+        </Modal>
+        {this.state.quiz?(<Redirect to={{ pathname: '/quiz', state: {fase: 1} }}/>):<></> }
         </div>
       )
     }
@@ -424,7 +459,7 @@ class SnakeGame extends React.Component {
           <img onClick={()=>this.goDown()} className="flecha4" alt="flechaAbaj" id="flechaabaj" src={process.env.PUBLIC_URL + '/assets/img/FlechaAbaj.png'} />
       </div>
       <Nav key='1'/>
-      {this.state.numInfo===10?(<Redirect to={{ pathname: '/quiz' }}/>):<></> }
+      {this.state.quiz?(<Redirect to={{ pathname: '/quiz' }}/>):<></> }
       </div>
     )
   }

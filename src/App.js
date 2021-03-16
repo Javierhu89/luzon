@@ -10,6 +10,7 @@ import Intro from './components/Intro/Intro';
 import Home from './components/Home/Home';
 import Maria from './components/Maria/Maria';
 import SnakeGame from './components/snake/SnakeGame';
+import Quiz from './components/Quiz/Quiz';
  function App () {
 return(
   <div>
@@ -22,6 +23,7 @@ return(
         <Route path='/game' component={Game}/>
         <Route path='/maria' component={Maria}/>
         <Route exact path='/phase1' component={SnakeGame}/>
+        <Route exact path='/quiz' component={Quiz}/>
         <Route exact path='/donar' component={Donar}/>
       </Switch>
   </BrowserRouter>
