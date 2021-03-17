@@ -374,7 +374,7 @@ class SnakeGame extends React.Component {
     // Game over
     if (this.state.isGameOver && this.state.numInfo ===10) {
       return ( <div>
-        <GameOver key= '2'
+        <GameOver
           width={this.state.width}
           height={this.state.height}
           Score={this.state.Score}
@@ -388,7 +388,7 @@ class SnakeGame extends React.Component {
       )
     } else if (this.state.isGameOver && this.state.numInfo <10){
       return ( <div>
-        <GameOver key= '2'
+        <GameOver
           width={this.state.width}
           height={this.state.height}
           Score={this.state.Score}
@@ -424,7 +424,7 @@ class SnakeGame extends React.Component {
                     left: snakePart.Xpos,
                     top: snakePart.Ypos,
                     // background: this.state.snakeColor,
-                  }} src={process.env.PUBLIC_URL + 'assets/img/jefe.png'}
+                  }} src={process.env.PUBLIC_URL + 'assets/img/ninja.png'}
                 />
               )
             }
@@ -439,7 +439,7 @@ class SnakeGame extends React.Component {
           }} src={process.env.PUBLIC_URL + 'assets/img/info.png'} />
 
 
-        {this.state.rock? this.state.rock.map( (item,i) => {return (<img alt='Ladrillos' className='Block'
+        {this.state.rock? this.state.rock.map( (item,i) => {return (<img key={i} alt='Ladrillos' className='Block'
           style={{
             width: this.state.blockWidth,
             height: this.state.blockHeight,
@@ -458,7 +458,7 @@ class SnakeGame extends React.Component {
           <img onClick={()=>this.goRight()} className="flecha3" alt="flechader" id="flechader" src={process.env.PUBLIC_URL + '/assets/img/FlechaDer.png'} />
           <img onClick={()=>this.goDown()} className="flecha4" alt="flechaAbaj" id="flechaabaj" src={process.env.PUBLIC_URL + '/assets/img/FlechaAbaj.png'} />
       </div>
-      <Nav key='1'/>
+      <Nav />
       {this.state.quiz?(<Redirect to={{ pathname: '/quiz' }}/>):<></> }
       </div>
     )

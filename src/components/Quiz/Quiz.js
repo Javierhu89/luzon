@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import './Quiz.scss';
 import axios from 'axios';
 import Modal from '../Modal/Modal'
+import ModalBuena from "../ModalBuena/ModalBuena";
+import ModalMala from "../ModalMala/ModalMala";
+import { Redirect } from "react-router-dom";
 class Quiz extends Component {
 
   constructor(props) {
@@ -14,7 +17,8 @@ class Quiz extends Component {
        active: true,
        buena:null,
        mala:null,
-       Score:null
+       Score:null, 
+       solucion:null
     }
   }
   corregir = (i) => {
@@ -24,11 +28,17 @@ class Quiz extends Component {
       elemento.className = 'verde';
       this.setState({'buena':true})
       let value = parseInt(localStorage.getItem('Puntos Acumulados')) + 10;
-      localStorage.setItem('Puntos Acumulados', value)
+      if(value>20){
+        localStorage.setItem('Puntos Acumulados', 20)
+      } else{
+        localStorage.setItem('Puntos Acumulados', value)
+      }
       this.setState({Score: value })
     } else {
       let elemento = document.getElementById(`opcion${i}`);
       elemento.className = 'rojo';
+      let value = parseInt(localStorage.getItem('Puntos Acumulados'))
+      this.setState({Score: value })
       this.setState({'mala':true})
     } 
   }
@@ -46,9 +56,17 @@ class Quiz extends Component {
 //     }
 //   })
 // }
-  toggle = () => {
+toggle = () => {
   this.setState({'active': !this.state.active})
   //this.setState({'solucion': !this.state.solucion})
+}
+toggle2 = () => {
+  this.setState({'buena': !this.state.buena})
+  this.setState({'solucion': !this.state.solucion})
+}
+toggle3= () => {
+  this.setState({'mala': !this.state.mala})
+  this.setState({'solucion': !this.state.solucion})
 }
 
   render() {
@@ -72,20 +90,19 @@ class Quiz extends Component {
         </button>
         </Modal>
 
+        <ModalBuena buena={this.state.buena} toggle2={this.toggle2}>
+        <img className='results' alt='Celebración'src={process.env.PUBLIC_URL + '/assets/img/celebracion.png'}></img>
+        <p className='presult'>¡Enhorabuena!</p>
+        <p className='presult inferior'>Has conseguido {this.state.Score} puntos en esta fase. </p>
+        </ModalBuena>
 
-        
-        <Modal buena={this.state.buena} toggle2={this.toggle2}>
-        <img className='imgQuestion' alt='Signo de Interrogación'src={process.env.PUBLIC_URL + '/assets/img/.png'}></img>
-        <p className='ops info'>¡Enhorabuena! Has conseguido {this.state.Score} puntos en esta fase. </p>
-        </Modal>
-        <Modal mala={this.state.mala} toggle2={this.toggle2}>
-        <img className='imgQuestion' alt='Signo de Interrogación'src={process.env.PUBLIC_URL + '/assets/img/.png'}></img>
-        <p className='ops info'>Lo sentimos. Esta respuesta no es correcta. Tus puntos actuales son {this.state.Score}.</p>
-        </Modal>
+        <ModalMala mala={this.state.mala} toggle3={this.toggle3}>
+        <img className='results' alt='¡Has fallado!'src={process.env.PUBLIC_URL + '/assets/img/incorrecto.png'}></img>
+        <p className='presult'>Lo sentimos.</p>
+        <p className='presult inferior'>Esta respuesta no es correcta. Tus puntos actuales son {this.state.Score}.</p>
+        </ModalMala>
 
-
-
-        {/* {this.state.solucion?(<Redirect to={{ pathname: '/quiz', state: {fase: 1} }}/>):<></> } */}
+        {this.state.solucion?(<Redirect to={{ pathname: '/solucion', state: {fase: 1} }}/>):<></> }
       </div>;
     }
 }
