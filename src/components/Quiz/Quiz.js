@@ -19,7 +19,7 @@ class Quiz extends Component {
   }
   corregir = (i) => {
     console.log(`opcion${i}`)
-    if (i===1){
+    if (i===2){
       let elemento = document.getElementById(`opcion${i}`);
       elemento.className = 'verde';
       this.setState({'buena':true})

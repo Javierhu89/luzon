@@ -37,6 +37,8 @@ button.omitir{
     border: 0;
     background-color: white;
     text-decoration: underline;
+    position:absolute;
+    z-index:3;
 }
 div.divOmitir{
     height: 13vh;
@@ -46,7 +48,7 @@ img.bolas{
     margin: 10px auto;
 }
 div.board{
-    height: 100vh;
+    height: 100%;
 }
 div.sigue{
     height: 12vh;
@@ -64,4 +66,20 @@ button#seguimos{
     display: block;
     margin: 10px auto;
     text-decoration:none;
+    position:absolute;
+    z-index:3;
+    left: 33.125%;
+}
+div.izquierda{
+    position: absolute;
+    top:0;
+    width: 50%;
+    height: 100vh;
+}
+div.derecha{
+    position: absolute;
+    top:0;
+    left: 50%;
+    width: 50%;
+    height: 100vh;
 }

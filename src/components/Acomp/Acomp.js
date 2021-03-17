@@ -15,7 +15,8 @@ class Acomp extends Component {
       alts: ['Mujer Saludando', 'Hombre sentado en sofá', 'Dos personas colaborando', 'Mujer Saludando' ],
       pagina:0,
       omitir: null,
-      home : null
+      home : null,
+      luzon: null
     }
   }
   
@@ -30,12 +31,21 @@ class Acomp extends Component {
       this.setState({'pagina': sumar})
     }
   }
+  retrocederPagina = () => {
+    if (this.state.pagina===0){
+      this.setState({'luzon':true})
+    } else {
+      let restar = this.state.pagina - 1;
+      this.setState({'pagina': restar})
+    }
+  }
+
   omitirOnboarding = () => {
     this.setState({'omitir': true});
   }
   
   render() {
-      return (<div className="board" onClick={this.pasarPagina}> 
+      return (<> <div className="board"> 
       <img className="saludar" alt={this.state.alts[this.state.pagina]} src={process.env.PUBLIC_URL + this.state.imagen[this.state.pagina]} />
       <h2 className="acompanante">{this.state.h2[this.state.pagina]}</h2>
       <p className="elige">{this.state.p[this.state.pagina]}</p>
@@ -49,8 +59,10 @@ class Acomp extends Component {
       :<div className="divOmitir"><button className="omitir" onClick={this.omitirOnboarding}>Omitir</button></div>}
       {this.state.omitir?(<Redirect to={{ pathname: '/game' }}/>):<></> }
       {this.state.home?(<Redirect to={{ pathname: '/home' }}/>):<></> }
+      {this.state.luzon?(<Redirect to={{ pathname: '/luzon' }}/>):<></> }
       <img className="bolas" alt="orden de paginación" src={process.env.PUBLIC_URL + this.state.bolas[this.state.pagina] } />
-  </div>)
+  </div><div className='izquierda' onClick={this.retrocederPagina}></div><div className='derecha' onClick={this.pasarPagina}></div>     
+      </>)
 }}
 
 export default Acomp;
