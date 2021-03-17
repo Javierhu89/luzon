@@ -74,6 +74,11 @@ toggle3= () => {
       position: "relative",
       top: '25%'
     }
+    if(this.props.location.state===undefined){
+      return (
+      <Redirect to={{ pathname: '/game' }}/>
+      )
+    } else {
       return <div>
         <img className='imgQuestion' alt='Signo de Interrogación'src={process.env.PUBLIC_URL + '/assets/img/question.png'}></img>
         <h3 className="pregunta">¿Crees que María puede tener ELA siendo tan joven?</h3>
@@ -104,7 +109,7 @@ toggle3= () => {
 
         {this.state.solucion?(<Redirect to={{ pathname: '/solucion', state: {fase: this.props.location.state.fase} }}/>):<></> }
       </div>;
-    }
+    }}
 }
 
 export default Quiz;

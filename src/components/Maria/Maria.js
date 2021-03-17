@@ -25,6 +25,11 @@ class Maria extends Component {
   }
   
   render() {
+    if(this.props.location.state===undefined){
+      return (
+      <Redirect to={{ pathname: '/game' }}/>
+      )
+    } else {
     if(this.props.location.state.fase===1){
     return <div style={{ 
       backgroundColor: '#BAC3D7'
@@ -106,6 +111,7 @@ class Maria extends Component {
     {this.state.jugar?(<Redirect to={{ pathname: '/phase4' }}/>):<></> }
     </div>
   }
+}
 }
 }
 
