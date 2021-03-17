@@ -1,6 +1,5 @@
 import React from 'react'
 import './SnakeGame.scss'
-import GameOver from './GameOver.js'
 import Nav from '../Nav/Nav'
 import { Redirect } from "react-router-dom";
 import { ThreeSixtyOutlined } from '@material-ui/icons';
@@ -374,11 +373,7 @@ class SnakeGame extends React.Component {
     // Game over
     if (this.state.isGameOver && this.state.numInfo ===10) {
       return ( <div>
-        <GameOver
-          width={this.state.width}
-          height={this.state.height}
-          Score={this.state.Score}
-        />
+        
         <Modal active={this.state.active} toggle={this.toggle}>
         <p className='ops'>¡Felicidades! Has pasado el reto y has ganado 10 puntos.</p>
         <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
@@ -388,11 +383,7 @@ class SnakeGame extends React.Component {
       )
     } else if (this.state.isGameOver && this.state.numInfo <10){
       return ( <div>
-        <GameOver
-          width={this.state.width}
-          height={this.state.height}
-          Score={this.state.Score}
-        />
+        
         <Modal active={this.state.active} toggle={this.toggle}>
         <p className='ops'>¡Oops!</p>
         <p className='chocado'>Te has chocado contra la pared.</p>

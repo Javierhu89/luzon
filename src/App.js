@@ -10,6 +10,7 @@ import Intro from './components/Intro/Intro';
 import Home from './components/Home/Home';
 import Maria from './components/Maria/Maria';
 import SnakeGame from './components/snake/SnakeGame';
+import SnakeGame2 from './components/SnakeGame2/SnakeGame2';
 import Quiz from './components/Quiz/Quiz';
 import Solucion from './components/Solucion/Solucion';
  function App () {
@@ -24,6 +25,7 @@ return(
         <Route path='/game' component={Game}/>
         <Route path='/maria' component={Maria}/>
         <Route path='/phase1' component={SnakeGame}/>
+        <Route path='/phase2' component={SnakeGame2}/>
         <Route path='/quiz' component={Quiz}/>
         <Route path='/solucion' component={Solucion}/>
         <Route path='/donar' component={Donar}/>

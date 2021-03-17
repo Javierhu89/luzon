@@ -28,11 +28,7 @@ class Quiz extends Component {
       elemento.className = 'verde';
       this.setState({'buena':true})
       let value = parseInt(localStorage.getItem('Puntos Acumulados')) + 10;
-      if(value>20){
-        localStorage.setItem('Puntos Acumulados', 20)
-      } else{
-        localStorage.setItem('Puntos Acumulados', value)
-      }
+      localStorage.setItem('Puntos Acumulados', value)
       this.setState({Score: value })
     } else {
       let elemento = document.getElementById(`opcion${i}`);
