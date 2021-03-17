@@ -15,6 +15,7 @@ import SnakeGame3 from './components/SnakeGame3/SnakeGame3';
 import SnakeGame4 from './components/SnakeGame4/SnakeGame4';
 import Quiz from './components/Quiz/Quiz';
 import Solucion from './components/Solucion/Solucion';
+import Colaborar from './components/Colaborar/Colaborar';
  function App () {
 return(
   <div>
@@ -32,6 +33,7 @@ return(
         <Route path='/phase4' component={SnakeGame4}/>
         <Route path='/quiz' component={Quiz}/>
         <Route path='/solucion' component={Solucion}/>
+        <Route path='/colaborar' component={Colaborar}/>
         <Route path='/donar' component={Donar}/>
       </Switch>
   </BrowserRouter>

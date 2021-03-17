@@ -1,0 +1,42 @@
+p.participar{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 42px;
+    color: #666666;
+    width: 45%;
+    text-align: center;
+    margin-top: 35px;
+}
+div.colabora{
+    display:flex;
+    justify-content: space-around;
+}
+img.participar{
+    height: 70px;
+    width: auto;
+    margin-right: -15px;
+}
+img.imgcolaborando{
+    display: block;
+    margin: 10px auto;
+    width: 160px;
+}
+div.total{
+    height: 100vh;
+}
+p.pCura{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left:25px;
+    margin-right: 25px;
+}
+button.dono{
+    margin-top:38px;
+}
