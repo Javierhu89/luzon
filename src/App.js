@@ -12,6 +12,7 @@ import Maria from './components/Maria/Maria';
 import SnakeGame from './components/snake/SnakeGame';
 import SnakeGame2 from './components/SnakeGame2/SnakeGame2';
 import SnakeGame3 from './components/SnakeGame3/SnakeGame3';
+import SnakeGame4 from './components/SnakeGame4/SnakeGame4';
 import Quiz from './components/Quiz/Quiz';
 import Solucion from './components/Solucion/Solucion';
  function App () {
@@ -28,6 +29,7 @@ return(
         <Route path='/phase1' component={SnakeGame}/>
         <Route path='/phase2' component={SnakeGame2}/>
         <Route path='/phase3' component={SnakeGame3}/>
+        <Route path='/phase4' component={SnakeGame4}/>
         <Route path='/quiz' component={Quiz}/>
         <Route path='/solucion' component={Solucion}/>
         <Route path='/donar' component={Donar}/>

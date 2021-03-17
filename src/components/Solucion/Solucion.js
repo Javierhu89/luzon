@@ -55,7 +55,7 @@ class Solucion extends Component {
         backgroundColor: '#BAC3D7'
       }}>
         <div className="title">
-        <h1 className="prevencion">EVOLUCIÓN</h1>
+        <h1 className="h1title">EVOLUCIÓN</h1>
         <p className="text"> En nuestro país, algunos de los costes directos de tipo médico están generalmente cubiertos por el Sistema Nacional de Salud o los seguros de salud privados, mientras que otros costes recaen directamente en la persona y en sus familias, llegando a superar en algunos casos los 50.000€. </p>
         </div>
         {this.state.maria?(<Redirect to={{ pathname: '/colaborar'}}/>):<></> }
