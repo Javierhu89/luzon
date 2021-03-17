@@ -13,7 +13,13 @@ class Solucion extends Component {
     this.setState({'maria':true})
   }
   render() {
-      if(this.props.location.state.fase===1){
+    if(this.props.location.state===undefined){
+    return (
+    <Redirect to={{ pathname: '/game' }}/>
+    )
+  }
+     else {
+       if (this.props.location.state.fase===1){
         return <div onClick={this.goToMaria} style={{ 
         backgroundColor: '#BAC3D7'
     }}>
@@ -29,7 +35,7 @@ class Solucion extends Component {
         backgroundColor: '#BAC3D7'
         }}>
         <div className="title">
-        <h1 className="prevencion">PREDIAGNÓSTICO</h1>
+        <h1 className="h1title">PREDIAGNÓSTICO</h1>
         <p className="text"> En esta fase, los síntomas iniciales de la Esclerosis Lateral Amiotrófica, que aparecen gradualmente, son muy inespecíficos y es habitual que se presente con formas inusuales, por lo que son fácilmente confundidos con los de otras enfermedades, como los de la Esclerosis Múltiple.</p>
         </div>
         {this.state.maria?(<Redirect to={{ pathname: '/maria', state: {fase: 3} }}/>):<></> }
@@ -39,7 +45,7 @@ class Solucion extends Component {
         backgroundColor: '#BAC3D7'
         }}>
         <div className="title">
-        <h1 className="prevencion">DIAGNÓSTICO</h1>
+        <h1 className="h1title">DIAGNÓSTICO</h1>
         <p className="text"> La ELA no tiene una prueba específica. El proceso para llegar a diagnosticar la ELA es difícil y en muchos casos suele comenzar en el médico de Atención Primaria. Éste realizará un exámen físico y redactará una historia detallada con los signos y síntomas observados. Tras un estudio del informe, y si el médico sospecha, derivará al paciente al servicio de Neurología.</p>
         </div>
         {this.state.maria?(<Redirect to={{ pathname: '/maria', state: {fase: 4} }}/>):<></> }
@@ -54,7 +60,7 @@ class Solucion extends Component {
         </div>
         {this.state.maria?(<Redirect to={{ pathname: '/colaborar'}}/>):<></> }
         </div>
-        }
+        }}
 }
 }
 
