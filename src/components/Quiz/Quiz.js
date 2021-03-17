@@ -42,12 +42,12 @@ class Quiz extends Component {
       this.setState({'mala':true})
     } 
   }
-//   componentDidMount = () => {
+//componentDidMount = () => {
 //     axios.get(``)
 //     .then(res => {
-//       if(this.props.location.state.fase===1){
-
-//     } else if(this.props.location.state.fase===2){
+ //    if(this.props.location.state.fase===1){
+      
+ //    } else if(this.props.location.state.fase===2){
 
 //     } else if(this.props.location.state.fase===3){
 
@@ -102,7 +102,7 @@ toggle3= () => {
         <p className='presult inferior'>Esta respuesta no es correcta. Tus puntos actuales son {this.state.Score}.</p>
         </ModalMala>
 
-        {this.state.solucion?(<Redirect to={{ pathname: '/solucion', state: {fase: 1} }}/>):<></> }
+        {this.state.solucion?(<Redirect to={{ pathname: '/solucion', state: {fase: this.props.location.state.fase} }}/>):<></> }
       </div>;
     }
 }

@@ -25,7 +25,7 @@ class Maria extends Component {
   }
   
   render() {
-    if(this.props.paginas!==null){
+    if(this.props.location.state.fase===1){
     return <div style={{ 
       backgroundColor: '#BAC3D7'
     }}>
@@ -48,7 +48,7 @@ class Maria extends Component {
       <button onClick={this.irAjugar}>¡A jugar!</button>
       {this.state.jugar?(<Redirect to={{ pathname: '/phase1' }}/>):<></> }
       </div>;
-    } else if (this.props.paginas===1){
+    } else if (this.props.location.state.fase===2){
       return <div style={{ 
         backgroundColor: '#BAC3D7'
       }}>
@@ -62,11 +62,13 @@ class Maria extends Component {
       :<img onClick={this.quitarAudio} alt="Logo de sonido tachado" className="No sonido" src={process.env.PUBLIC_URL + '/assets/img/nosonido.png'}/>
       }
       </div>
-      <p className="descrip">Estoy en el hospital de Basurto, me han visto más de 10 médicos y me han hecho diferentes pruebas, sigo sin encontrarme mejor y los médicos aún no saben qué me pasa.</p>
+      <p className="descrip">Estoy en el hospital de Basurto, me han visto más de 10 médicos y me han hecho diferentes pruebas, pero sigo sin encontrarme mejor y los médicos aún no saben qué me pasa.</p>
       <img alt="Doctor mirando radiografía" className="momento" src={process.env.PUBLIC_URL + '/assets/img/doctor.png'}/>
-      <p className="descrip tiempo">Han sugerido que los síntomas se relacionan con las de la esclerosis múltiple pero sigo sin estar segura. Estoy asustada, ¿conseguirán hacerme alguna prueba que determine que me pasa?¿A cuántos hospitales mas tendre que ir?.</p>
+      <p className="descrip tiempo sintoma">Han sugerido que los síntomas se relacionan con las de la esclerosis múltiple pero sigo sin estar segura. Estoy asustada, ¿conseguirán hacerme alguna prueba que determine que me pasa?.</p>
+      <button onClick={this.irAjugar}>¡A jugar!</button>
+      {this.state.jugar?(<Redirect to={{ pathname: '/phase2' }}/>):<></> }
       </div>
-    } else if(this.props.paginas===2){
+    } else if(this.props.location.state.fase===3){
       return <div style={{ 
         backgroundColor: '#BAC3D7'
       }}>
@@ -82,6 +84,8 @@ class Maria extends Component {
       </div>
       <p className="descrip">Está confirmado. Mi diagnóstico final después de 9 meses de pruebas es ELA. Me siento muy abrumada y no estoy segura de lo que debo hacer a continuación. Necesito un fisioterapeuta que me ayude a levantarme por las mañanas y un psicólogo para poder asumir todo lo que me esta pasando. También estoy preocupada por los trámites que tengo que rellenar. Parece que nadie puede guiarme en los siguientes pasos. ¿Me ayudas?.</p>
       <img alt="María buscando entre documentos" className="momento" src={process.env.PUBLIC_URL + '/assets/img/documentos.png'}/>
+      <button onClick={this.irAjugar}>¡A jugar!</button>
+      {this.state.jugar?(<Redirect to={{ pathname: '/phase3' }}/>):<></> }
       </div>
   } else {
     return <div style={{ 
@@ -97,7 +101,10 @@ class Maria extends Component {
       :<img onClick={this.quitarAudio} alt="Logo de sonido tachado" className="No sonido" src={process.env.PUBLIC_URL + '/assets/img/nosonido.png'}/>
       }
     </div>
-    <p className="descrip">Ha pasado un año desde que tengo la ELA, mi familia se ha gastado este año 20.000€, que es cuando empecé a necesitar ayudas técnicas (vehículo adaptado, sillas manuales, silla eléctrica, adaptación al baño, grúa de techo). He recibido solo 4.000€ de ayudas del País vasco por la adquisición de las sillas.En el futuro la ELA nos va a suponer más gastos aun porque mi movilidad se reduce cada día.¿Me ayudas a conseguir fondos?</p> </div>
+    <p className="descrip">Ha pasado un año desde que tengo la ELA, mi familia se ha gastado este año 20.000€, que es cuando empecé a necesitar ayudas técnicas (vehículo adaptado, sillas manuales, silla eléctrica, adaptación al baño, grúa de techo). He recibido solo 4.000€ de ayudas del País vasco por la adquisición de las sillas.En el futuro la ELA nos va a suponer más gastos aun porque mi movilidad se reduce cada día.¿Me ayudas a conseguir fondos?</p> 
+    <button onClick={this.irAjugar}>¡A jugar!</button>
+    {this.state.jugar?(<Redirect to={{ pathname: '/phase4' }}/>):<></> }
+    </div>
   }
 }
 }

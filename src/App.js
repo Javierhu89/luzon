@@ -11,20 +11,22 @@ import Home from './components/Home/Home';
 import Maria from './components/Maria/Maria';
 import SnakeGame from './components/snake/SnakeGame';
 import Quiz from './components/Quiz/Quiz';
+import Solucion from './components/Solucion/Solucion';
  function App () {
 return(
   <div>
   <BrowserRouter>
       <Switch>
         <Route exact path='/' component={Intro}/>
-        <Route exact path='/luzon' component={Main}/>
-        <Route exact path='/Onboarding' component={Acomp}/>
-        <Route exact path='/home' component={Home}/>
+        <Route path='/luzon' component={Main}/>
+        <Route path='/Onboarding' component={Acomp}/>
+        <Route path='/home' component={Home}/>
         <Route path='/game' component={Game}/>
         <Route path='/maria' component={Maria}/>
-        <Route exact path='/phase1' component={SnakeGame}/>
-        <Route exact path='/quiz' component={Quiz}/>
-        <Route exact path='/donar' component={Donar}/>
+        <Route path='/phase1' component={SnakeGame}/>
+        <Route path='/quiz' component={Quiz}/>
+        <Route path='/solucion' component={Solucion}/>
+        <Route path='/donar' component={Donar}/>
       </Switch>
   </BrowserRouter>
   </ div>

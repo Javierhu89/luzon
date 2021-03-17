@@ -53,7 +53,7 @@ class Game extends Component {
       <p className='edad davidedad black'>David 23 años</p>
     </div>
       <Nav />
-      {this.state.cambiarfase?(<Redirect to={{ pathname: '/maria' }}/>):<></>}
+      {this.state.cambiarfase?(<Redirect to={{ pathname: '/maria' , state: {fase: 1} }}/>):<></> }
     </div>
   }
 }
