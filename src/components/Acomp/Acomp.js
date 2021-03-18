@@ -58,8 +58,8 @@ class Acomp extends Component {
         </div>
       :<div className="divOmitir"><button className="omitir" onClick={this.omitirOnboarding}>Omitir</button></div>}
       {this.state.omitir?(<Redirect to={{ pathname: '/game' }}/>):<></> }
-      {this.state.home?(<Redirect to={{ pathname: '/home' }}/>):<></> }
-      {this.state.luzon?(<Redirect to={{ pathname: '/luzon' }}/>):<></> }
+      {this.state.home?(<Redirect to={{ pathname: '/game' }}/>):<></> }
+      {this.state.luzon?(<Redirect to={{ pathname: '/home' }}/>):<></> }
       <img className="bolas" alt="orden de paginación" src={process.env.PUBLIC_URL + this.state.bolas[this.state.pagina] } />
   </div><div className='izquierda' onClick={this.retrocederPagina}></div><div className='derecha' onClick={this.pasarPagina}></div>     
       </>)

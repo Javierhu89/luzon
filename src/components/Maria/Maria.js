@@ -45,11 +45,11 @@ class Maria extends Component {
       }
       </div>
       <p className="descrip">Hola, gracias por elegir jugar conmigo.</p>
-      <p className="descrip">Soy Maria Perez, vivo en Bilbao, tengo 20 años y vivo con mis padres, soy deportista de alto rendimiento en el mundo de la gimnasia rítmica profesional.</p>
+      <p className="descrip">Soy María Perez, vivo en Bilbao, tengo 20 años y vivo con mis padres, soy deportista de alto rendimiento en el mundo de la gimnasia rítmica.</p>
       <img alt="María haciendo Gimnasia" className="momento" src={process.env.PUBLIC_URL + '/assets/img/gimnasia.png'}/>
-      <p className="descrip tiempo">Desde hace 6 o 7 meses no me siento bien, he empezado a notar falta de fuerza en mis piernas, mi fisio ha estado trabajando conmigo pero no encuentra la explicación a lo que me pasa.</p>
+      <p className="descrip tiempo">Desde hace 6 o 7 meses no me siento bien, he empezado a notar falta de fuerza en mis piernas, mi fisioterapeuta ha estado trabajando conmigo pero no encuentra la explicación a lo que me pasa.</p>
       <img alt="María llorando" className="momento" src={process.env.PUBLIC_URL + '/assets/img/llorando.png'}/>
-      <p className="descrip ayuda">Me han recomendado ir al neurólogo aunque no tengo patologías genéticas¿me ayudas a conseguir información?.</p>
+      <p className="descrip ayuda">Me han recomendado ir al neurólogo aunque no tengo patologías genéticas. ¿Me ayudas a conseguir mas información?.</p>
       <button onClick={this.irAjugar}>¡A jugar!</button>
       {this.state.jugar?(<Redirect to={{ pathname: '/phase1' }}/>):<></> }
       </div>;
@@ -87,7 +87,7 @@ class Maria extends Component {
       :<img onClick={this.quitarAudio} alt="Logo de sonido tachado" className="No sonido" src={process.env.PUBLIC_URL + '/assets/img/nosonido.png'}/>
       }
       </div>
-      <p className="descrip">Está confirmado. Mi diagnóstico final después de 9 meses de pruebas es ELA. Me siento muy abrumada y no estoy segura de lo que debo hacer a continuación. Necesito un fisioterapeuta que me ayude a levantarme por las mañanas y un psicólogo para poder asumir todo lo que me esta pasando. También estoy preocupada por los trámites que tengo que rellenar. Parece que nadie puede guiarme en los estos pasos. ¿Me ayudas?.</p>
+      <p className="descrip">Está confirmado. Mi diagnóstico final después de 9 meses de pruebas es ELA. Me siento muy abrumada y no estoy segura de lo que debo hacer a continuación. Necesito un fisio que me ayude a levantarme por las mañanas y un psicólogo para poder asumir todo lo que me esta pasando. También estoy preocupada por los trámites que tengo que rellenar. Parece que nadie puede guiarme en estos pasos. ¿Me ayudas?.</p>
       <img alt="María buscando entre documentos" className="momento" src={process.env.PUBLIC_URL + '/assets/img/documentos.png'}/>
       <button onClick={this.irAjugar}>¡A jugar!</button>
       {this.state.jugar?(<Redirect to={{ pathname: '/phase3' }}/>):<></> }
@@ -106,7 +106,7 @@ class Maria extends Component {
       :<img onClick={this.quitarAudio} alt="Logo de sonido tachado" className="No sonido" src={process.env.PUBLIC_URL + '/assets/img/nosonido.png'}/>
       }
     </div>
-    <p className="descrip">Ha pasado un año desde que me diagnosticaron la ELA. En este año, mi familia se ha gastado más de 20.000€ en ayudas técnicas para mi movilidad, un vehículo adaptado, una silla manual, una silla eléctrica, adaptación para el baño, una grúa de techo, pero sólo he recibido 4.000€ de ayudas por la compra de las sillas. En el futuro la ELA va a suponer muchos más gastos a mi familia, ya que mi movilidad se reduce cada día y cada vez necesito más ayuda. ¿Me ayudas a conseguir fondos?</p> 
+    <p className="descrip">Ha pasado un año desde que me diagnosticaron la ELA. En este año, mi familia se ha gastado más de 20.000€ en ayudas técnicas para mi movilidad, un vehículo adaptado, una silla manual, una silla eléctrica, adaptación para el baño, una grúa de techo, pero sólo he recibido 4.000€ de ayudas por la compra de las sillas. En el futuro, la ELA va a suponer muchos más gastos a mi familia, ya que mi movilidad se reduce cada día y cada vez necesito más ayuda. ¿Me ayudas a conseguir fondos?</p> 
     <button onClick={this.irAjugar}>¡A jugar!</button>
     {this.state.jugar?(<Redirect to={{ pathname: '/phase4' }}/>):<></> }
     </div>

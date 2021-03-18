@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import './App.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
-import Main from './components/Main/Main';
 import Game from './components/Game/Game';
 import Donar from './components/Donar/Donar'
 import Acomp from './components/Acomp';
@@ -22,7 +21,6 @@ return(
   <BrowserRouter>
       <Switch>
         <Route exact path='/' component={Intro}/>
-        <Route path='/luzon' component={Main}/>
         <Route path='/Onboarding' component={Acomp}/>
         <Route path='/home' component={Home}/>
         <Route path='/game' component={Game}/>

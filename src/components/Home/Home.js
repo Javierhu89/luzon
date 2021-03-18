@@ -13,7 +13,7 @@ class Home extends Component {
   }
   
   goToJugar = () =>{
-      this.setState({'traslado':'/Game'})
+      this.setState({'traslado':'/Onboarding'})
     }
   goToDonar = () => {
     this.setState({'traslado':'/Donar'})
@@ -28,12 +28,14 @@ class Home extends Component {
       <p className="sobre">La ELA (Esclerosis Lateral Amiotrófica) es una enfermedad del sistema nervioso central que produce una degeneración progresiva de las neuronas motoras </p>
       <p className="sobre">Es la enfermedad de neuronas motoras más frecuente del adulto.</p>
       <p className="sobre">Es una enfermedad sin tratamiento curativo, con una esperanza de vida entre 3 y 5 años.</p>
+      <p className="sobre">La Fundación Luzón es una organización independiente, sin ánimo de lucro y dedicada por completo a la mejora de las condiciones con las que viven los pacientes con ELA y sus familiares.</p>
+      <p className="sobre">#ELALIFE se inspiró para apoyar la causa y concienciar sobre la enfermedad.</p>
       <div className="donjug">
         <button className="siguiente play" onClick={this.goToJugar}>
-          JUGAR
+          Jugar
         </button>
         <button className="siguiente play" onClick={this.goToDonar}>
-          DONAR
+          Donar
         </button>
       </div>
       {this.state.traslado?(<Redirect to={{ pathname: this.state.traslado }}/>):<></> }

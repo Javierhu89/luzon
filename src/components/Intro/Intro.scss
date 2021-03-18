@@ -1,8 +1,19 @@
 img.intro{
-    margin:10px auto;
+    margin:0px auto;
 	display:block;
-    padding-top:220px;
+    padding-top:120px;
     padding-bottom: 150px;
     width: 189.2px;
     height: 180px;
+    margin-left:77px;
+}
+div.introductorio{
+    background: #BAC3D7;
+    width: 100%;
+    height: 100vh;
+}
+img.bajera{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
