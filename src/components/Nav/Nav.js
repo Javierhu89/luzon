@@ -14,9 +14,11 @@ const [value, setValue] = useState(null);
         setValue('/game')
       }
   }
+
+  {/* {parseInt(localStorage.getItem('Puntos Acumulados'))>} */}
   return (
     <>
-    <img className="fijo" src={process.env.PUBLIC_URL + '/assets/img/navegacion.svg'}></img>
+    <img className="fijo" src={process.env.PUBLIC_URL + '/assets/img/nav.svg'}></img>
     <div className="iconosNav">
     <div className="home">
     <img className="icons" onClick={() => redireccionar(1)} src={process.env.PUBLIC_URL + '/assets/img/home.png'}></img><p onClick={() => redireccionar(1)} className="icons">Home</p></div>

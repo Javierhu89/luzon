@@ -30,9 +30,11 @@ class SnakeGame2 extends React.Component {
       snakeColor: this.props.snakeColor || this.getRandomColor(),
       appleColor: this.props.appleColor  || this.getRandomColor(),
       Score: parseInt(localStorage.getItem('Puntos Acumulados')),
+      Score2: 0,
       numHosp:0,
       active: false,
-      quiz: false
+      quiz: false,
+      imagen: ""
     }
   }
 
@@ -45,7 +47,7 @@ class SnakeGame2 extends React.Component {
   
   initGame() {
     // Game size initialization
-    let percentageWidth = this.props.percentageWidth || 95 // Con el segundo valor tocas el tamaño de la pantalla
+    let percentageWidth = this.props.percentageWidth || 100 // Con el segundo valor tocas el tamaño de la pantalla
     let width =
       document.getElementById('GameBoard').parentElement.offsetWidth *
       (percentageWidth / 100)
@@ -185,6 +187,7 @@ class SnakeGame2 extends React.Component {
       let newTail = { Xpos: apple.Xpos, Ypos: apple.Ypos }
       let gameLoopTimeout = this.state.gameLoopTimeout
       let Score = this.state.Score;
+      let Score2 = this.state.Score2;
       // increase snake size
       snake.push(newTail)
 
@@ -224,6 +227,16 @@ class SnakeGame2 extends React.Component {
            
       // increment high score if needed
         Score = Score + 3;
+        Score2 = Score2 + 3;
+        if(Score2>11&&Score2<22){
+          this.setState({'imagen':'1'})
+        } else if(Score2>22&&Score2<33){
+          this.setState({'imagen':'2'})
+        } else if(Score2>33&&Score2<45){
+          this.setState({'imagen':'3'})
+        } else if (Score2===45) {
+          this.setState({'imagen':'4'})
+        }
         localStorage.setItem('Puntos Acumulados', Score)
       // decrease the game loop timeout
       if (gameLoopTimeout > 25) gameLoopTimeout -= 0.5
@@ -233,6 +246,7 @@ class SnakeGame2 extends React.Component {
         apple,
         rock,
         Score,
+        Score2,
         gameLoopTimeout,
         numHosp: numHosp +1
       })
@@ -379,7 +393,12 @@ class SnakeGame2 extends React.Component {
     this.setState({'active': !this.state.active})
     this.setState({'quiz': !this.state.quiz})
   }
-
+  redireccionar = () =>{
+    this.setState({'redirigir':'/'})
+  }
+  redireccionar1 = () =>{
+    this.setState({'redirigir':'/donar'})
+  }
   render() {
     const styleModal = {
       position: "relative",
@@ -389,7 +408,7 @@ class SnakeGame2 extends React.Component {
       if (this.state.isGameOver && this.state.numHosp ===15) {
       return ( <div>
         <Modal active={this.state.active} toggle={this.toggle}>
-        <p className='ops'>¡Felicidades! Has pasado el reto y has ganado 15 puntos.</p>
+        <p className='ops'>¡Felicidades! Has pasado el reto y has ganado {this.state.Score} puntos.</p>
         <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
         </Modal>
         {this.state.quiz?(<Redirect to={{ pathname: '/quiz', state: {fase: 2}}}/>):<></> }
@@ -407,7 +426,8 @@ class SnakeGame2 extends React.Component {
         </div>
       )
     }
-    return ( <div>
+    return ( <div> <div className="gameboy" id="GameBoy">
+      <div className="screen-area">  
       <div
         id='GameBoard'
         style={{
@@ -462,18 +482,43 @@ class SnakeGame2 extends React.Component {
             background: 'green',
           }} src={process.env.PUBLIC_URL + 'assets/img/ladrillo.png'} />)}): <></>}
       <div id='Score' style={{ fontSize: this.state.width / 20 }}>
-          <h3 className='acumulados'>Puntos Acumulados: {this.state.Score} </h3>
-        </div>
-
-      </div><br/><br/><br/>
-      <div className="botones">
-          <img onClick={()=>this.goUp()} className="flecha1" alt="flechaArr" id="flechaarr" src={process.env.PUBLIC_URL + '/assets/img/FlechaArr.png'} />
-          <img onClick={()=>this.goLeft()} className="flecha2" alt="flechaizq" id="flechaizq" src={process.env.PUBLIC_URL + '/assets/img/FlechaIzq.png'} />
-          <img onClick={()=>this.goRight()} className="flecha3" alt="flechader" id="flechader" src={process.env.PUBLIC_URL + '/assets/img/FlechaDer.png'} />
-          <img onClick={()=>this.goDown()} className="flecha4" alt="flechaAbaj" id="flechaabaj" src={process.env.PUBLIC_URL + '/assets/img/FlechaAbaj.png'} />
       </div>
-      <Nav />
-      {this.state.quiz?(<Redirect to={{ pathname: '/quiz' }}/>):<></> }
+      </div>
+      <div className="label">
+        <div className="title">ELA </div>
+        <div className="subtitle">
+          <span className="letra">L</span>
+          <span className="letra">I</span>
+       <span className="letra">F</span>
+       <span className="letra">E</span>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div className="controls">
+      <div className="dpad">
+        <div className="up"><i className="fa fa-caret-up" onClick={()=>this.goUp()}></i></div>
+        <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}></i></div>
+        <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}></i></div>
+        <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}></i></div>
+        <div className="middle"></div>
+      </div>
+    </div>    
+  </div>
+      
+      <br/><br/><br/>
+      <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.svg`}></img>
+    <div className="iconosNav">
+    <div className="home">
+    <img className="icons" onClick={ this.redireccionar} src={process.env.PUBLIC_URL + '/assets/img/home.png'}></img><p onClick={this.redireccionar} className="icons">Home</p></div>
+    <p className="puntuacion">{this.state.Score}</p>
+    <div className="colaborar">
+    <img onClick={this.redireccionar1} className="icons flor" src={process.env.PUBLIC_URL + '/assets/img/crecimiento.png'}></img> <p onClick={this.redireccionar1} className="icons">Colaborar</p>
+    </div>
+    </div>
+    {this.state.redirigir?(<Redirect to={{ pathname: this.state.redirigir }}/>):<></> }
+    {this.state.quiz?(<Redirect to={{ pathname: '/quiz' }}/>):<></> }
       </div>
     )
   }
