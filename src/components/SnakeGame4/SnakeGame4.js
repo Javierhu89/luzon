@@ -27,7 +27,7 @@ class SnakeGame4 extends React.Component {
       direction: 'right',
       directionChanged: false,
       isGameOver: false,
-      Score: localStorage.getItem('Puntos Acumulados'),
+      Score: parseInt(localStorage.getItem('Puntos Acumulados')),
       numDin:0,
       active: false,
       quiz: false,
@@ -248,7 +248,7 @@ class SnakeGame4 extends React.Component {
            
 
       // increment high score if needed
-        Score++
+        Score = Score + 3;
         localStorage.setItem('Puntos Acumulados', Score)
       // decrease the game loop timeout
       if (gameLoopTimeout > 25) gameLoopTimeout -= 0.5
@@ -261,7 +261,7 @@ class SnakeGame4 extends React.Component {
         gameLoopTimeout,
         numDin: numDin +1
       })
-      if(this.state.numDin===16){
+      if(this.state.numDin===21){
         this.setState({ isGameOver: true })
         clearInterval(this.intervalID)
         this.setState({'active': !this.state.active})
@@ -412,16 +412,16 @@ class SnakeGame4 extends React.Component {
       top: '30%'
     }
     // Game over
-      if (this.state.isGameOver && this.state.numDin ===16) {
+      if (this.state.isGameOver && this.state.numDin ===21) {
       return ( <div>
         <Modal active={this.state.active} toggle={this.toggle}>
-        <p className='ops'>¡Felicidades! Has pasado el reto y has ganado 16 puntos.</p>
+        <p className='ops'>¡Felicidades! Has pasado el reto y has ganado 21 puntos.</p>
         <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
         </Modal>
         {this.state.quiz?(<Redirect to={{ pathname: '/quiz', state: {fase: 4}}}/>):<></> }
         </div>
       )
-    } else if (this.state.isGameOver && this.state.numDin<16){
+    } else if (this.state.isGameOver && this.state.numDin<21){
       return ( <div>
         <Modal active={this.state.active} toggle={this.toggle}>
         <p className='ops'>¡Oops!</p>

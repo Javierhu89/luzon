@@ -221,7 +221,7 @@ class SnakeGame extends React.Component {
            
 
       // increment high score if needed
-        Score++
+        Score = Score + 3
         localStorage.setItem('Puntos Acumulados', Score)
       // decrease the game loop timeout
       if (gameLoopTimeout > 25) gameLoopTimeout -= 0.5
@@ -234,7 +234,7 @@ class SnakeGame extends React.Component {
         gameLoopTimeout,
         numInfo: numInfo +1
       })
-      if(this.state.numInfo===10){
+      if(this.state.numInfo===12){
         this.setState({ isGameOver: true })
         this.setState({'active': !this.state.active})
       }
@@ -371,17 +371,17 @@ class SnakeGame extends React.Component {
       top: '25%'
     }
     // Game over
-    if (this.state.isGameOver && this.state.numInfo ===10) {
+    if (this.state.isGameOver && this.state.numInfo ===12) {
       return ( <div>
         
         <Modal active={this.state.active} toggle={this.toggle}>
-        <p className='ops'>¡Felicidades! Has pasado el reto y has ganado 10 puntos.</p>
+        <p className='ops'>¡Felicidades! Has pasado el reto y has ganado 12 puntos.</p>
         <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
         </Modal>
         {this.state.quiz?(<Redirect to={{ pathname: '/quiz', state: {fase: 1}}}/>):<></> }
         </div>
       )
-    } else if (this.state.isGameOver && this.state.numInfo <10){
+    } else if (this.state.isGameOver && this.state.numInfo <12){
       return ( <div>
         
         <Modal active={this.state.active} toggle={this.toggle}>

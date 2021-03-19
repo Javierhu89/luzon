@@ -29,7 +29,7 @@ class SnakeGame2 extends React.Component {
       isGameOver: false,
       snakeColor: this.props.snakeColor || this.getRandomColor(),
       appleColor: this.props.appleColor  || this.getRandomColor(),
-      Score: localStorage.getItem('Puntos Acumulados'),
+      Score: parseInt(localStorage.getItem('Puntos Acumulados')),
       numHosp:0,
       active: false,
       quiz: false
@@ -222,9 +222,8 @@ class SnakeGame2 extends React.Component {
           ) * blockHeight
       }
            
-
       // increment high score if needed
-        Score++
+        Score = Score + 3;
         localStorage.setItem('Puntos Acumulados', Score)
       // decrease the game loop timeout
       if (gameLoopTimeout > 25) gameLoopTimeout -= 0.5
@@ -237,7 +236,7 @@ class SnakeGame2 extends React.Component {
         gameLoopTimeout,
         numHosp: numHosp +1
       })
-      if(this.state.numHosp===12){
+      if(this.state.numHosp===15){
         this.setState({ isGameOver: true })
         this.setState({'active': !this.state.active})
       }
@@ -387,16 +386,16 @@ class SnakeGame2 extends React.Component {
       top: '30%'
     }
     // Game over
-      if (this.state.isGameOver && this.state.numHosp ===12) {
+      if (this.state.isGameOver && this.state.numHosp ===15) {
       return ( <div>
         <Modal active={this.state.active} toggle={this.toggle}>
-        <p className='ops'>¡Felicidades! Has pasado el reto y has ganado 12 puntos.</p>
+        <p className='ops'>¡Felicidades! Has pasado el reto y has ganado 15 puntos.</p>
         <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
         </Modal>
         {this.state.quiz?(<Redirect to={{ pathname: '/quiz', state: {fase: 2}}}/>):<></> }
         </div>
       )
-    } else if (this.state.isGameOver && this.state.numHosp<12){
+    } else if (this.state.isGameOver && this.state.numHosp<15){
       return ( <div>
         <Modal active={this.state.active} toggle={this.toggle}>
         <p className='ops'>¡Oops!</p>

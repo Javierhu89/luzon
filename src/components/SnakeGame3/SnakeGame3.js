@@ -29,7 +29,7 @@ class SnakeGame3 extends React.Component {
       isGameOver: false,
       snakeColor: this.props.snakeColor || this.getRandomColor(),
       appleColor: this.props.appleColor  || this.getRandomColor(),
-      Score: localStorage.getItem('Puntos Acumulados'),
+      Score: parseInt(localStorage.getItem('Puntos Acumulados')),
       numFoll:0,
       active: false,
       quiz: false
@@ -224,7 +224,7 @@ class SnakeGame3 extends React.Component {
            
 
       // increment high score if needed
-        Score++
+        Score = Score + 3;
         localStorage.setItem('Puntos Acumulados', Score)
       // decrease the game loop timeout
       if (gameLoopTimeout > 25) gameLoopTimeout -= 0.5
@@ -237,7 +237,7 @@ class SnakeGame3 extends React.Component {
         gameLoopTimeout,
         numFoll: numFoll +1
       })
-      if(this.state.numFoll===14){
+      if(this.state.numFoll===18){
         this.setState({ isGameOver: true })
         this.setState({'active': !this.state.active})
       }
@@ -387,16 +387,16 @@ class SnakeGame3 extends React.Component {
       top: '30%'
     }
     // Game over
-      if (this.state.isGameOver && this.state.numFoll ===14) {
+      if (this.state.isGameOver && this.state.numFoll ===18) {
       return ( <div>
         <Modal active={this.state.active} toggle={this.toggle}>
-        <p className='ops'>¡Felicidades! Has pasado el reto y has ganado 14 puntos.</p>
+        <p className='ops'>¡Felicidades! Has pasado el reto y has ganado 18 puntos.</p>
         <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
         </Modal>
         {this.state.quiz?(<Redirect to={{ pathname: '/quiz', state: {fase: 3}}}/>):<></> }
         </div>
       )
-    } else if (this.state.isGameOver && this.state.numFoll<14){
+    } else if (this.state.isGameOver && this.state.numFoll<18){
       return ( <div>
         <Modal active={this.state.active} toggle={this.toggle}>
         <p className='ops'>¡Oops!</p>
