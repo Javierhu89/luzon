@@ -14,7 +14,7 @@ class Game extends Component {
     this.setState({'cambiarfase':true})
   }
   render() {
-    return <div>
+    return <>
     <h3 className="choose">Elige tu jugador</h3>
     <div className='recuadro' onClick={this.goToPhase1}>
       <div className='jugadores'>
@@ -54,7 +54,7 @@ class Game extends Component {
     </div>
       <Nav />
       {this.state.cambiarfase?(<Redirect to={{ pathname: '/maria' , state: {fase: 1} }}/>):<></> }
-    </div>
+    </>
   }
 }
 

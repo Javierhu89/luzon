@@ -32,7 +32,7 @@ p.descrip{
     font-weight: normal;
     font-size: 19px;
     line-height: 28px;
-    color: #FFF9F9;
+    color: #666666;
     margin-left: 35px;
     margin-right: 35px;
     margin-top:10px;
@@ -45,11 +45,17 @@ img.momento{
     width: 250px;
     height: auto;
     margin-top: 10px;
+    margin-bottom: 15px;
 }
 p.tiempo{
     padding-top:20px;
     padding-bottom: 20px;
 }
 p.ayuda{
-    padding-bottom: 30px;
+    padding-bottom: 5px;
+}
+img.Flecha{
+    margin-top:0px;
+    padding-bottom: 70px;
+    margin-left: 82%;
 }
