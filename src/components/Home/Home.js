@@ -32,10 +32,10 @@ class Home extends Component {
       <p className="sobre">#ELALIFE se inspiró para apoyar la causa y concienciar sobre la enfermedad.</p>
       <div className="donjug">
         <button className="siguiente play" onClick={this.goToJugar}>
-          Jugar
+          JUGAR
         </button>
         <button className="siguiente play" onClick={this.goToDonar}>
-          Donar
+          DONAR
         </button>
       </div>
       {this.state.traslado?(<Redirect to={{ pathname: this.state.traslado }}/>):<></> }

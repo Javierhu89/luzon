@@ -34,10 +34,10 @@ class Solucion extends Component {
       <p className="text">La ELA puede afectar a personas de cualquier edad, sean niños, jóvenes o adultos</p>
       <div className="donjug solve">
         <button className="siguiente play" onClick={this.goToMaria}>
-          Continuar
+          CONTINUAR
         </button>
         <button className="siguiente play" onClick={this.goToDonar}>
-          Colaborar
+          DONAR
         </button>
         </div>
       </div>
@@ -56,10 +56,10 @@ class Solucion extends Component {
         <p className="text"> En esta fase, los síntomas iniciales de la Esclerosis Lateral Amiotrófica, que aparecen gradualmente, son muy inespecíficos y es habitual que se presente con formas inusuales, por lo que son fácilmente confundidos con los de otras enfermedades, como los de la Esclerosis Múltiple.</p>
         <div className="donjug solve">
         <button className="siguiente play" onClick={this.goToMaria}>
-          Continuar
+          CONTINUAR
         </button>
         <button className="siguiente play" onClick={this.goToDonar}>
-          Colaborar
+          DONAR
         </button>
         </div>
       </div>
@@ -78,10 +78,10 @@ class Solucion extends Component {
         <p className="text"> La ELA no tiene una prueba específica. El proceso para llegar a diagnosticar la ELA es difícil y en muchos casos suele comenzar en el médico de Atención Primaria. Éste realizará un exámen físico y redactará una historia detallada con los signos y síntomas observados. Tras un estudio del informe, y si el médico sospecha, derivará al paciente al servicio de Neurología.</p>
         <div className="donjug solve">
         <button className="siguiente play" onClick={this.goToMaria}>
-          Continuar
+          CONTINUAR
         </button>
         <button className="siguiente play" onClick={this.goToDonar}>
-          Colaborar
+          DONAR
         </button>
         </div>
         </div>
@@ -100,10 +100,10 @@ class Solucion extends Component {
         <p className="text"> En nuestro país, algunos de los costes directos de tipo médico están generalmente cubiertos por el Sistema Nacional de Salud o los seguros de salud privados, mientras que otros costes recaen directamente en la persona y en sus familias, llegando a superar en algunos casos los 50.000€. </p>
         <div className="donjug solve">
         <button className="siguiente play" onClick={this.goToMaria}>
-          Continuar
+          CONTINUAR
         </button>
         <button className="siguiente play" onClick={this.goToDonar}>
-          Colaborar
+          DONAR
         </button>
         </div>
         </div>

@@ -8,6 +8,7 @@ p.participar{
     width: 45%;
     text-align: center;
     margin-top: 35px;
+    margin-left: -60px;
 }
 div.colabora{
     display:flex;
@@ -21,7 +22,7 @@ img.participar{
 img.imgcolaborando{
     display: block;
     margin: 10px auto;
-    width: 160px;
+    width: 140px;
 }
 div.total{
     height: 100vh;
@@ -36,6 +37,8 @@ p.pCura{
     color: #666666;
     margin-left:25px;
     margin-right: 25px;
+    position:relative;
+    z-index: 3;
 }
 button.dono{
     margin-top:38px;

@@ -141,7 +141,7 @@ toggle3= () => {
         <Modal active={this.state.active} toggle={this.toggle}>
         <p className='ops info'>Basándonos en la información que nos ha dado María, ayúdanos a responder la siguiente pregunta.</p>
         <button className="siguiente play pregunta" onClick={this.toggle}>
-          ¡Ir a la Pregunta!
+          ¡PREGUNTA!
         </button>
         </Modal>
 

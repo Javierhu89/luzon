@@ -53,7 +53,7 @@ div.board{
     height: 100vh;
 }
 div.sigue{
-    height: 18vh;
+    height: 17vh;
     padding-top:1vh;
     margin: 10px auto;
 }
@@ -94,6 +94,7 @@ button.siguiente{
     height: 36px;
     font-weight: bold;
     margin-top:58.5px;
+    z-index: 1;
 }
 div.introduccion{
     margin-top:0px;

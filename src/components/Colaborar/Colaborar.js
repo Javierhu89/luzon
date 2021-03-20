@@ -25,9 +25,10 @@ class Colaborar extends Component {
       <p className="pCura">La ELA no tiene cura, pero fundaciones como Luzón nos ayudan a recibir información, apoyo psicológico e integración. Tu ayuda es muy valiosa en la lucha con nuestro día a día.</p>
       <div className="donjug">
       <button className="siguiente dono" onClick={this.goToDonar}>
-        Colaborar
+        DONAR
       </button>
     </div>
+    <img className="bajera" src={process.env.PUBLIC_URL + '/assets/img/portada.svg'}></img>
     {this.state.donar?(<Redirect to={{ pathname: '/Donar' }}/>):<></> }
     </div>
   }
