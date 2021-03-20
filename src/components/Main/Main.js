@@ -32,7 +32,7 @@ class Main extends Component {
         </button>
       </div>
     </div>
-    {this.state.change?(<Redirect to={{ pathname: '/Onboarding' }}/>):<></> }
+    {this.state.change?(<Redirect to={{ pathname: '/onboarding' }}/>):<></> }
     </div>
     )
   }

@@ -22,7 +22,7 @@ import './Header.scss';
 class Header extends Component {
   render() {
     return <div className='cabecera'>
-      <img className="logo" src={process.env.PUBLIC_URL + '/assets/img/Intro.png'} />
+      <img className="logo" src={process.env.PUBLIC_URL + '/assets/img/elalife.png'} />
     </div>;
   }
 }

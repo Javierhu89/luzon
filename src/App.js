@@ -21,8 +21,8 @@ return(
   <BrowserRouter>
       <Switch>
         <Route exact path='/' component={Intro}/>
-        <Route path='/Onboarding' component={Acomp}/>
-        <Route path='/home' component={Home}/>
+        <Route path='/onboarding' component={Acomp}/>
+        <Route path='/informacion' component={Home}/>
         <Route path='/game' component={Game}/>
         <Route path='/maria' component={Maria}/>
         <Route path='/phase1' component={SnakeGame}/>

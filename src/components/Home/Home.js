@@ -13,7 +13,7 @@ class Home extends Component {
   }
   
   goToJugar = () =>{
-      this.setState({'traslado':'/Onboarding'})
+      this.setState({'traslado':'/onboarding'})
     }
   goToDonar = () => {
     this.setState({'traslado':'/Donar'})
@@ -29,7 +29,7 @@ class Home extends Component {
       <p className="sobre">Es la enfermedad de neuronas motoras más frecuente del adulto.</p>
       <p className="sobre">Es una enfermedad sin tratamiento curativo, con una esperanza de vida entre 3 y 5 años.</p>
       <p className="sobre">La <span className="modificarcolor">Fundación Luzón</span> es una organización independiente, sin ánimo de lucro y dedicada por completo a la mejora de las condiciones con las que viven los pacientes con ELA y sus familiares.</p>
-      <p className="sobre"><span className="modificarcolor">#ELALIFE</span> se inspiró para apoyar la causa y concienciar sobre la enfermedad.</p>
+      <p className="sobre final"><span className="modificarcolor">#ELALIFE</span> se inspiró para apoyar la causa y concienciar sobre la enfermedad.</p>
       <div className="donjug">
         <button className="siguiente play" onClick={this.goToJugar}>
           JUGAR

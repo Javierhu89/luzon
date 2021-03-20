@@ -17,7 +17,7 @@ class Intro extends Component {
   render() {
     return <div className='introductorio' onClick={this.pasarIntro}>
       <img className="intro" src={process.env.PUBLIC_URL + '/assets/img/Intro.png'}></img>
-      {this.state.pagina?(<Redirect to={{ pathname: '/home' }}/>):<></> }
+      {this.state.pagina?(<Redirect to={{ pathname: '/informacion' }}/>):<></> }
       <div>
       <img className="bajera" src={process.env.PUBLIC_URL + '/assets/img/portada.svg'}></img>
         </div>
