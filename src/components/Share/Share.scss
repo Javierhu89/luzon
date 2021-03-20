@@ -3,6 +3,10 @@ div#sharethis-1615497904014{
 }
 div.compartir{
     margin-top:35px;
-    display: block;
+    display: flex;
+    justify-content: center;
     padding-bottom: 30px;
+}
+div.st-btn{
+    display: inline-block;
 }

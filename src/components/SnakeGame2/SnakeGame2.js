@@ -100,7 +100,7 @@ class SnakeGame2 extends React.Component {
     let appleYpos =
       Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
       blockHeight
-    while (appleYpos === snake[0].Ypos) {
+    while (appleYpos === snake[0].Ypos || (appleYpos=== rockYpos && appleXpos===rockXpos) || (appleYpos===rockYpos1 && appleXpos===rockXpos1 )) {
       appleYpos =
         Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
         blockHeight

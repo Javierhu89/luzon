@@ -23,7 +23,6 @@ class Quiz extends Component {
     }
   }
   corregir = (i) => {
-    console.log(`opcion${i}`)
     if (i===this.state.result){
       let elemento = document.getElementById(`opcion${i}`);
       elemento.className = 'verde';
@@ -50,7 +49,6 @@ componentDidMount = () => {
       let j = Math.floor(Math.random() * (5 - 0)) + 0;
       this.setState({'pregunta':data[j][0]})
       let k = Math.floor(Math.random() * (3 - 1)) + 1;
-      console.log(k)
       this.setState({'opcion1':data[j][k]})
       if (k===1){
         this.setState({'opcion2':data[j][2]})
@@ -63,7 +61,6 @@ componentDidMount = () => {
       let j = Math.floor(Math.random() * (10 - 5)) + 5;
       this.setState({'pregunta':data[j][0]})
       let k = Math.floor(Math.random() * (3 - 1)) + 1;
-      console.log(k)
       this.setState({'opcion1':data[j][k]})
       if (k===1){
         this.setState({'opcion2':data[j][2]})
@@ -76,7 +73,6 @@ componentDidMount = () => {
       let j = Math.floor(Math.random() * (15 - 10)) + 10;
       this.setState({'pregunta':data[j][0]})
       let k = Math.floor(Math.random() * (3 - 1)) + 1;
-      console.log(k)
       this.setState({'opcion1':data[j][k]})
       if (k===1){
         this.setState({'opcion2':data[j][2]})
@@ -89,7 +85,6 @@ componentDidMount = () => {
       let j = Math.floor(Math.random() * (20 - 15)) + 15;
       this.setState({'pregunta':data[j][0]})
       let k = Math.floor(Math.random() * (3 - 1)) + 1;
-      console.log(k)
       this.setState({'opcion1':data[j][k]})
       if (k===1){
         this.setState({'opcion2':data[j][2]})
@@ -138,7 +133,7 @@ toggle3= () => {
         <div className='opciones' id='opcion2' onClick={() => this.corregir (2)}>
         <p className='respuestas'>{this.state.opcion2}</p>
         </div>
-        <Modal active={this.state.active} toggle={this.toggle}>
+        <Modal active={this.state.active} toggle={this.toggle} style={{styleModal}}>
         <p className='ops info'>Basándonos en la información que nos ha dado María, ayúdanos a responder la siguiente pregunta.</p>
         <button className="siguiente play pregunta" onClick={this.toggle}>
           ¡PREGUNTA!

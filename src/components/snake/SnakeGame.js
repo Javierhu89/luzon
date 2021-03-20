@@ -381,12 +381,12 @@ class SnakeGame extends React.Component {
   render() {
     const styleModal = {
       position: "relative",
-      top: '25%'
+      top: '15%'
     }
     // Game over
     if (this.state.isGameOver && this.state.numInfo ===12) {
       return ( <div>
-        <Modal active={this.state.active} toggle={this.toggle}>
+        <Modal active={this.state.active} toggle={this.toggle} style={{styleModal}}>
         <p className='ops'>¡Felicidades! Has pasado el reto y has ganado {this.state.Score} puntos.</p>
         <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
         </Modal>
@@ -404,7 +404,7 @@ class SnakeGame extends React.Component {
       )
     } else if (this.state.isGameOver && this.state.numInfo <12){
       return ( <div>
-        <Modal active={this.state.active} toggle={this.toggle}>
+        <Modal active={this.state.active} toggle={this.toggle} style={{styleModal}}>
         <p className='ops'>¡Oops!</p>
         <p className='chocado'>Te has chocado contra la pared.</p>
         <p>Has acumulado: {this.state.Score} puntos.</p>
