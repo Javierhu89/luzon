@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './Quiz.scss';
-import axios from 'axios';
+import data from '../../data'
 import Modal from '../Modal/Modal'
 import ModalBuena from "../ModalBuena/ModalBuena";
 import ModalMala from "../ModalMala/ModalMala";
@@ -18,12 +18,13 @@ class Quiz extends Component {
        buena:null,
        mala:null,
        Score:null, 
-       solucion:null
+       solucion:null,
+       result:null
     }
   }
   corregir = (i) => {
     console.log(`opcion${i}`)
-    if (i===2){
+    if (i===this.state.result){
       let elemento = document.getElementById(`opcion${i}`);
       elemento.className = 'verde';
       this.setState({'buena':true})
@@ -38,20 +39,68 @@ class Quiz extends Component {
       this.setState({'mala':true})
     } 
   }
-//componentDidMount = () => {
-//     axios.get(``)
-//     .then(res => {
- //    if(this.props.location.state.fase===1){
-      
- //    } else if(this.props.location.state.fase===2){
+componentDidMount = () => {
+    if(this.props.location.state===undefined){
+      return (
+        <Redirect to={{ pathname: '/game' }}/>
+      )
+    }
+    else {
+      if(this.props.location.state.fase===1){
+      let j = Math.floor(Math.random() * (5 - 0)) + 0;
+      this.setState({'pregunta':data[j][0]})
+      let k = Math.floor(Math.random() * (3 - 1)) + 1;
+      console.log(k)
+      this.setState({'opcion1':data[j][k]})
+      if (k===1){
+        this.setState({'opcion2':data[j][2]})
+        this.setState({'result': 1})
+      } else {
+        this.setState({'opcion2':data[j][1]})
+        this.setState({'result': 2})
+      }
+    } else if(this.props.location.state.fase===2){
+      let j = Math.floor(Math.random() * (10 - 5)) + 5;
+      this.setState({'pregunta':data[j][0]})
+      let k = Math.floor(Math.random() * (3 - 1)) + 1;
+      console.log(k)
+      this.setState({'opcion1':data[j][k]})
+      if (k===1){
+        this.setState({'opcion2':data[j][2]})
+        this.setState({'result': 1})
+      } else {
+        this.setState({'opcion2':data[j][1]})
+        this.setState({'result': 2})
+      }
+    } else if(this.props.location.state.fase===3){
+      let j = Math.floor(Math.random() * (15 - 10)) + 10;
+      this.setState({'pregunta':data[j][0]})
+      let k = Math.floor(Math.random() * (3 - 1)) + 1;
+      console.log(k)
+      this.setState({'opcion1':data[j][k]})
+      if (k===1){
+        this.setState({'opcion2':data[j][2]})
+        this.setState({'result': 1})
+      } else {
+        this.setState({'opcion2':data[j][1]})
+        this.setState({'result': 2})
+      }
+    } else {
+      let j = Math.floor(Math.random() * (20 - 15)) + 15;
+      this.setState({'pregunta':data[j][0]})
+      let k = Math.floor(Math.random() * (3 - 1)) + 1;
+      console.log(k)
+      this.setState({'opcion1':data[j][k]})
+      if (k===1){
+        this.setState({'opcion2':data[j][2]})
+        this.setState({'result': 1})
+      } else {
+        this.setState({'opcion2':data[j][1]})
+        this.setState({'result': 2})
+      }
+    }
+  }}
 
-//     } else if(this.props.location.state.fase===3){
-
-//     } else {
-
-//     }
-//   })
-// }
 toggle = () => {
   this.setState({'active': !this.state.active})
   //this.setState({'solucion': !this.state.solucion})
@@ -66,6 +115,11 @@ toggle3= () => {
 }
 
   render() {
+    if(this.props.location.state===undefined){
+      return (
+      <Redirect to={{ pathname: '/game' }}/>
+      )
+    } else {
     const styleModal = {
       position: "relative",
       top: '25%'
@@ -77,12 +131,12 @@ toggle3= () => {
     } else {
       return <div>
         <img className='imgQuestion' alt='Signo de Interrogación'src={process.env.PUBLIC_URL + '/assets/img/question.png'}></img>
-        <h3 className="pregunta">¿Crees que María puede tener ELA siendo tan joven?</h3>
+        <h3 className="pregunta">{this.state.pregunta}</h3>
         <div className='opciones' id='opcion1' onClick={() => this.corregir(1)}>
-        <p className='respuestas'>La ELA sola afecta a personas mayores de 40 años</p>
+        <p className='respuestas'>{this.state.opcion1}</p>
         </div>
         <div className='opciones' id='opcion2' onClick={() => this.corregir (2)}>
-        <p className='respuestas'>La Ela puede afectar a personas de cualquier edad</p>
+        <p className='respuestas'>{this.state.opcion2}</p>
         </div>
         <Modal active={this.state.active} toggle={this.toggle}>
         <p className='ops info'>Basándonos en la información que nos ha dado María, ayúdanos a responder la siguiente pregunta.</p>
@@ -105,7 +159,7 @@ toggle3= () => {
 
         {this.state.solucion?(<Redirect to={{ pathname: '/solucion', state: {fase: this.props.location.state.fase} }}/>):<></> }
       </div>;
-    }}
+    }}}
 }
 
 export default Quiz;

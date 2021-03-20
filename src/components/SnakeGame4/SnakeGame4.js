@@ -439,6 +439,15 @@ class SnakeGame4 extends React.Component {
         <p className='ops'>¡Felicidades! Has pasado el reto y has ganado {this.state.Score} puntos.</p>
         <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
         </Modal>
+        <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.svg`}></img>
+        <div className="iconosNav">
+        <div className="home">
+        <img className="icons" onClick={ this.redireccionar} src={process.env.PUBLIC_URL + '/assets/img/home.png'}></img><p onClick={this.redireccionar} className="icons">Home</p></div>
+        <p className="puntuacion">{this.state.Score}</p>
+        <div className="colaborar">
+        <img onClick={this.redireccionar1} className="icons flor" src={process.env.PUBLIC_URL + '/assets/img/crecimiento.png'}></img> <p onClick={this.redireccionar1} className="icons">Colaborar</p>
+        </div>
+        </div>
         {this.state.quiz?(<Redirect to={{ pathname: '/quiz', state: {fase: 4}}}/>):<></> }
         </div>
       )
@@ -450,6 +459,15 @@ class SnakeGame4 extends React.Component {
         <p>Has acumulado: {this.state.Score} puntos.</p>
         <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
         </Modal>
+        <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.svg`}></img>
+        <div className="iconosNav">
+        <div className="home">
+        <img className="icons" onClick={ this.redireccionar} src={process.env.PUBLIC_URL + '/assets/img/home.png'}></img><p onClick={this.redireccionar} className="icons">Home</p></div>
+        <p className="puntuacion">{this.state.Score}</p>
+        <div className="colaborar">
+        <img onClick={this.redireccionar1} className="icons flor" src={process.env.PUBLIC_URL + '/assets/img/crecimiento.png'}></img> <p onClick={this.redireccionar1} className="icons">Colaborar</p>
+        </div>
+        </div>
         {this.state.quiz?(<Redirect to={{ pathname: '/quiz', state: {fase: 4} }}/>):<></> }
         </div>
       )
