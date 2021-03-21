@@ -1,6 +1,7 @@
 .PayPal {
     text-align: center;
-    margin-bottom: 60px;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 img.PayPal{
     display:block;
@@ -35,7 +36,7 @@ p.resultado{
     line-height: 21px;
     text-align: center;
     color: #666666;
-    margin-left: 10px;
+    margin-left: 0;
 }
 p.euros{
     font-weight: normal;
@@ -46,11 +47,44 @@ p.punt{
 div.end{
     background: #FFFFFF;
     border-radius: 8px;
-    margin-left:24px;
-    margin-right: 24px;
-    padding: 10px;
+    margin-left:15px;
+    margin-right: 15px;
+    padding: 15px;
     margin-top:30px;
 }
 img.trofeo{
     width: 65px;
+    height: 79.39px;
+    display:block;
+    margin:10px auto;
+    margin-left:0;
+    margin-right: 10px;
+}
+p.points{
+    font-size: 24px;
+    margin-left:0;
+    padding-left:0;
+    margin-top:5px;
+}
+div.donacion{
+    background-color:  #FFFFFF;
+    border-radius: 10px;
+    height: 300px;
+}p.org{
+    font-size: 15px;
+}
+@media screen and (min-width: 375px) {
+    p.enhorabuena{
+        font-size: 22px;
+    }
+    p.resultado{
+        font-size: 22px;
+    }
+    p.points{
+        font-size: 34px;
+    }p.org{
+        font-size: 19px;
+        padding-bottom: 115px;
+    }
+
 }

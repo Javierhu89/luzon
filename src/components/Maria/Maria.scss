@@ -56,13 +56,18 @@ p.ayuda{
 }
 img.Flecha{
     margin-top:0px;
-    padding-bottom: 70px;
+    padding-bottom: 80px;
     margin-left: 82%;
 } img.final{
     margin-top:15px;
     padding-bottom: 75px;
 } img.basurto{
     margin-top:-10px;
+}
+@media screen and (min-height: 640px) {
+    img.Flecha{
+        padding-bottom: 90px;
+    }
 }
 @media screen and (min-width: 375px){
     p.descrip{
@@ -84,6 +89,6 @@ img.Flecha{
         margin-top: 20px;
         padding-bottom: 10px;
     }img.baja{
-        padding-bottom: 150px;
+        padding-bottom: 140px;
     }
 }

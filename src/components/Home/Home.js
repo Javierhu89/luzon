@@ -27,7 +27,7 @@ class Home extends Component {
       <img alt="Lupa sujetada por dos personas" className="lupa" src={process.env.PUBLIC_URL + '/assets/img/lupa.png'}></img>
       <p className="sobre">La ELA (Esclerosis Lateral Amiotrófica) es una enfermedad del sistema nervioso central que produce una degeneración progresiva de las neuronas motoras </p>
       <p className="sobre">Es una enfermedad sin tratamiento curativo, con una esperanza de vida entre 3 y 5 años.</p>
-      <p className="sobre">La <span className="modificarcolor">Fundación Luzón</span> es una organización independiente, sin ánimo de lucro y dedicada por completo a la mejora de las condiciones con las que viven los pacientes con ELA y sus familiares.</p>
+      <p className="sobre">La <span className="modificarcolor"><a targer="_blank" className="fundacion" href="https://ffluzon.org/">Fundación Luzón</a></span> es una organización independiente, sin ánimo de lucro y dedicada por completo a la mejora de las condiciones con las que viven los pacientes con ELA y sus familiares.</p>
       <p className="sobre final"><span className="modificarcolor">#ELALIFE</span> se inspiró para apoyar la causa y concienciar sobre la enfermedad.</p>
       <div className="donjug">
         <button className="siguiente play step" onClick={this.goToJugar}>

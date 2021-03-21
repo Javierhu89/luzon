@@ -42,9 +42,14 @@ div.home{
 div.colaborar{
     margin-right: 50px;
 }
-@media screen and (min-width: 375px) {
+
+@media screen and (min-height: 640px) {
+    div.iconosNav{
+        bottom: -2px;
+    }
+}
+@media screen and (min-width: 375px) and (min-height: 812px) {
     div.iconosNav{
         bottom: 0;
     }
-
 }

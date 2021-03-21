@@ -32,12 +32,11 @@ button.omitir{
     outline: none;
     display: block;
     margin: 10px auto;
-    left: 41.15%;
     text-decoration: none;
     border: 0;
     background-color: #BAC3D7;
     text-decoration: underline;
-    position:absolute;
+    position:relative;
     z-index:3;
 }
 div.divOmitir{
@@ -53,7 +52,7 @@ div.board{
     height: 100vh;
 }
 div.sigue{
-    height: 10vh;
+    height: 11vh;
     padding-top:0vh;
     padding-bottom:1vh;
     margin: 10px auto;
@@ -69,9 +68,8 @@ button#seguimos{
     display: block;
     margin: 10px auto;
     text-decoration:none;
-    position:absolute;
+    position:relative;
     z-index:3;
-    left: 30.266%;
     margin-top:-5px;
 }
 div.izquierda{
@@ -143,7 +141,7 @@ div.donjug{
         margin-bottom: 75px;
         height: 420.44px;
     }div.sigue {
-        height: 8.5vh;
+        height: 9.5vh;
     }img#sofa{
         width: 352.4px;
     }img#colabora{
