@@ -1,12 +1,12 @@
 img.saludar{
     display: block;
     margin: 0px auto;
-    padding-top: 46px;
+    padding-top: 35px;
     margin-bottom: 20px;
     height: 37vh;
 }
 h2.acompanante{
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -17,7 +17,7 @@ h2.acompanante{
     height: 5vh;
 }
 p.elige{
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
@@ -26,7 +26,7 @@ p.elige{
     color: #666666;
     margin-left: 40px;
     margin-right: 40px;
-    height: 21vh;
+    height: 25vh;
 }
 button.omitir{
     outline: none;
@@ -41,7 +41,7 @@ button.omitir{
     z-index:3;
 }
 div.divOmitir{
-    height: 12vh;
+    height: 11vh;
 }
 img.bolas{
     display: block;
@@ -53,7 +53,7 @@ div.board{
     height: 100vh;
 }
 div.sigue{
-    height: 11vh;
+    height: 10vh;
     padding-top:0vh;
     padding-bottom:1vh;
     margin: 10px auto;
@@ -102,7 +102,7 @@ div.introduccion{
     margin-top:0px;
 }
 p.luzon{
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
