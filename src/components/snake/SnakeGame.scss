@@ -335,7 +335,47 @@ canvas.pantalla{
 div.agrandar{
   height: 510px;
 }
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 360px) {
+  .gameboy .screen-area .display {
+    width:320px;
+}
+}
+@media screen and (min-height: 640px) and (max-height: 666px) {
+  div.gameboy{
+    padding: 15px 0px 25px 0px;
+  }div.agrandar{
+    height: 535px;
+  }
+}
+@media screen and (min-height: 667px) {
+  div.gameboy{
+    padding: 15px 0px 25px 0px;
+  }div.agrandar{
+    height: 555px;
+  }
+}
+@media screen and (min-height: 736px) {
+  div.agrandar{
+    height: 590px;
+  }
+  div.gameboy{
+    padding: 15px 0px 45px 0px;
+  }
+  .gameboy .controls .dpad{
+    width: 130px;
+    height: 130px;
+  }
+}
+@media screen and (min-width: 414px) {
+  .gameboy .screen-area .display {
+    width:370px;
+}
+.gameboy .controls .dpad{
+  width: 130px;
+  height: 130px;
+}
+}
+@media screen and (min-width: 375px) and (min-height: 812px) {
   div.gameboy{
     padding: 35px 0px 75px 0px;
   }

@@ -37,7 +37,22 @@ div.solve{
 button.diag{
     margin-top:33px;
 }
-@media screen and (min-width: 375px) {
+
+@media screen and (min-height: 667px)
+{
+    h1.h1title{
+        font-size: 30px;
+        padding-top:70px;
+        padding-bottom: 30px;
+    } 
+    p.text{
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (min-width: 375px) and (min-height: 812px) {
     h1.h1title{
         font-size: 36px;
         padding-top:121px;

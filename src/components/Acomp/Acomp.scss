@@ -125,23 +125,35 @@ div.donjug{
     justify-content: space-around;
     margin-top:-20px;
 }
-@media screen and (min-width: 375px) {
+@media screen and (min-height: 667px) {
     img.saludar{
-        padding-top:120px;
+        margin-bottom: 35px;
+    }
+}
+@media screen and (min-height: 736px) {
+    img.saludar{
+        padding-top:45px;
+        margin-bottom: 55px;
+    }
+}
+@media screen and (min-width: 375px) and (min-height: 812px) {
+    img.saludar{
+        padding-top:100px;
         width: 280px;
-        margin-bottom: 75px;
+        margin-bottom: 35px;
+        height: auto;
     }h2.acompanante{
         font-size: 24px;
     } p.elige{
         font-size: 17px;
-        height: 14.5vh;
+        height: 16.5vh;
     } div.divOmitir{
-        height: 9.5vh;
+        height: 11.5vh;
     } div.agrupar{
         margin-bottom: 75px;
-        height: 420.44px;
+        height: 370.44px;
     }div.sigue {
-        height: 9.5vh;
+        height: 11.5vh;
     }img#sofa{
         width: 352.4px;
     }img#colabora{
