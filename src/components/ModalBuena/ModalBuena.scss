@@ -1,0 +1,14 @@
+div.modeloBuena{
+    width: 84.7%;
+}
+
+
+@media screen and (min-width: 375px) {
+    div.modeloBuena{
+        width: 85%;
+    }
+    img.results{
+        width: 193px;
+    }
+
+}

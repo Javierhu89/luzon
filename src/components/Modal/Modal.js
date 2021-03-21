@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Portal from '../Portal/Portal'
+import Portal from '../Portal/Portal';
+import './Modal.scss';
 class Modal extends Component {
   constructor(props) {
     super(props)
@@ -15,7 +16,7 @@ class Modal extends Component {
       <Portal>
         {active && ( <>
           <div onClick={toggle} style={styles.background} />
-          <div style = {styles.wrapper}>
+          <div className="modelo" style = {styles.wrapper}>
             <div style={styles.window}>
               <img style={styles.closeBtn} onClick ={toggle} src={process.env.PUBLIC_URL + '/assets/img/cruz.png'}></img>
               <div>{children}</div>
@@ -31,10 +32,9 @@ class Modal extends Component {
 const styles = {
   wrapper: {
     position: 'absolute',
-    top:'30%',
-    marginLeft:'28px',
+    top:'26%',
+    marginLeft:'24px',
     marginRight:'28px',
-    width: '82.7%',
     heigth: '100%',
     display: 'flex',
     justifyContent: 'center',

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Portal from '../Portal/Portal'
+import './ModalMala.scss';
 class ModalMala extends Component {
   constructor(props) {
     super(props)
@@ -15,7 +16,7 @@ class ModalMala extends Component {
       <Portal>
         {mala && ( <>
           <div onClick={toggle3} style={styles.background} />
-          <div style = {styles.wrapper}>
+          <div className="modeloMala" style = {styles.wrapper}>
             <div style={styles.window}>
               <img style={styles.closeBtn} onClick ={toggle3} src={process.env.PUBLIC_URL + '/assets/img/cruz.png'}></img>
               <div>{children}</div>
@@ -34,7 +35,6 @@ const styles = {
     top:'30%',
     marginLeft:'28px',
     marginRight:'28px',
-    width: '82.7%',
     heigth: '100%',
     display: 'flex',
     justifyContent: 'center',

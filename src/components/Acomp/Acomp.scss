@@ -41,7 +41,7 @@ button.omitir{
     z-index:3;
 }
 div.divOmitir{
-    height: 13vh;
+    height: 12vh;
 }
 img.bolas{
     display: block;
@@ -53,7 +53,7 @@ div.board{
     height: 100vh;
 }
 div.sigue{
-    height: 12vh;
+    height: 11vh;
     padding-top:0vh;
     padding-bottom:1vh;
     margin: 10px auto;
@@ -71,7 +71,8 @@ button#seguimos{
     text-decoration:none;
     position:absolute;
     z-index:3;
-    left: 33.125%;
+    left: 30.266%;
+    margin-top:-5px;
 }
 div.izquierda{
     position: absolute;
@@ -135,7 +136,24 @@ div.donjug{
         font-size: 24px;
     } p.elige{
         font-size: 17px;
-        height: 10vh;
-    } div.divOmitir{
         height: 13vh;
-    }}
+    } div.divOmitir{
+        height: 11vh;
+    } div.agrupar{
+        margin-bottom: 75px;
+        height: 420.44px;
+    }div.sigue {
+        height: 10vh;
+    }img#sofa{
+        width: 352.4px;
+    }img#colabora{
+        width: 309px;
+    }
+    img#activa{
+        width: 362.4px;
+    }button#seguimos{
+        margin-top:-10px;
+        width: 148px;
+        height: 46px;
+    }
+}

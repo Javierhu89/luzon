@@ -43,3 +43,23 @@ p.pCura{
 button.dono{
     margin-top:38px;
 }
+@media screen and (min-width: 375px) {
+    img.iconomaria{
+        margin-top: 117px;
+        width: 88px;
+        height: 81.8px;
+    } p.perez{
+        margin-top: 117px;
+        margin-right: 40px;
+    } img.imgcolaborando{
+        width: 186px;
+        margin-top:38px;
+    } p.pCura{
+        font-size: 24px;
+    } button.siguiente {
+        font-size: 20px;
+        width: 148px;
+        height: 46px;
+    }
+
+}

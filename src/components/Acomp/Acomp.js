@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import './Acomp.scss';
 import { Redirect } from "react-router-dom";
-import { Link } from 'react-router-dom';
 
 class Acomp extends Component {
   constructor(props) {
@@ -16,7 +15,8 @@ class Acomp extends Component {
       pagina:0,
       omitir: null,
       home : null,
-      luzon: null
+      luzon: null,
+      seleccion: ['saludar','sofa','colabora','activa']
     }
   }
   
@@ -45,8 +45,10 @@ class Acomp extends Component {
   }
   
   render() {
-      return (<> <div className="board"> 
-      <img className="saludar" alt={this.state.alts[this.state.pagina]} src={process.env.PUBLIC_URL + this.state.imagen[this.state.pagina]} />
+      return (<> <div className="board">
+      <div className="agrupar">
+      <img id={this.state.seleccion[this.state.pagina]} className='saludar' alt={this.state.alts[this.state.pagina]} src={process.env.PUBLIC_URL + this.state.imagen[this.state.pagina]} />
+      </div>
       <h2 className="acompanante">{this.state.h2[this.state.pagina]}</h2>
       <p className="elige">{this.state.p[this.state.pagina]}</p>
     

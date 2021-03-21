@@ -22,6 +22,7 @@ p.text{
     margin-right: 35px;
     margin-top:0px;
     margin-bottom: 0px;
+    z-index: 3;
 }
 div.title{
     height: 100vh;
@@ -30,4 +31,16 @@ div.solve{
     margin-top:-20px;
     padding-top:0px;
     z-index: 2;
+}
+@media screen and (min-width: 375px) {
+    h1.h1title{
+        font-size: 36px;
+        padding-top:121px;
+        padding-bottom: 30px;
+    } p.text{
+        font-size: 25px;
+        line-height: 28px;
+        margin-bottom: 25px;
+    }
+
 }

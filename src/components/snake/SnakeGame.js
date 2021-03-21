@@ -388,7 +388,7 @@ class SnakeGame extends React.Component {
       return ( <div>
         <Modal active={this.state.active} toggle={this.toggle} style={{styleModal}}>
         <p className='ops'>¡Felicidades! Has pasado el reto y has ganado {this.state.Score} puntos.</p>
-        <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
+        <img className='feliz' src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
         </Modal>
         <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.svg`}></img>
         <div className="iconosNav">
@@ -407,8 +407,8 @@ class SnakeGame extends React.Component {
         <Modal active={this.state.active} toggle={this.toggle} style={{styleModal}}>
         <p className='ops'>¡Oops!</p>
         <p className='chocado'>Te has chocado contra la pared.</p>
-        <p>Has acumulado: {this.state.Score} puntos.</p>
-        <img src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
+        <p className='chocado'>Has acumulado: {this.state.Score} puntos.</p>
+        <img className='feliz' src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
         </Modal>
         <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.svg`}></img>
         <div className="iconosNav">

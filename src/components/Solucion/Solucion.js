@@ -25,12 +25,13 @@ class Solucion extends Component {
   }
      else {
        if (this.props.location.state.fase===1){
-        return <div onClick={this.goToMaria} style={{ 
+        return <div style={{ 
         backgroundColor: '#BAC3D7'
     }}>
       <div className="title">
       <h1 className="h1title">PREVENCIÓN</h1>
       <p className="text"> Las causas que originan la ELA son mayoritariamente desconocidas. En esta fase es importante identificar, mediante estudios genéticos, en familias con varias personas con la ELA.</p>
+      <br></br>
       <p className="text">La ELA puede afectar a personas de cualquier edad, sean niños, jóvenes o adultos</p>
       <div className="donjug solve">
         <button className="siguiente play" onClick={this.goToMaria}>
@@ -48,7 +49,7 @@ class Solucion extends Component {
       {this.state.donar?(<Redirect to={{ pathname: '/donar' }}/>):<></> }
       </div>
     } else if(this.props.location.state.fase===2){
-        return <div onClick={this.goToMaria} style={{ 
+        return <div style={{ 
         backgroundColor: '#BAC3D7'
         }}>
         <div className="title">
@@ -70,7 +71,7 @@ class Solucion extends Component {
         {this.state.donar?(<Redirect to={{ pathname: '/donar' }}/>):<></> }
         </div>
     } else if(this.props.location.state.fase===3){
-        return <div onClick={this.goToMaria} style={{ 
+        return <div style={{ 
         backgroundColor: '#BAC3D7'
         }}>
         <div className="title">
@@ -92,7 +93,7 @@ class Solucion extends Component {
         {this.state.donar?(<Redirect to={{ pathname: '/donar' }}/>):<></> }
         </div>
     } else {
-        return <div onClick={this.goToMaria} style={{ 
+        return <div style={{ 
         backgroundColor: '#BAC3D7'
       }}>
         <div className="title">

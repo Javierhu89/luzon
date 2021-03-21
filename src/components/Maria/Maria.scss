@@ -8,7 +8,7 @@ div.superior{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
+} 
 p.perez{
     margin-left:-30px;
     margin-top:55px;
@@ -35,7 +35,7 @@ p.descrip{
     color: #666666;
     margin-left: 35px;
     margin-right: 35px;
-    margin-top:10px;
+    margin-top:15px;
     margin-bottom: 0;
     text-align: justify;
 }
@@ -58,4 +58,27 @@ img.Flecha{
     margin-top:0px;
     padding-bottom: 70px;
     margin-left: 82%;
+}
+@media screen and (min-width: 375px){
+    p.descrip{
+        font-size: 23px;
+    } img.momento{
+        width: 355.71px;
+    } p.tiempo{
+        padding-top: 0;
+    } p.ayuda{
+        padding-bottom: 15px;
+    } img.Flecha{
+        padding-bottom: 95px;
+    } img.doctor{
+        width: 318px;
+        padding-bottom: 20px;
+    } 
+    img.tumbada{
+        width: 233px;
+        margin-top: 20px;
+        padding-bottom: 10px;
+    }img.baja{
+        padding-bottom: 150px;
+    }
 }

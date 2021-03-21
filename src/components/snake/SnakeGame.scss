@@ -45,14 +45,30 @@ h3.acumulados{
   margin-top:0px;
 }
 p.ops{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #666666;
   padding:0;
   padding-top:35px;
-  padding-bottom: 15px;
+  padding-bottom: 0px;
   margin:0;
+  padding-left:15px;
+  padding-right: 15px;
 }
 p.chocado{
   padding:0;
   margin:0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #666666;
 }
 .gameboy {
   position:relative;
@@ -297,4 +313,29 @@ p.puntuacion{
   color: #FFFFFF;
   margin-top:10.5px;
   margin-left:7px;
+}
+img.feliz{
+  padding-top: 25px;
+}
+@media screen and (min-width: 375px) {
+  div.gameboy{
+    padding: 35px 0px 75px 0px;
+  }
+  .gameboy .controls .dpad{
+    width: 130px;
+    height: 130px;
+  }
+  div.controls{
+    margin-top:35px;
+  } p.chocado{
+    padding:0 15px 15px 15px;
+  } img.feliz{
+    margin-top:0px;
+    width: 122.94px;
+    margin-bottom: 20px;
+  } p.ops{
+    padding-left:15px;
+    padding-right: 15px;
+  }
+
 }
