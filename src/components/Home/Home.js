@@ -30,11 +30,11 @@ class Home extends Component {
       <p className="sobre">La <span className="modificarcolor"><a targer="_blank" className="fundacion" href="https://ffluzon.org/">Fundación Luzón</a></span> es una organización independiente, sin ánimo de lucro y dedicada por completo a la mejora de las condiciones con las que viven los pacientes con ELA y sus familiares.</p>
       <p className="sobre final"><span className="modificarcolor">#ELALIFE</span> se inspiró para apoyar la causa y concienciar sobre la enfermedad.</p>
       <div className="donjug">
-        <button className="siguiente play step" onClick={this.goToJugar}>
-          JUGAR
-        </button>
         <button className="siguiente play step" onClick={this.goToDonar}>
           DONAR
+        </button>
+        <button className="siguiente play step" onClick={this.goToJugar}>
+          JUGAR
         </button>
       </div>
       {this.state.traslado?(<Redirect to={{ pathname: this.state.traslado }}/>):<></> }

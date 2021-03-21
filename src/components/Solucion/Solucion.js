@@ -34,11 +34,11 @@ class Solucion extends Component {
       <br></br>
       <p className="text">La ELA puede afectar a personas de cualquier edad, sean niños, jóvenes o adultos</p>
       <div className="donjug solve">
-        <button className="siguiente play" onClick={this.goToMaria}>
-          CONTINUAR
-        </button>
         <button className="siguiente play" onClick={this.goToDonar}>
           DONAR
+        </button>
+        <button className="siguiente play" onClick={this.goToMaria}>
+          CONTINUAR
         </button>
         </div>
       </div>
