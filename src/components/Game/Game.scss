@@ -83,4 +83,15 @@ div.black{
 }
 p.black{
     color: #3D322B;
+} 
+@media screen and (min-width: 375px) {
+    p.descripcion{
+        font-size: 16px;
+    }
+    h3.choose{
+        font-size: 36px;
+    }div.inferior {
+        margin-bottom: 100px;
+    }
+
 }

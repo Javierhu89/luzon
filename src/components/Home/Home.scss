@@ -6,7 +6,7 @@ h1.titulo{
     line-height: 42px;
     color: #666666;
     margin-left:15px;
-    margin-top: -10px;
+    margin-top: -45px;
     margin-bottom: 0;
 }
 img.lupa{
@@ -40,7 +40,7 @@ p.final{
 @media screen and (min-width: 375px) {
     img.logo{
     width: 104.02px;
-    margin-top: 74px;
+    margin-top: 34px;
 } h1.titulo{
     font-size: 36px;
     margin-bottom: 15px;
@@ -48,6 +48,9 @@ p.final{
     width: 290.15px;
 } button.siguiente{
     width: 148px;
+} button.step{
+    margin-top:45px;
+    margin-bottom: 40px;
 }
 
 }

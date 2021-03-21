@@ -1,11 +1,11 @@
 img.intro{
     margin:0px auto;
 	display:block;
-    padding-top:120px;
+    padding-top:215px;
     padding-bottom: 150px;
     width: 189.2px;
     height: auto;
-    margin-left:77px;
+    margin-left:80px;
 }
 div.introductorio{
     background: #BAC3D7;
@@ -19,7 +19,8 @@ img.bajera{
 }
 @media screen and (min-width: 375px) {
     img.intro{
-        margin-left:90px;
+        margin-left:100px;
+        padding-top:315px;
     }
 
 
