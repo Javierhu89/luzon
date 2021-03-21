@@ -10,7 +10,7 @@ class Share extends Component {
       display: 'inline-block',
       width: '100%',
       alignment: 'center',  // alignment of buttons (left, center, right)
-      color: 'social',      // set the color of buttons (social, white)
+      color: 'white',      // set the color of buttons (social, white)
       enabled: true,        // show/hide buttons (true, false)
       font_size: 16,        // font size for the buttons
       labels: 'null',        // button labels (cta, counts, null)
@@ -38,7 +38,7 @@ class Share extends Component {
       display: 'inline-block',
       width: '100%',
       alignment: 'center',  // alignment of buttons (left, center, right)
-      color: 'social',      // set the color of buttons (social, white)
+      color: 'white',      // set the color of buttons (social, white)
       enabled: true,        // show/hide buttons (true, false)
       font_size: 16,        // font size for the buttons
       labels: 'null',        // button labels (cta, counts, null)
@@ -65,7 +65,7 @@ class Share extends Component {
     config={{
       width: '100%',
       alignment: 'center',  // alignment of buttons (left, center, right)
-      color: 'social',      // set the color of buttons (social, white)
+      color: 'white',      // set the color of buttons (social, white)
       enabled: true,        // show/hide buttons (true, false)
       font_size: 16,        // font size for the buttons
       labels: 'null',        // button labels (cta, counts, null)
@@ -92,7 +92,7 @@ class Share extends Component {
     config={{
       width: '100%',
       alignment: 'center',  // alignment of buttons (left, center, right)
-      color: 'social',      // set the color of buttons (social, white)
+      color: 'white',      // set the color of buttons (social, white)
       enabled: true,        // show/hide buttons (true, false)
       font_size: 16,        // font size for the buttons
       labels: 'null',        // button labels (cta, counts, null)

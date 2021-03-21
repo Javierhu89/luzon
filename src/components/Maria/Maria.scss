@@ -18,7 +18,7 @@ p.perez{
     font-size: 24px;
     line-height: 36px;
     text-align: center;
-    color: #FFFFFF;
+    color: #666666;
 }
 img.sonido{
     margin-left:-10px;
@@ -58,6 +58,11 @@ img.Flecha{
     margin-top:0px;
     padding-bottom: 70px;
     margin-left: 82%;
+} img.final{
+    margin-top:15px;
+    padding-bottom: 75px;
+} img.basurto{
+    margin-top:-10px;
 }
 @media screen and (min-width: 375px){
     p.descrip{

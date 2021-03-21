@@ -48,7 +48,7 @@ p.ops{
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 28px;
   text-align: center;
   color: #666666;
@@ -61,11 +61,13 @@ p.ops{
 }
 p.chocado{
   padding:0;
+  padding-left:10px;
+  padding-right:10px;
   margin:0;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 28px;
   text-align: center;
   color: #666666;
@@ -301,7 +303,7 @@ span.letra{
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 29px;
+  font-size: 26px;
   line-height: 44px;
   color: #FFFFFF;
 }
@@ -316,6 +318,22 @@ p.puntuacion{
 }
 img.feliz{
   padding-top: 25px;
+}
+img.robot{
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+div.agrande{
+  height: 345px;
+}
+div.extra{
+  margin-top:12px;
+}
+canvas.pantalla{
+  margin-left:20px;
+}
+div.agrandar{
+  height: 510px;
 }
 @media screen and (min-width: 375px) {
   div.gameboy{

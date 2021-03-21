@@ -72,7 +72,7 @@ class Maria extends Component {
       <p className="descrip">Estoy en el hospital de Basurto, me han visto más de 10 médicos y me han hecho diferentes pruebas, pero sigo sin encontrarme mejor y los médicos aún no saben qué me pasa.</p>
       <img alt="Doctor mirando radiografía" className="momento doctor" src={process.env.PUBLIC_URL + '/assets/img/doctor.png'}/>
       <p className="descrip tiempo sintoma">Han sugerido que los síntomas se relacionan con los de la esclerosis múltiple pero sigo sin estar segura. Estoy asustada, ¿conseguirán hacerme alguna prueba que determine qué me pasa?.</p>
-      <img onClick={this.irAjugar} alt="Fecha hacia la derecha" className="Flecha" src={process.env.PUBLIC_URL + '/assets/img/flechaderecha.png'}/>
+      <img onClick={this.irAjugar} alt="Fecha hacia la derecha" className="Flecha basurto" src={process.env.PUBLIC_URL + '/assets/img/flechaderecha.png'}/>
       <Nav />
       {this.state.jugar?(<Redirect to={{ pathname: '/phase2' }}/>):<></> }
       </div>
@@ -111,7 +111,7 @@ class Maria extends Component {
       }
     </div>
     <p className="descrip">Ha pasado un año desde que me diagnosticaron la ELA. En este año, mi familia se ha gastado más de 20.000€ en ayudas técnicas para mi movilidad, un vehículo adaptado, una silla manual, una silla eléctrica, adaptación para el baño, una grúa de techo, pero sólo he recibido 4.000€ de ayudas por la compra de las sillas. En el futuro, la ELA va a suponer muchos más gastos a mi familia, ya que mi movilidad se reduce cada día y cada vez necesito más ayuda. ¿Me ayudas a conseguir fondos?.</p> 
-    <img onClick={this.irAjugar} alt="Fecha hacia la derecha" className="Flecha baja" src={process.env.PUBLIC_URL + '/assets/img/flechaderecha.png'}/>
+    <img onClick={this.irAjugar} alt="Fecha hacia la derecha" className="Flecha baja final" src={process.env.PUBLIC_URL + '/assets/img/flechaderecha.png'}/>
     <Nav />
     {this.state.jugar?(<Redirect to={{ pathname: '/phase4' }}/>):<></> }
     </div>

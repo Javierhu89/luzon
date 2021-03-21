@@ -5,7 +5,15 @@ import Nav from "../Nav/Nav";
 import Share from "../Share/Share";
 
 class Donar extends Component {
-
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       Puntuacion: parseInt(localStorage.getItem('Puntos Acumulados')),
+       euros: parseInt(localStorage.getItem('Puntos Acumulados'))/10
+    }
+  }
+ 
   render() {
     
     return <div style={{ 
@@ -14,9 +22,12 @@ class Donar extends Component {
       <p className="enhorabuena"><span className="modificarcolor">¡Enhorabuena!</span> Aquí tienes la puntuación que has conseguido para ayudar a María:</p>
       <div className="end">
       <img className="trofeo" src={process.env.PUBLIC_URL + '/assets/img/trofeo.png'} alt="Trofeo final"/>
-      <p className="resultado">{parseInt(localStorage.getItem('Puntos Acumulados'))} Puntos</p>
+      <div>
+      <p className="resultado">{this.state.Puntuacion} Puntos</p>
+      <p className="resultado euros">Has conseguido <span className="modificarcolor">{this.state.euros}€</span></p>
       </div>
-      <p className="enhorabuena punt">Comparte lo que has conseguido con tus amigos e invítalos a jugar.</p>
+      </div>
+      <p className="enhorabuena punt">Por favor, dona estos {this.state.euros}€ y comparte lo que has conseguido con tus amigos.</p>
       <Share />
     <form className="PayPal" action="https://www.paypal.com/donate" method="post" target="_top">
       <input type="hidden" name="hosted_button_id" value="9GQMEW4MYPY8Y" />

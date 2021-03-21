@@ -78,10 +78,10 @@ class Solucion extends Component {
         <h1 className="h1title">DIAGNÓSTICO</h1>
         <p className="text"> La ELA no tiene una prueba específica. El proceso para llegar a diagnosticar la ELA es difícil y en muchos casos suele comenzar en el médico de Atención Primaria. Éste realizará un exámen físico y redactará una historia detallada con los signos y síntomas observados. Tras un estudio del informe, y si el médico sospecha, derivará al paciente al servicio de Neurología.</p>
         <div className="donjug solve">
-        <button className="siguiente play" onClick={this.goToMaria}>
+        <button className="siguiente play diag" onClick={this.goToMaria}>
           CONTINUAR
         </button>
-        <button className="siguiente play" onClick={this.goToDonar}>
+        <button className="siguiente play diag" onClick={this.goToDonar}>
           DONAR
         </button>
         </div>

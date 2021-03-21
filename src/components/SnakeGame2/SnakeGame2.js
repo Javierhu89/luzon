@@ -407,9 +407,30 @@ class SnakeGame2 extends React.Component {
     // Game over
       if (this.state.isGameOver && this.state.numHosp ===15) {
       return ( <div>
+        <div className="gameboy agrandar" id="GameBoy">
+        <div className="screen-area agrande"> 
+        <canvas className="display pantalla" id="mainCanvas"></canvas>
+        <div className="label">
+        <div className="title">ELA </div>
+        <div className="subtitle">
+          <span className="letra">L</span>
+          <span className="letra">I</span>
+       <span className="letra">F</span>
+       <span className="letra">E</span>
+        </div>
+      </div> 
+      <div className="controls extra">
+      <div className="dpad">
+        <div className="up"><i className="fa fa-caret-up" onClick={()=>this.goUp()}></i></div>
+        <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}></i></div>
+        <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}></i></div>
+        <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}></i></div>
+        <div className="middle"></div>
+      </div>
+      </div>
         <Modal active={this.state.active} toggle={this.toggle}>
         <p className='ops'>¡Felicidades! Has pasado el reto y has ganado {this.state.Score} puntos.</p>
-        <img className='feliz' src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
+        <img className='feliz' src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="¡Logrado!"></img>
         </Modal>
         <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.svg`}></img>
         <div className="iconosNav">
@@ -418,6 +439,8 @@ class SnakeGame2 extends React.Component {
         <p className="puntuacion">{this.state.Score}</p>
         <div className="colaborar">
         <img onClick={this.redireccionar1} className="icons flor" src={process.env.PUBLIC_URL + '/assets/img/crecimiento.png'}></img> <p onClick={this.redireccionar1} className="icons">Colaborar</p>
+        </div>
+        </div>
         </div>
         </div>
         {this.state.quiz?(<Redirect to={{ pathname: '/quiz', state: {fase: 2}}}/>):<></> }
@@ -425,11 +448,32 @@ class SnakeGame2 extends React.Component {
       )
     } else if (this.state.isGameOver && this.state.numHosp<15){
       return ( <div>
+        <div className="gameboy agrandar" id="GameBoy">
+        <div className="screen-area agrande"> 
+        <canvas className="display pantalla" id="mainCanvas"></canvas>
+        <div className="label">
+        <div className="title">ELA </div>
+        <div className="subtitle">
+          <span className="letra">L</span>
+          <span className="letra">I</span>
+       <span className="letra">F</span>
+       <span className="letra">E</span>
+        </div>
+      </div> 
+      <div className="controls extra">
+      <div className="dpad">
+        <div className="up"><i className="fa fa-caret-up" onClick={()=>this.goUp()}></i></div>
+        <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}></i></div>
+        <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}></i></div>
+        <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}></i></div>
+        <div className="middle"></div>
+      </div>
+      </div>
         <Modal active={this.state.active} toggle={this.toggle}>
         <p className='ops'>¡Oops!</p>
         <p className='chocado'>Te has chocado.</p>
         <p className='chocado'>Has acumulado: {this.state.Score} puntos.</p>
-        <img className='feliz' src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="Imagen de puntos"></img>
+        <img className='robot' src={process.env.PUBLIC_URL + 'assets/img/robot.png'} alt="Robot triste"></img>
         </Modal>
         <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.svg`}></img>
         <div className="iconosNav">
@@ -440,6 +484,8 @@ class SnakeGame2 extends React.Component {
         <img onClick={this.redireccionar1} className="icons flor" src={process.env.PUBLIC_URL + '/assets/img/crecimiento.png'}></img> <p onClick={this.redireccionar1} className="icons">Colaborar</p>
         </div>
         </div>
+        </div>
+      </div>
         {this.state.quiz?(<Redirect to={{ pathname: '/quiz', state: {fase: 2} }}/>):<></> }
         </div>
       )

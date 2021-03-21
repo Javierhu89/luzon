@@ -27,16 +27,18 @@ div.end{
 }
 p.resultado{
     margin-top:0px;
-    padding-top:30px;
+    padding-top:10px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 17px;
     line-height: 21px;
-    text-align: justify;
+    text-align: center;
     color: #666666;
-    margin-left:24px;
-    margin-right: 24px;
+    margin-left: 10px;
+}
+p.euros{
+    font-weight: normal;
 }
 p.punt{
     padding-top: 10px;
@@ -50,5 +52,5 @@ div.end{
     margin-top:30px;
 }
 img.trofeo{
-    width: 60px;
+    width: 65px;
 }

@@ -8,7 +8,7 @@ class Acomp extends Component {
   
     this.state = {
       imagen: ['/assets/img/pana.png', '/assets/img/sofa.png', '/assets/img/colabora.png', '/assets/img/activo.png' ],
-      h2: ['ELIGE ACOMPAÑANTE', 'SELECCIONA NIVEL', 'COLABORA', 'MANTENTE AL TANTO' ],
+      h2: ['ELIGE ACOMPAÑANTE', 'JUEGA', 'COLABORA', 'MANTENTE AL TANTO' ],
       p: ['Elige a tu acompañante para este viaje. Irá contigo por la diferentes fases de la ELA y te ayudará a descubir cómo es un día a día con la enfermedad.', 'A través de los niveles de ELALife, te encontrarás con diferentes dificultades y etapas por las que pasa un enfermo de ELA, ¿Quieres saber un poco más sobre lo que supone esta enfermedad?', 'Ayúdanos a través de una donación para la investigación e integración de las personas con ELA, podrás hacerlo a través de PayPal, sincronizar una donación, y compartir con tus amigos tu puntuación y todo lo que has aprendido con nosotros.','Te mantendremos al día de las últimas noticias relacionadas con la enfermedad, y sabrás qué pasa con tu donación a partir del propio testimonio de los pacientes'],
       bolas: ['/assets/img/Bolas1.png', '/assets/img/Bolas2.png','/assets/img/Bolas3.png', '/assets/img/Bolas4.png' ],
       alts: ['Mujer Saludando', 'Hombre sentado en sofá', 'Dos personas colaborando', 'Mujer Saludando' ],

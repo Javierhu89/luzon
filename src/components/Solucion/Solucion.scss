@@ -22,6 +22,7 @@ p.text{
     margin-right: 35px;
     margin-top:0px;
     margin-bottom: 0px;
+    position:relative;
     z-index: 3;
 }
 div.title{
@@ -31,6 +32,10 @@ div.solve{
     margin-top:-20px;
     padding-top:0px;
     z-index: 2;
+    height: 17vh;
+}
+button.diag{
+    margin-top:33px;
 }
 @media screen and (min-width: 375px) {
     h1.h1title{

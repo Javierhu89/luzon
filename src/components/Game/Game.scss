@@ -15,6 +15,7 @@ div.jugadores{
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 169px;
 }
 p.edad{
     text-align: right;
@@ -23,9 +24,9 @@ p.edad{
     font-weight: bold;
     font-size: 14px;
     line-height: 16px;
-    color: #FFFFFF;
+    color: #3D322B;
     margin-right: 9%;
-    margin-top:7px;
+    margin-top:-25px;
     padding-bottom: 8px;
 }
 div.recuadro{
@@ -34,6 +35,7 @@ div.recuadro{
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 30px;
+    height: 169px;
 }
 p.descripcion{
     font-family: 'Roboto', sans-serif;
@@ -41,19 +43,19 @@ p.descripcion{
     font-weight: 300;
     font-size: 14px;
     line-height: 16px;
-    color: #FFFFFF;
+    color: #3D322B;
     margin-right: 8%;
     margin-left:8%;
 }
 img.foto{
-    padding-top: 7%;
-    padding-right: 5%;
+    padding-right: 6%;
 }
 span.negrita{
     font-weight: bold;
 }
 p.javiedad{
-    margin-top:-15px;
+    margin-top:-25px;
+    margin-right: 9.5%;
 }
 p.subtitulo{
     margin-top: 12%;
@@ -66,13 +68,15 @@ img.david {
     padding-top:0;
 }
 p.davidedad{
-    margin-top:-15px;
+    margin-top:-25px;
+    margin-right: 9.6%;
 }
 p.saraedad{
-    margin-right: 10.4%;
+    margin-right: 11%;
+    margin-top:-26px;
 }
 div.inferior{
-    margin-bottom: 68px;
+    margin-bottom: 85px;
 }
 div.black{
     background: #C4C4C4;
