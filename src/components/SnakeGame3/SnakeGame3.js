@@ -1,5 +1,5 @@
 import React from 'react'
-import './SnakeGame3.scss'
+import '../SnakeGame4/SnakeGame4.scss'
 import { Redirect } from "react-router-dom";
 import Modal from '../Modal/Modal'
 // color serpiente y color manzana
@@ -17,7 +17,7 @@ class SnakeGame3 extends React.Component {
       blockWidth: 0,
       blockHeight: 0,
       //velocidad a mayor número, más lento
-      gameLoopTimeout: 80,
+      gameLoopTimeout: 100,
       timeoutId: 0,
       startSnakeSize: 0,
       snake: [],
@@ -45,13 +45,7 @@ class SnakeGame3 extends React.Component {
   }
   
   initGame() {
-    let percentageWidth = 0;
-    if(window.screen.width ===360 && window.screen.height===640){
-      percentageWidth = this.props.percentageWidth || 95 // Con el segundo valor tocas el tamaño de la pantalla
-    } else{
-      percentageWidth = this.props.percentageWidth || 100 // Con el segundo valor tocas el tamaño de la pantalla
-    }
-
+    let percentageWidth = this.props.percentageWidth || 100 // Con el segundo valor tocas el tamaño de la pantalla
     // Game size initialization
     let width =
       document.getElementById('GameBoard').parentElement.offsetWidth *

@@ -20,7 +20,7 @@ class Game extends Component {
       <div className='jugadores'>
         <div className='parrafos'>
         <p className='descripcion'>Buenas tardes, soy María</p>
-        <p className='descripcion'>Llevo 6 o 7 meses desde que he empezado a notar síntomas.<span className="negrita"> Leer mas...</span></p>
+        <p className='descripcion'>Llevo 6 o 7 meses desde que he empezado a notar síntomas.<span className="negrita"> Leer más...</span></p>
           </div><img className="iconos" alt="Foto de María" className="foto" src={process.env.PUBLIC_URL + '/assets/img/maria.png'} />
       </div>
       <p className='edad'>María  20 años</p>
@@ -38,7 +38,7 @@ class Game extends Component {
       <div className='jugadores'>
         <div className='parrafos'>
         <p className='descripcion subtitulo black'>Buenas tardes, soy Sara</p>
-        <p className='descripcion black'>Nunca supe realmente cuándo empezaron los síntomas.<span className="negrita"> Leer mas...</span></p>
+        <p className='descripcion black'>Nunca supe realmente cuándo empezaron los síntomas.<span className="negrita"> Leer más...</span></p>
           </div><img alt="Foto de Sara" className="foto sara" src={process.env.PUBLIC_URL + '/assets/img/sara.png'} />
       </div>
       <p className='edad saraedad black'>Sara  55 años</p>
@@ -47,7 +47,7 @@ class Game extends Component {
       <div className='jugadores'>
         <div className='parrafos'>
         <p className='descripcion subtitulo black'>Buenas tardes, soy David</p>
-        <p className='descripcion black'>Han pasado un año desde que tengo la ELA, mi familia se ha gastato este año 20.000€.<span className="negrita"> Leer mas...</span></p>
+        <p className='descripcion black'>Han pasado un año desde que tengo la ELA, mi familia se ha gastato este año 20.000€.<span className="negrita"> Leer más...</span></p>
           </div><img alt="Foto de David" className="foto david" src={process.env.PUBLIC_URL + '/assets/img/david.png'} />
       </div>
       <p className='edad davidedad black'>David 23 años</p>

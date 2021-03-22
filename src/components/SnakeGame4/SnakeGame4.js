@@ -18,7 +18,7 @@ class SnakeGame4 extends React.Component {
       blockWidth: 0,
       blockHeight: 0,
       //velocidad a mayor número, más lento
-      gameLoopTimeout: 80,
+      gameLoopTimeout: 100,
       timeoutId: 0,
       startSnakeSize: 0,
       snake: [],
@@ -41,16 +41,11 @@ class SnakeGame4 extends React.Component {
     //ahora está keydown mirar con click para mobile
     window.addEventListener('keydown', this.handleKeyDown)
     this.gameLoop()
-    this.intervalID = setInterval(this.cambiarSaco, 3000)
+    this.intervalID = setInterval(this.cambiarSaco, 4000)
   }
   
   initGame() {
-    let percentageWidth = 0;
-    if(window.screen.width ===360 && window.screen.height===640){
-      percentageWidth = this.props.percentageWidth || 95 // Con el segundo valor tocas el tamaño de la pantalla
-    } else{
-      percentageWidth = this.props.percentageWidth || 100 // Con el segundo valor tocas el tamaño de la pantalla
-    }
+    let percentageWidth = this.props.percentageWidth || 100 // Con el segundo valor tocas el tamaño de la pantalla
 
     // Game size initialization
     let width =

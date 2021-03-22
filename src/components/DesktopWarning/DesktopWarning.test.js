@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Footer from "./Footer";
+import DesktopWarning from "./DesktopWarning";
 
-describe("Footer", () => {
+describe("DesktopWarning", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<Footer />);
+    const wrapper = shallow(<DesktopWarning />);
     expect(wrapper).toMatchSnapshot();
   });
 });

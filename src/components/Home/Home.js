@@ -20,7 +20,7 @@ class Home extends Component {
   }
   render() {
     return <div style={{ 
-      backgroundColor: '#BAC3D7'
+      backgroundColor: '#BAC3D7', width:'100%'
     }}>
       <Header />
       <h1 className="titulo">Sobre la ELA</h1>
