@@ -10,7 +10,11 @@ class Intro extends Component {
     }
   }
   
- 
+  componentDidMount () {
+    setTimeout (() => {
+      this.setState({'pagina':true})
+    }, 3000);
+  }
   pasarIntro = () =>{
     this.setState({'pagina':true})
   }

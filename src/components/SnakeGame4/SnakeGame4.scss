@@ -173,8 +173,8 @@
         
         > * {
           box-sizing: border-box;
-          width:33%;
-          height:33%;
+          width:50%;
+          height:50%;
           position:absolute;
           background-color:#565e6a;
           cursor:pointer;
@@ -187,14 +187,15 @@
             height:100%;
             font-size:28px;
             color:#333a4a;
-            text-shadow:0px -0.5px 0px #aaa;
+            //text-shadow:0px -0.5px 0px #aaa;
           }
         }
         
         .up {
           top:calc(0% + 4px);
-          left:33%;
+          left:-85%;
           border-top:4px solid black;
+          border-bottom:4px solid black;
           border-left:4px solid black;
           border-right:4px solid black;
           border-radius:5px 5px 0px 0px;
@@ -209,12 +210,13 @@
         }
         .right {
           top:33%;
-          left:calc(66% - 4px);
+          left:calc(130% - 4px);
+          border-left:4px solid black;
           border-top:4px solid black;
           border-bottom:4px solid black;
           border-right:4px solid black;
           border-radius:0px 5px 5px 0px;
-          box-shadow:0px -2px 0px #888 inset;
+          // box-shadow:0px -2px 0px #888 inset;
           
           &:active {
             background:linear-gradient(to right, #565e6a 0%, #333 100%);
@@ -226,12 +228,13 @@
         }
         .down {
           top:calc(66% - 4px);
-          left:33%;
+          left: -85%;
           border-left:4px solid black;
           border-bottom:4px solid black;
           border-right:4px solid black;
+          border-top:4px solid black;
           border-radius:0px 0px 5px 5px;
-          box-shadow:0px -2px 0px #888 inset;
+          //box-shadow:0px -2px 0px #888 inset;
           
           &:active {
             background:linear-gradient(to bottom, #565e6a 0%, #333 100%);
@@ -239,12 +242,13 @@
         }
         .left {
           top:33%;
-          left:calc(0% + 4px);
+          left:calc(69% + 4px);
           border-top:4px solid black;
           border-bottom:4px solid black;
           border-left:4px solid black;
+          border-right:4px solid black;
           border-radius:5px 0px 0px 5px;
-          box-shadow:0px -2px 0px #888 inset;
+          //box-shadow:0px -2px 0px #888 inset;
           
           i {
             top:-5px;
@@ -263,14 +267,20 @@
             content:'';
             position:absolute;
             top:20%;
-            left:20%;
+            left:19%;
             display:inline-block;
             border:1px solid #6e737a;
             background:linear-gradient(to bottom, #6d7075 0%, #6d7075 30%, #23272f 70%, #23272f 100%);
             border-radius:50%;
             height:60%;
             width:60%;
-          }
+          } 
+        } .izqui{
+            left: -85%;
+           
+        } .derec{
+            left: 132%;
+             
         }
         
         .up-down {
@@ -335,6 +345,16 @@
   div.agrandar{
     height: 510px;
   }
+  img.flechabajo, img.flecharriba, img.flechaderecha{
+    margin-top: 30%;
+    width: 30px;
+    height: auto;
+  }
+  img.flechaderecha, img.flechaizquierda{
+    margin-top: 22%;
+    width: 28px;
+    height: auto;
+  }
   @media screen and (min-width: 360px) and (min-height: 667px) {
     .gameboy .screen-area .display {
       width:320px;
@@ -376,7 +396,7 @@
 }
   @media screen and (min-width: 375px) and (min-height: 812px) {
     div.gameboy{
-      padding: 35px 0px 105px 0px;
+      padding: 35px 0px 135px 0px;
     }
     .gameboy .controls .dpad{
       width: 130px;

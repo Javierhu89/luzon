@@ -404,7 +404,8 @@ class SnakeGame extends React.Component {
         <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}></i></div>
         <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}></i></div>
         <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}></i></div>
-        <div className="middle"></div>
+        <div className="middle izqui"></div>
+        <div className="middle derec"></div>
       </div>
       </div>
         <Modal active={this.state.active} toggle={this.toggle} style={{styleModal}}>
@@ -445,7 +446,8 @@ class SnakeGame extends React.Component {
         <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}></i></div>
         <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}></i></div>
         <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}></i></div>
-        <div className="middle"></div>
+        <div className="middle izqui"></div>
+        <div className="middle derec"></div>
       </div>
       </div>
         <Modal active={this.state.active} toggle={this.toggle} style={{styleModal}}>
@@ -535,15 +537,14 @@ class SnakeGame extends React.Component {
     
     <div className="controls">
       <div className="dpad">
-        <div className="up"><i className="fa fa-caret-up" onClick={()=>this.goUp()}></i></div>
-        <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}></i></div>
-        <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}></i></div>
-        <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}></i></div>
-        <div className="middle"></div>
+        <div className="up"><i className="fa fa-caret-up" onClick={()=>this.goUp()}><img className="flecharriba" src={process.env.PUBLIC_URL + `/assets/img/flechaarriba.png`}></img></i></div>
+        <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}><img className="flechaderecha" src={process.env.PUBLIC_URL + `/assets/img/flechadere.png`}></img></i></div>
+        <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}><img className="flechabajo" src={process.env.PUBLIC_URL + `/assets/img/flechaabajo.png`}></img></i></div>
+        <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}><img className="flechaizquierda" src={process.env.PUBLIC_URL + `/assets/img/flechaizquier.png`}></img></i></div>
       </div>
     </div>    
   </div>      
-      <br/><br/><br/>
+      <br/><br/>
     <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.svg`}></img>
     <div className="iconosNav">
     <div className="home">

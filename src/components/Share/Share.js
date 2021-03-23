@@ -26,7 +26,7 @@ class Share extends Component {
       size: 45,             // the size of each button (INTEGER)
 
       // OPTIONAL PARAMETERS
-      url: "@FundacionLuzon " + "Yo he logrado " + parseInt(localStorage.getItem('Puntos Acumulados')) +" puntos, y tú? " + `https://ffluzon.org/`, // (defaults to current url)
+      url: "@FundacionLuzon " + "Yo he logrado " + parseInt(localStorage.getItem('Puntos Acumulados')) +" puntos, y tú? " + `https://elalife.netlify.app/`, // (defaults to current url)
       image: '',  // (defaults to og:image or twitter:image)
       description: '¡Logro conseguido!',       // (defaults to og:description or twitter:description)
       //title: "ELALIFE - He logrado " + parseInt(localStorage.getItem('Puntos Acumulados')) + ' puntos y ya he donado, ¿porqué no te animas?',   // (defaults to og:title or twitter:title)
@@ -54,7 +54,7 @@ class Share extends Component {
       size: 45,             // the size of each button (INTEGER)
 
       // OPTIONAL PARAMETERS
-      url: "@FundacionLuzon " + "Yo he logrado " + parseInt(localStorage.getItem('Puntos Acumulados')) +" puntos, y tú? " + `https://ffluzon.org/`, // (defaults to current url)
+      url: "@FundacionLuzon " + "Yo he logrado " + parseInt(localStorage.getItem('Puntos Acumulados')) +" puntos, y tú? " + `https://elalife.netlify.app/`, // (defaults to current url)
       image: '',  // (defaults to og:image or twitter:image)
       description: '¡Logro conseguido!',       // (defaults to og:description or twitter:description)
       //title: "ELALIFE - He logrado " + parseInt(localStorage.getItem('Puntos Acumulados')) + ' puntos y ya he donado, ¿porqué no te animas?',   // (defaults to og:title or twitter:title)
@@ -81,7 +81,7 @@ class Share extends Component {
       size: 45,             // the size of each button (INTEGER)
 
       // OPTIONAL PARAMETERS
-      url: `https://ffluzon.org/`, // (defaults to current url)
+      url: `https://elalife.netlify.app/`, // (defaults to current url)
       image: '',  // (defaults to og:image or twitter:image)
       description: 'custom text',       // (defaults to og:description or twitter:description)
       title: 'ELALIFE - He logrado 20.000 puntos y ya he donado, ¿porqué no te animas?',   // (defaults to og:title or twitter:title)
@@ -108,7 +108,7 @@ class Share extends Component {
       size: 45,             // the size of each button (INTEGER)
 
       // OPTIONAL PARAMETERS
-      url: `https://ffluzon.org/`, // (defaults to current url)
+      url: `https://elalife.netlify.app/`, // (defaults to current url)
       image: '',  // (defaults to og:image or twitter:image)
       description: 'custom text',       // (defaults to og:description or twitter:description)
       title: 'ELALIFE - He logrado 20.000 puntos y ya he donado, ¿porqué no te animas?',   // (defaults to og:title or twitter:title)

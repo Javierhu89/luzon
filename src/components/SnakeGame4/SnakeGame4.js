@@ -601,7 +601,7 @@ class SnakeGame4 extends React.Component {
   </div>
       
       
-      <br/><br/><br/>
+      <br/><br/>
       <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.svg`}></img>
     <div className="iconosNav">
     <div className="home">
