@@ -1,6 +1,6 @@
 img.fijo{
     position: fixed;
-    bottom: 0px;
+    bottom: -1px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -43,23 +43,42 @@ div.home{
 div.colaborar{
     margin-right: 50px;
 }
-
-@media screen and (min-height: 640px) and (max-height: 666px) {
-    div.iconosNav{
+@media screen and (min-width: 323px) and (max-width: 334px) {
+    div.iconosNav {
+        bottom: -4px;
+    }
+}
+@media screen and (min-width: 334px) and (max-width: 343px) {
+    div.iconosNav {
+        bottom: -2.8px;
+    }
+}
+@media screen and (min-width: 343px) and (max-width: 350px) {
+    div.iconosNav {
         bottom: -2px;
     }
 }
-@media screen and (min-height: 667px) {
-    div.iconosNav{
-        bottom: -1px;
+@media screen and (min-width: 350px) and (max-width: 363px) {
+    div.iconosNav {
+        bottom: -0.5px;
     }
 }
-@media screen and (min-height: 736px) {
-    div.iconosNav{
-        bottom: 3px;
+@media screen and (min-width: 363px) and (max-width: 375px) {
+    div.iconosNav {
+        bottom: 1.5px;
     }
 }
-@media screen and (min-width: 375px) and (min-height: 812px) {
+@media screen and (min-width: 375px) and (max-width: 390px) {
+    div.iconosNav {
+        bottom: 2.5px;
+    }
+}
+@media screen and (min-width: 390px) and (max-width: 420px) {
+    div.iconosNav {
+        bottom: 8px;
+    }
+}
+@media screen and (min-width: 375px) and (height: 812px) {
     div.iconosNav{
         bottom: 0.7%;
     } img.play {

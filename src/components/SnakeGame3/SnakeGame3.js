@@ -45,7 +45,7 @@ class SnakeGame3 extends React.Component {
   }
   
   initGame() {
-    let percentageWidth = this.props.percentageWidth || 100 // Con el segundo valor tocas el tamaño de la pantalla
+    let percentageWidth = this.props.percentageWidth || 95 // Con el segundo valor tocas el tamaño de la pantalla
     // Game size initialization
     let width =
       document.getElementById('GameBoard').parentElement.offsetWidth *
