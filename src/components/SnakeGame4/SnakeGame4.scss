@@ -77,7 +77,7 @@
     width:320px;
     height:570px;
     border-radius:20px;
-    box-shadow:0px -5px 0px black, 0px 5px 0px black;
+    box-shadow:0px -5px 0px black, 0px 1px 0px black;
     font-family: 'Roboto', sans-serif;
     background-color: #A2E58D;
     cursor:default;
@@ -192,7 +192,7 @@
         }
         
         .up {
-          top:calc(0% + 4px);
+          top:calc(-8% + 4px);
           left:-85%;
           border-top:4px solid black;
           border-bottom:4px solid black;
@@ -209,7 +209,7 @@
           }
         }
         .right {
-          top:33%;
+          top:23%;
           left:calc(130% - 4px);
           border-left:4px solid black;
           border-top:4px solid black;
@@ -227,7 +227,7 @@
           }
         }
         .down {
-          top:calc(66% - 4px);
+          top:calc(55% - 4px);
           left: -85%;
           border-left:4px solid black;
           border-bottom:4px solid black;
@@ -241,7 +241,7 @@
           }
         }
         .left {
-          top:33%;
+          top:23%;
           left:calc(69% + 4px);
           border-top:4px solid black;
           border-bottom:4px solid black;
@@ -323,7 +323,7 @@
     font-size: 20px;
     line-height: 21px;
     color: #FFFFFF;
-    margin-top:10.5px;
+    margin-top:-7.5px;
     margin-left:7px;
   }
   img.feliz{
@@ -354,6 +354,9 @@
     margin-top: 22%;
     width: 28px;
     height: auto;
+  }
+  div.fase{
+    bottom: -2px;
   }
   @media screen and (min-width: 360px) and (min-height: 667px) {
     .gameboy .screen-area .display {

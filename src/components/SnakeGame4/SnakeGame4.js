@@ -1,6 +1,5 @@
 import React from 'react'
 import './SnakeGame4.scss'
-import Nav from '../Nav/Nav'
 import { Redirect } from "react-router-dom";
 import Modal from '../Modal/Modal'
 // color serpiente y color manzana
@@ -449,19 +448,18 @@ class SnakeGame4 extends React.Component {
       </div> 
       <div className="controls extra">
       <div className="dpad">
-        <div className="up"><i className="fa fa-caret-up" onClick={()=>this.goUp()}></i></div>
-        <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}></i></div>
-        <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}></i></div>
-        <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}></i></div>
-        <div className="middle"></div>
+        <div className="up"><i className="fa fa-caret-up" onClick={()=>this.goUp()}><img className="flecharriba" src={process.env.PUBLIC_URL + `/assets/img/flechaarriba.png`}></img></i></div>
+        <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}><img className="flechaderecha" src={process.env.PUBLIC_URL + `/assets/img/flechadere.png`}></img></i></div>
+        <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}><img className="flechabajo" src={process.env.PUBLIC_URL + `/assets/img/flechaabajo.png`}></img></i></div>
+        <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}><img className="flechaizquierda" src={process.env.PUBLIC_URL + `/assets/img/flechaizquier.png`}></img></i></div>
       </div>
       </div>
         <Modal active={this.state.active} toggle={this.toggle}>
         <p className='ops'>¡Felicidades! Has pasado el reto y has ganado {this.state.Score} puntos.</p>
         <img className='feliz' src={process.env.PUBLIC_URL + 'assets/img/puntos.png'} alt="¡Logrado!"></img>
         </Modal>
-        <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.svg`}></img>
-        <div className="iconosNav">
+        <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.png`}></img>
+        <div className="iconosNav fase">
         <div className="home">
         <img className="icons" onClick={ this.redireccionar} src={process.env.PUBLIC_URL + '/assets/img/home.png'}></img><p onClick={this.redireccionar} className="icons">Home</p></div>
         <p className="puntuacion">{this.state.Score}</p>
@@ -490,11 +488,10 @@ class SnakeGame4 extends React.Component {
       </div> 
       <div className="controls extra">
       <div className="dpad">
-        <div className="up"><i className="fa fa-caret-up" onClick={()=>this.goUp()}></i></div>
-        <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}></i></div>
-        <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}></i></div>
-        <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}></i></div>
-        <div className="middle"></div>
+        <div className="up"><i className="fa fa-caret-up" onClick={()=>this.goUp()}><img className="flecharriba" src={process.env.PUBLIC_URL + `/assets/img/flechaarriba.png`}></img></i></div>
+        <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}><img className="flechaderecha" src={process.env.PUBLIC_URL + `/assets/img/flechadere.png`}></img></i></div>
+        <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}><img className="flechabajo" src={process.env.PUBLIC_URL + `/assets/img/flechaabajo.png`}></img></i></div>
+        <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}><img className="flechaizquierda" src={process.env.PUBLIC_URL + `/assets/img/flechaizquier.png`}></img></i></div>
       </div>
       </div>
         <Modal active={this.state.active} toggle={this.toggle}>
@@ -503,8 +500,8 @@ class SnakeGame4 extends React.Component {
         <p className='chocado'>Has acumulado: {this.state.Score} puntos.</p>
         <img className='robot' src={process.env.PUBLIC_URL + 'assets/img/robot.png'} alt="Robot triste"></img>
         </Modal>
-        <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.svg`}></img>
-        <div className="iconosNav">
+        <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.png`}></img>
+        <div className="iconosNav fase">
         <div className="home">
         <img className="icons" onClick={ this.redireccionar} src={process.env.PUBLIC_URL + '/assets/img/home.png'}></img><p onClick={this.redireccionar} className="icons">Home</p></div>
         <p className="puntuacion">{this.state.Score}</p>
@@ -591,19 +588,18 @@ class SnakeGame4 extends React.Component {
     
     <div className="controls">
       <div className="dpad">
-        <div className="up"><i className="fa fa-caret-up" onClick={()=>this.goUp()}></i></div>
-        <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}></i></div>
-        <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}></i></div>
-        <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}></i></div>
-        <div className="middle"></div>
+        <div className="up"><i className="fa fa-caret-up" onClick={()=>this.goUp()}><img className="flecharriba" src={process.env.PUBLIC_URL + `/assets/img/flechaarriba.png`}></img></i></div>
+        <div className="right"><i className="fa fa-caret-right" onClick={()=>this.goRight()}><img className="flechaderecha" src={process.env.PUBLIC_URL + `/assets/img/flechadere.png`}></img></i></div>
+        <div className="down"><i className="fa fa-caret-down" onClick={()=>this.goDown()}><img className="flechabajo" src={process.env.PUBLIC_URL + `/assets/img/flechaabajo.png`}></img></i></div>
+        <div className="left"><i className="fa fa-caret-left" onClick={()=>this.goLeft()}><img className="flechaizquierda" src={process.env.PUBLIC_URL + `/assets/img/flechaizquier.png`}></img></i></div>
       </div>
     </div>    
   </div>
       
       
       <br/><br/>
-      <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.svg`}></img>
-    <div className="iconosNav">
+      <img className="fijo" src={process.env.PUBLIC_URL + `/assets/img/nav${this.state.imagen}.png`}></img>
+    <div className="iconosNav fase">
     <div className="home">
     <img className="icons" onClick={ this.redireccionar} src={process.env.PUBLIC_URL + '/assets/img/home.png'}></img><p onClick={this.redireccionar} className="icons">Home</p></div>
     <p className="puntuacion">{this.state.Score}</p>
