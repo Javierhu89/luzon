@@ -544,7 +544,7 @@
     }
     .gameboy .controls .dpad .down {
       top: calc(3% - 4px);
-      left: -40%;
+      left: -38%;
     } .gameboy .controls .dpad .right {
       left: calc(150% - 4px);
     } .gameboy .controls .dpad .left{
@@ -584,11 +584,11 @@
   } p.puntuacion{
     margin-top: 0.3px;
   } img.flechabajo, img.flecharriba, img.flechaderecha, img.flechaizquierda {
-    margin-top: 32%;
+    margin-top: 31%;
     width: 35px;
     height: 35px;
 } img.flechabajo{
-    margin-top:23%;
+    margin-top:26%;
 } }
 @media screen and (min-width: 400px) and (max-width: 415px) {
   div.fase {
