@@ -373,6 +373,9 @@
     }.gameboy .controls .dpad .down {
       left: -25%;
     }
+    .gameboy .controls .dpad .left {
+      left: calc(63% + 4px);
+    }
     img.flechabajo, img.flecharriba, img.flechaderecha, img.flechaizquierda {
       margin-top: 29%;
   }
@@ -384,14 +387,18 @@
       width: 60%;
       height: 60%;
     }.gameboy .controls .dpad .up {
-      top: calc(10% + 4px); 
+      top: calc(11% + 4px); 
       left: -90%;
     }
     .gameboy .controls .dpad .down {
       top: calc(19% - 4px);
+      left: -20%;
     } .gameboy .controls .dpad .right {
       left: calc(140% - 4px);
     } 
+    .gameboy .controls .dpad .left {
+      left: calc(62% + 4px);
+    }
     .gameboy .controls .dpad .left, .gameboy .controls .dpad .right {
       top: 15%;
     }img.flechabajo, img.flecharriba, img.flechaderecha, img.flechaizquierda {
