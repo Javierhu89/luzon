@@ -382,7 +382,7 @@
   }
   @media screen and (min-height: 650px) and (max-height: 700px) {
     div.gameboy{
-      padding: 10px 0px 65px 0px;
+      padding: 10px 0px 22px 0px;
     } .gameboy .controls .dpad > * {
       width: 60%;
       height: 60%;
@@ -409,7 +409,7 @@
   } 
   @media screen and (min-height: 700px) and (max-height: 750px) {
     div.gameboy{
-      padding: 10px 0px 115px 0px;
+      padding: 10px 0px 35px 0px;
     } .gameboy .controls .dpad > * {
       width: 70px;
       height: 70px;
@@ -437,10 +437,10 @@
   }
   @media screen and (min-height: 750px) and (max-height: 800px) {
     div.gameboy{
-      padding: 25px 0px 150px 0px;
+      padding: 25px 0px 108px 0px;
     } .gameboy .controls .dpad .up {
       top: calc(0% + 4px); 
-      left: -99%;
+      left: -110%;
     }.gameboy .controls .dpad > * {
       width: 70px;
       height: 70px;
@@ -449,9 +449,9 @@
       top: calc(9% - 4px);
       left: -27%;
     } .gameboy .controls .dpad .right {
-      left: calc(134% - 4px);
+      left: calc(146% - 4px);
     } .gameboy .controls .dpad .left{
-      left: calc(45% + 4px);
+      left: calc(55% + 4px);
     }
     .gameboy .controls .dpad .left, .gameboy .controls .dpad .right {
       top: 5%;
