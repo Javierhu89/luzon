@@ -30,7 +30,7 @@ class Solucion extends Component {
     }}>
       <div className="title">
       <h1 className="h1title">PREVENCIÓN</h1>
-      <p className="text"> Las causas que originan la ELA son mayoritariamente desconocidas. En esta fase es importante identificar, mediante estudios genéticos, en familias con varias personas con la ELA.</p>
+      <p className="text"> Las causas que originan la ELA son mayoritariamente desconocidas. En esta fase es importante consultar a un genetista para detectar antecedentes familiares que hayan sufrido ELA.</p>
       <br></br>
       <p className="text">La ELA puede afectar a personas de cualquier edad, sean niños, jóvenes o adultos</p>
       <div className="donjug solve">
