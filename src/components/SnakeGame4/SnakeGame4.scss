@@ -193,7 +193,7 @@
         
         .up {
           top:calc(-5% + 4px);
-          left:-85%;
+          left:-95%;
           border-top:4px solid black;
           border-bottom:4px solid black;
           border-left:4px solid black;
@@ -210,7 +210,7 @@
         }
         .right {
           top:0%;
-          left:calc(138% - 4px);
+          left:calc(150% - 4px);
           border-left:4px solid black;
           border-top:4px solid black;
           border-bottom:4px solid black;
@@ -228,7 +228,7 @@
         }
         .down {
           top:calc(4% - 4px);
-          left: -20%;
+          left: -30%;
           border-left:4px solid black;
           border-bottom:4px solid black;
           border-right:4px solid black;
@@ -242,7 +242,7 @@
         }
         .left {
           top:0%;
-          left:calc(62% + 4px);
+          left:calc(78% + 4px);
           border-top:4px solid black;
           border-bottom:4px solid black;
           border-left:4px solid black;
@@ -536,22 +536,22 @@
     div.gameboy{
       padding: 35px 0px 125px 0px;
     } .gameboy .controls .dpad .up {
-      top: calc(-5% + 4px);
-      left: -125%;
+      top: calc(-10% + 4px);
+      left: -110%;
     }.gameboy .controls .dpad > * {
       width: 80px;
       height: 80px;
     }
     .gameboy .controls .dpad .down {
-      top: calc(3% - 4px);
-      left: -38%;
+      top: calc(95% - 4px);
+      left: -110%;
     } .gameboy .controls .dpad .right {
       left: calc(150% - 4px);
     } .gameboy .controls .dpad .left{
-      left: calc(55% + 4px);
+      left: calc(45% + 4px);
     }
     .gameboy .controls .dpad .left, .gameboy .controls .dpad .right {
-      top: -1%;
+      top: 48%;
     }img.flechabajo, img.flecharriba, img.flechaderecha, img.flechaizquierda {
       margin-top: 32%;
   }
@@ -598,66 +598,66 @@
   div.fase {
     bottom: 12px;
 }}
-@media screen and (min-width: 375px) and (min-height: 813px) {
-  div.gameboy{
-    padding: 15px 0px 85px 0px;
-  }
-}
-@media screen and (min-height: 813px) {
-  div.gameboy{
-    padding: 35px 0px 125px 0px;
-  } .gameboy .controls .dpad .up {
-    top: calc(-5% + 4px);
-    left: -125%;
-  }.gameboy .controls .dpad > * {
-    width: 80px;
-    height: 80px;
-  }
-  .gameboy .controls .dpad .down {
-    top: calc(3% - 4px);
-    left: -40%;
-  } .gameboy .controls .dpad .right {
-    left: calc(150% - 4px);
-  } .gameboy .controls .dpad .left{
-    left: calc(55% + 4px);
-  }
-  .gameboy .controls .dpad .left, .gameboy .controls .dpad .right {
-    top: -1%;
-  }img.flechabajo, img.flecharriba, img.flechaderecha, img.flechaizquierda {
-    margin-top: 32%;
-}
-  div.controls{
-    margin-top:35px;
-  } p.chocado{
-    padding:0 15px 15px 15px;
-  } img.feliz{
-    margin-top:0px;
-    width: 122.94px;
-    margin-bottom: 20px;
-  }p.ops{
-    padding-left:15px;
-    padding-right: 15px;
-  }div.agrandar{
-    height: 630px;
-  }  #mainCanvas {
-    width: 335px;
-    height: 375px;
-  }div.agrande{
-    height: 415px;
-  }p.ops{
-    font-size: 24px;
-  } p.chocado{
-    font-size: 24px;
-  }  .gameboy {
-    width:320px;
-} div.fase{
-  bottom: 15px;
-} p.puntuacion{
-  margin-top: 0.3px;
-} img.flechabajo, img.flecharriba, img.flechaderecha, img.flechaizquierda {
-  margin-top: 32%;
-  width: 35px;
-  height: 35px;
-} img.flechabajo{
-  margin-top:23%;
-} }
+// @media screen and (min-width: 375px) and (min-height: 813px) {
+//   div.gameboy{
+//     padding: 15px 0px 85px 0px;
+//   }
+// }
+// @media screen and (min-height: 813px) {
+//   div.gameboy{
+//     padding: 35px 0px 125px 0px;
+//   } .gameboy .controls .dpad .up {
+//     top: calc(-5% + 4px);
+//     left: -125%;
+//   }.gameboy .controls .dpad > * {
+//     width: 80px;
+//     height: 80px;
+//   }
+//   .gameboy .controls .dpad .down {
+//     top: calc(3% - 4px);
+//     left: -40%;
+//   } .gameboy .controls .dpad .right {
+//     left: calc(150% - 4px);
+//   } .gameboy .controls .dpad .left{
+//     left: calc(55% + 4px);
+//   }
+//   .gameboy .controls .dpad .left, .gameboy .controls .dpad .right {
+//     top: -1%;
+//   }img.flechabajo, img.flecharriba, img.flechaderecha, img.flechaizquierda {
+//     margin-top: 32%;
+// }
+//   div.controls{
+//     margin-top:35px;
+//   } p.chocado{
+//     padding:0 15px 15px 15px;
+//   } img.feliz{
+//     margin-top:0px;
+//     width: 122.94px;
+//     margin-bottom: 20px;
+//   }p.ops{
+//     padding-left:15px;
+//     padding-right: 15px;
+//   }div.agrandar{
+//     height: 630px;
+//   }  #mainCanvas {
+//     width: 335px;
+//     height: 375px;
+//   }div.agrande{
+//     height: 415px;
+//   }p.ops{
+//     font-size: 24px;
+//   } p.chocado{
+//     font-size: 24px;
+//   }  .gameboy {
+//     width:320px;
+// } div.fase{
+//   bottom: 15px;
+// } p.puntuacion{
+//   margin-top: 0.3px;
+// } img.flechabajo, img.flecharriba, img.flechaderecha, img.flechaizquierda {
+//   margin-top: 32%;
+//   width: 35px;
+//   height: 35px;
+// } img.flechabajo{
+//   margin-top:23%;
+// } }
