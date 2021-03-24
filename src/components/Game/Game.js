@@ -29,7 +29,7 @@ class Game extends Component {
       <div className='jugadores'>
         <div className='parrafos'>
         <p className='descripcion subtitulo black'>Buenas tardes, soy Javier</p>
-        <p className='descripcion black'>Llevo 9 meses haciéndome pruebas y sigo sin saber qué es lo que me pasa?!.<span className="negrita"> Leer mas...</span></p>
+        <p className='descripcion black'>Llevo 9 meses haciéndome pruebas y sigo sin saber qué es lo que me pasa?!.<span className="negrita"> Leer más...</span></p>
           </div><img alt="Foto de Javier" className="foto javi" src={process.env.PUBLIC_URL + '/assets/img/javier.png'} />
       </div>
       <p className='edad javiedad black'>Javier  35 años</p>

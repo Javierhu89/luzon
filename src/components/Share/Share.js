@@ -54,7 +54,7 @@ class Share extends Component {
       size: 45,             // the size of each button (INTEGER)
 
       // OPTIONAL PARAMETERS
-      url: "@FundacionLuzon " + "Yo he logrado " + parseInt(localStorage.getItem('Puntos Acumulados')) +" puntos, y tú? " + `https://elalife.netlify.app/`, // (defaults to current url)
+      url: "@FundacionLuzon " + "Yo he logrado " + parseInt(localStorage.getItem('Puntos Acumulados')) +" puntos, ¿y tú? " + `https://elalife.netlify.app/`, // (defaults to current url)
       image: '',  // (defaults to og:image or twitter:image)
       description: '¡Logro conseguido!',       // (defaults to og:description or twitter:description)
       //title: "ELALIFE - He logrado " + parseInt(localStorage.getItem('Puntos Acumulados')) + ' puntos y ya he donado, ¿porqué no te animas?',   // (defaults to og:title or twitter:title)
