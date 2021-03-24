@@ -23,7 +23,7 @@ return(
   <div>
   <BrowserRouter>
       <Switch>
-          {width >768 ? ( <>
+          {width >500 ? ( <>
           <Route exact path='/' component={DesktopWarning} />
           <Route path='/onboarding' component={DesktopWarning}/>
           <Route path='/informacion' component={DesktopWarning}/>
